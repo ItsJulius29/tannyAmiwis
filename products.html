@@ -57,8 +57,10 @@
                 style="width: 100%; border-radius: 10px;">
 
             <div class="category-tabs d-flex justify-content-center gap-5">
-                <button class="category-tab active-tab" data-tab="amigurumis">Amigurumis Terminados</button>
-                <button class="category-tab" data-tab="patrones">Patrones</button>
+                <button class="category-tab active-tab" data-tab="amigurumis" data-source="products.json">Amigurumis
+                    Terminados</button>
+                <button class="category-tab" data-tab="patrones" data-source="patterns.json">Patrones</button>
+
             </div>
         </div>
     </section>
@@ -72,21 +74,34 @@
                 <div class="bg-light rounded-4 p-3 mb-4">
                     <h5 class="fw-bold">Categorías</h5>
                     <ul class="list-unstyled ps-3">
-                        <li><button class="btn btn-link">Fantasía</button></li>
-                        <li><button class="btn btn-link">Clásicos</button></li>
-                        <li><button class="btn btn-link">Artistas</button></li>
-                        <li><button class="btn btn-link">Animados</button></li>
-                        <li><button class="btn btn-link">Rocas Reversibles</button></li>
-                        <li><button class="btn btn-link">Profesionales</button></li>
-                        <li><button class="btn btn-link">Caricaturas</button></li>
-                        <li><button class="btn btn-link">Animes</button></li>
-                        <li><button class="btn btn-link">Navideños</button></li>
-                        <li><button class="btn btn-link">Películas</button></li>
-                        <li><button class="btn btn-link">Personalizados</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Todos">Todos</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Fantasía">Fantasía</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Clásicos">Clásicos</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Artistas">Artistas</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Animados">Animados</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Rocas Reversibles">Rocas
+                                Reversibles</button></li>
+                        <li><button class="btn btn-link category-btn"
+                                data-category="Profesionales">Profesionales</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Caricaturas">Caricaturas</button>
+                        </li>
+                        <li><button class="btn btn-link category-btn" data-category="Animes">Animes</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Navideños">Navideños</button></li>
+                        <li><button class="btn btn-link category-btn" data-category="Películas">Películas</button></li>
+                        <li><button class="btn btn-link category-btn"
+                                data-category="Personalizados">Personalizados</button></li>
                     </ul>
                     <hr>
                     <h6 class="fw-bold">Nivel de dificultad</h6>
-                    <input type="range" class="form-range" min="1" max="3">
+
+                    <!-- Checkbox para mostrar todas las dificultades -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="allDifficulties" checked>
+                        <label class="form-check-label small" for="allDifficulties">
+                            Todas las dificultades
+                        </label>
+                    </div>
+                    <input type="range" class="form-range" min="1" max="3" id="difficultyRange" disabled>
                     <div class="d-flex justify-content-between small">
                         <span>Fácil</span><span>Intermedio</span><span>Difícil</span>
                     </div>
@@ -96,63 +111,6 @@
             <!-- Productos / Patrones -->
             <div class="col-md-9">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="products-container">
-                    <!-- Productos por defecto (amigurumis) -->
-                    <div class="col product-item" data-type="amigurumis">
-                        <div class="card h-100">
-                            <img src="img/amigurumi1.jpg" class="card-img-top" alt="Amigurumi 1">
-                            <div class="card-body">
-                                <p class="card-text small text-muted">Artistas</p>
-                                <h5 class="card-title">Karol G</h5>
-                                <p class="fw-bold">$11</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repite este bloque con diferentes productos -->
-                    <div class="col product-item" data-type="amigurumis">
-                        <div class="card h-100">
-                            <img src="img/amigurumi2.jpg" class="card-img-top" alt="Amigurumi 2">
-                            <div class="card-body">
-                                <p class="card-text small text-muted">Clásicos</p>
-                                <h5 class="card-title">Virgen de Guadalupe</h5>
-                                <p class="fw-bold">$10</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col product-item" data-type="amigurumis">
-                        <div class="card h-100">
-                            <img src="img/amigurumi3.jpg" class="card-img-top" alt="Amigurumi 3">
-                            <div class="card-body">
-                                <p class="card-text small text-muted">Animados</p>
-                                <h5 class="card-title">Luffy</h5>
-                                <p class="fw-bold">$12</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Patrones -->
-                    <div class="col product-item d-none" data-type="patrones">
-                        <div class="card h-100">
-                            <img src="img/patron1.jpg" class="card-img-top" alt="Patrón 1">
-                            <div class="card-body">
-                                <p class="card-text small text-muted">Patrón PDF</p>
-                                <h5 class="card-title">Patrón Flor</h5>
-                                <p class="fw-bold">$5</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col product-item d-none" data-type="patrones">
-                        <div class="card h-100">
-                            <img src="img/patron2.jpg" class="card-img-top" alt="Patrón 2">
-                            <div class="card-body">
-                                <p class="card-text small text-muted">Patrón PDF</p>
-                                <h5 class="card-title">Conejito tierno</h5>
-                                <p class="fw-bold">$6</p>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -207,39 +165,11 @@
         </div>
     </footer>
 
-    <script>
-        const tabs = document.querySelectorAll('.category-tab');
-        const banner = document.getElementById('categoryBanner');
-        const items = document.querySelectorAll('.product-item');
+    <script src="js/products.js"></script>
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelector('.active-tab')?.classList.remove('active-tab');
-                tab.classList.add('active-tab');
-
-                const type = tab.dataset.tab;
-                banner.src = type === 'amigurumis' ? 'img/amigurumis-banner.jpg' : 'img/patrones-banner.jpg';
-
-                // Aplicar fade-out a todos
-                items.forEach(item => {
-                    item.classList.remove('fade-in');
-                    item.classList.add('fade-out');
-                });
-
-                // Luego de un pequeño delay, mostrar solo los de la categoría
-                setTimeout(() => {
-                    items.forEach(item => {
-                        if (item.dataset.type === type) {
-                            item.classList.remove('d-none', 'fade-out');
-                            item.classList.add('fade-in');
-                        } else {
-                            item.classList.add('d-none');
-                        }
-                    });
-                }, 300); // Debe coincidir con el tiempo del fade-out
-            });
-        });
-    </script>
 
 </body>
 

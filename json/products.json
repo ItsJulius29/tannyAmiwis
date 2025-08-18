@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "type": "amigurumis",
+        "name": "Perrito Cute",
+        "category": "Clásicos",
+        "price": 15,
+        "difficulty": 1,
+        "image": "",
+        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
+    },
+    {
+        "id": 2,
+        "type": "amigurumis",
+        "name": "Conejita Rosa",
+        "category": "Fantasía",
+        "price": 18,
+        "difficulty": 2,
+        "image": "",
+        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
+    },
+    {
+        "id": 3,
+        "type": "amigurumis",
+        "name": "Gato Elegante",
+        "category": "Artistas",
+        "price": 16,
+        "difficulty": 3,
+        "image": "",
+        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
+    }
+]

@@ -100,6 +100,26 @@ section.text-center h4 {
     font-weight: bold;
 }
 
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* ======== PAGINACIÓN ======== */
 .pagination .page-link {
     color: #7a00b3;
@@ -162,21 +182,38 @@ section.text-center h4 {
     color: #a84cd4;
 }
 
+.category-btn.active-category {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #6a1b9a !important; /* Un morado más oscuro o el que uses como principal */
+}
+
+.category-btn {
+    color: #b57cc4 !important; /* Color más claro o translúcido para inactivas */
+    transition: color 0.2s ease;
+    text-decoration: none !important;
+}
+
+.category-btn:hover {
+    text-decoration: none !important;
+}
+
+
 /* ======== FILTROS PRODUCTOS ======== */
 .product-item {
-  opacity: 1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .product-item.fade-out {
-  opacity: 0;
-  transform: scale(0.98);
-  pointer-events: none;
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
 }
 
 .product-item.fade-in {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -213,6 +250,18 @@ section.text-center h4 {
 .sidebar .btn-link:hover {
     background-color: #e7d4fa;
 }
+
+.no-products-message {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 50px 50px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
 
 /* ======== TARJETAS DE PRODUCTO ======== */
 .card-body p.small {

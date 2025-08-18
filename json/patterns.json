@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "type": "patrones",
+        "name": "Patrón Unicornio",
+        "category": "Fantasía",
+        "price": 5,
+        "difficulty": 2,
+        "image": "",
+        "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
+    },
+    {
+        "id": 2,
+        "type": "patrones",
+        "name": "Patrón Dino Reversible",
+        "category": "Animados",
+        "price": 7,
+        "difficulty": 3,
+        "image": "",
+        "description": "Patrón reversible de dinosaurio, incluye video tutorial."
+    },
+    {
+        "id": 3,
+        "type": "patrones",
+        "name": "Patrón Koala Tierno",
+        "category": "Clásicos",
+        "price": 4,
+        "difficulty": 3,
+        "image": "",
+        "description": "Instrucciones paso a paso para crear un koala adorable."
+    }
+]
