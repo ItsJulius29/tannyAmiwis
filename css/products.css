@@ -1,0 +1,271 @@
+/* ======== GENERAL ======== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+h2,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* ======== NAVBAR ======== */
+.bg-purple {
+    background-color: #a569bd;
+}
+
+.btn-custom {
+    background-color: #e9c1f3;
+    color: #4b007d;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #6f2c91;
+}
+
+.btn-custom {
+    background-color: #d493f8;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #b364d8;
+}
+
+/* ======== SECCIÓN TÍTULO ======== */
+section.text-center h2 {
+    color: #7a00b3;
+}
+
+section.text-center h4 {
+    color: #d493f8;
+}
+
+/* ======== FILTROS LATERALES ======== */
+.bg-light {
+    border-radius: 20px;
+}
+
+.btn-link {
+    color: #7a00b3;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+.btn-link:hover {
+    color: #b364d8;
+    text-decoration: underline;
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: #7a00b3;
+}
+
+.form-range::-moz-range-thumb {
+    background-color: #7a00b3;
+}
+
+/* ======== GALERÍA DE PRODUCTOS ======== */
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #7a00b3;
+    font-weight: bold;
+}
+
+/* ======== PAGINACIÓN ======== */
+.pagination .page-link {
+    color: #7a00b3;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-link:hover {
+    color: #b364d8;
+    text-decoration: underline;
+}
+
+/* ======== BANNER CATEGORÍA ======== */
+.category-banner {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* ======== TABS DE CATEGORÍAS ======== */
+.category-tabs {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+    gap: 40px;
+    border-bottom: 3px solid #dcd0f1;
+}
+
+.category-tab {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #d4a1f3;
+    position: relative;
+    padding-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.category-tab.active-tab {
+    color: #4b007d;
+}
+
+.category-tab.active-tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ba54d3;
+    border-radius: 10px;
+}
+
+.category-tab:hover {
+    color: #a84cd4;
+}
+
+/* ======== FILTROS PRODUCTOS ======== */
+.product-item {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-item.fade-out {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.product-item.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ======== FILTROS LATERALES PERSONALIZADOS ======== */
+.sidebar .bg-light {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f5eafe;
+}
+
+.sidebar h5 {
+    color: #7a00b3;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar .btn-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.sidebar .btn-link:hover {
+    background-color: #e7d4fa;
+}
+
+/* ======== TARJETAS DE PRODUCTO ======== */
+.card-body p.small {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    color: #9c82c4;
+}
+
+.card-body h5 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.card-body .fw-bold {
+    color: #7a00b3;
+}
+
+/* ======== PAGINACIÓN SUPERIOR ======== */
+.top-pagination {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.top-pagination .pagination {
+    margin: 0;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background-color: #a54ccf;
+    color: white;
+    padding: 30px 0;
+    position: relative;
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #ffcbf2;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-size: 14px;
+}

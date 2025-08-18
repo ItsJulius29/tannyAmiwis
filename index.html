@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet">
+    <title>TannyAmiwis</title>
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Menú izquierdo -->
+            <div>
+                <ul class="navbar-nav flex-row gap-4">
+                    <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">INICIO</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="about.html">SOBRE MÍ</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="products.html">PRODUCTOS</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo central -->
+            <a class="navbar-brand mx-4" href="#">
+                <img src="" alt="Logo" height="50">
+            </a>
+            <!-- Redes y botón derecho -->
+            <div class="d-none d-lg-flex align-items-center gap-3">
+                <a href="#"><img src="assets/icons/youtube.svg" height="20"></a>
+                <a href="#"><img src="assets/icons/instagram.svg" height="20"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" height="20"></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="contact.html" class="btn btn-custom">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container py-5">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+                        <div class="hero-content text-center text-white">
+                            <h1>Arte y magia en cada puntada</h1>
+                            <a href="products.html" class="btn btn-light mt-3">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-item">
+                        <div class="hero-content text-center text-white">
+                            <h1>Nuevas colecciones limitadas</h1>
+                            <a href="#ofertas" class="btn btn-light mt-3">Ver ofertas</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="carousel-item">
+                        <div class="hero-content text-center text-white">
+                            <h1>Personaliza tu amigurumi favorito</h1>
+                            <a href="#personaliza" class="btn btn-light mt-3">Ver más</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators justify-content-center mt-4">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+
+            <!-- Botón fijo debajo del carrusel -->
+            <div class="text-center mt-4">
+                <a href="catalogo.pdf" class="btn btn-outline-light">Descargar catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA / SOBRE MI -->
+    <section class="history-section">
+        <div class="container text-center">
+            <h2 class="mb-4 fw-bold" style="color: #4b007d;">Historia breve de la creación del emprendimiento</h2>
+            <p class="lead mx-auto" style="max-width: 700px; color: #4b007d;">
+                Cuando me animé a crear mi emprendimiento, fue a inicios de pandemia cuando incursioné en crear página
+                en cada red social ya con el nombre de la marca, y en la que diseñaba las tarjetas y entregaba mis
+                primeros pedidos tejidos, fue evolucionando el packing para que los muñecos lleguen al cliente de una
+                manera más segura y en buen estado...
+            </p>
+            <p class="fw-bold text-end" style="max-width: 700px; color: #4b007d;">– Sthefanny Liss</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row text-center text-lg-start align-items-center">
+                <!-- Logo -->
+                <div class="col-lg-2 mb-3 d-flex justify-content-lg-start justify-content-center">
+                    <img src="" alt="Logo" class="footer-logo">
+                </div>
+                <!-- Menú -->
+                <div class="col-lg-2 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Inicio</a></li>
+                        <li><a href="about.html" class="text-white">Sobre Mí</a></li>
+                        <li><a href="products.html" class="text-white">Productos</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales + normativas -->
+                <div class="col-lg-4 mb-3 text-center">
+                    <div class="footer-icons mb-2">
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-heart"></i></a>
+                    </div>
+                    <small>Normativas</small>
+                </div>
+                <!-- Contacto -->
+                <div class="col-lg-3 mb-3 text-lg-end text-center footer-contact">
+                    <p><i class="bi bi-telephone"></i> +51 999245585</p>
+                    <p><i class="bi bi-envelope"></i> tannysamiwis@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

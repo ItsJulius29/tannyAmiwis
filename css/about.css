@@ -1,0 +1,228 @@
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: #fef6ff;
+ }
+
+ .header-img {
+     width: 180px;
+     border-radius: 50%;
+     border: 5px solid #b36ddc;
+ }
+
+ .about-me-section {
+     background-color: #ffffff;
+     padding-top: 4rem;
+     padding-bottom: 4rem;
+ }
+
+ .profile-img img {
+     max-width: 320px;
+     border: 6px solid #a569bd;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+
+
+ .text-purple {
+     color: #6d1a94;
+ }
+
+ .about-text h5 {
+     color: #4b007d;
+ }
+
+ .rounded-section {
+     background-color: #f6e0ff;
+     padding: 2rem;
+     border-radius: 20px;
+     margin: 2rem 0;
+ }
+
+/* ======== NAVBAR ======== */
+.bg-purple {
+    background-color: #a569bd;
+}
+
+.btn-custom {
+    background-color: #e9c1f3;
+    color: #4b007d;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #6f2c91;
+}
+
+.btn-custom {
+    background-color: #d493f8;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #b364d8;
+}
+
+ /* SECCIÓN INSPIRACION */
+ .inspiration-section {
+     background-color: #ffffff;
+ }
+
+ .inspiration-section .container {
+     background-color: #d493f8;
+     color: white;
+     border-radius: 40px;
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+ }
+
+ .section-title {
+     font-family: 'Poppins', sans-serif;
+     font-weight: 700;
+     font-size: 1.8rem;
+     color: white;
+ }
+
+ .inspiration-img {
+     width: 100px;
+     height: 100px;
+     object-fit: cover;
+     border-radius: 10px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease;
+ }
+
+ .inspiration-img:hover {
+     transform: scale(1.08);
+ }
+
+ /* SECCIÓN VALORES */
+ .value-section {
+     background-color: #ffffff;
+     padding-bottom: 3rem;
+ }
+
+ .value-section .container {
+     background-color: #e6d3fa;
+     border-radius: 40px;
+     padding: 1.5rem;
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     flex-wrap: wrap;
+     width: 70%;
+ }
+
+ .values-title {
+     font-family: 'Poppins', sans-serif;
+     font-weight: 700;
+     font-size: 1.7rem;
+     color: #4b007d;
+     margin-bottom: 2rem;
+ }
+
+
+ .value-pill {
+     background-color: #a849e8;
+     color: white;
+     font-family: 'Poppins', sans-serif;
+     font-weight: 600;
+     font-size: 1.1rem;
+     padding: 0.7rem 1.8rem;
+     border-radius: 40px;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+     cursor: default;
+     transition: transform 0.3s ease;
+ }
+
+ .value-pill:hover {
+     transform: scale(1.1);
+ }
+
+ /* SECCIÓN ANECDOTA */
+
+ .anecdote-section {
+     background-color: #4b007d;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .anecdote-subtitle {
+     font-family: 'Poppins', sans-serif;
+     font-weight: 500;
+     font-size: 1.2rem;
+     color: #e0bbff;
+     margin-bottom: 0.5rem;
+ }
+
+ .anecdote-title {
+     font-family: 'Poppins', sans-serif;
+     font-weight: 700;
+     font-size: 2rem;
+     color: white;
+     margin-bottom: 1rem;
+ }
+
+ .anecdote-text {
+     font-family: 'Poppins', sans-serif;
+     font-size: 1rem;
+     line-height: 1.8;
+     color: white;
+ }
+
+ .anecdote-butterfly {
+     width: 150px;
+     opacity: 0.9;
+ }
+
+ /* Bordes ondulados */
+ .wave-top,
+ .wave-bottom {
+     width: 100%;
+     height: 60px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+
+ .wave-top {
+     background-image: url('ruta-a-wave-top.svg');
+     /* O PNG si no tienes SVG */
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+
+ .wave-bottom {
+     background-image: url('ruta-a-wave-bottom.svg');
+     position: absolute;
+     bottom: 0;
+     left: 0;
+ }
+
+
+
+ /* SECCIÓN FOOTER */
+ footer {
+     background-color: #c96bf4;
+     color: white;
+     padding: 2rem 1rem;
+ }
+
+ .footer-logo {
+     height: 50px;
+ }
+
+ .footer-icons a,
+ .footer-contact a {
+     color: white;
+     margin: 0 0.25rem;
+     text-decoration: none;
+ }

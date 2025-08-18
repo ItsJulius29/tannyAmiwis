@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="css/products.css" rel="stylesheet">
+    <title>Productos</title>
+</head>
+
+<body>
+    <!-- HEADER / NAV -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Menú izquierdo -->
+            <div>
+                <ul class="navbar-nav flex-row gap-4">
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="about.html">SOBRE MÍ</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">PRODUCTOS</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo central -->
+            <a class="navbar-brand mx-4" href="#">
+                <img src="" alt="Logo" height="50">
+            </a>
+            <!-- Redes y botón derecho -->
+            <div class="d-none d-lg-flex align-items-center gap-3">
+                <a href="#"><img src="assets/icons/youtube.svg" height="20"></a>
+                <a href="#"><img src="assets/icons/instagram.svg" height="20"></a>
+                <a href="#"><img src="assets/icons/facebook.svg" height="20"></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="contact.html" class="btn btn-custom">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Título -->
+    <section class="text-center py-4">
+        <!-- Banner con tabs -->
+        <div class="container my-4">
+            <img id="categoryBanner" src="img/amigurumis-banner.jpg" class="category-banner mb-3" alt="Banner"
+                style="width: 100%; border-radius: 10px;">
+
+            <div class="category-tabs d-flex justify-content-center gap-5">
+                <button class="category-tab active-tab" data-tab="amigurumis">Amigurumis Terminados</button>
+                <button class="category-tab" data-tab="patrones">Patrones</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Filtros laterales y galería -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Filtros -->
+            <div class="col-md-3">
+                <div class="bg-light rounded-4 p-3 mb-4">
+                    <h5 class="fw-bold">Categorías</h5>
+                    <ul class="list-unstyled ps-3">
+                        <li><button class="btn btn-link">Fantasía</button></li>
+                        <li><button class="btn btn-link">Clásicos</button></li>
+                        <li><button class="btn btn-link">Artistas</button></li>
+                        <li><button class="btn btn-link">Animados</button></li>
+                        <li><button class="btn btn-link">Rocas Reversibles</button></li>
+                        <li><button class="btn btn-link">Profesionales</button></li>
+                        <li><button class="btn btn-link">Caricaturas</button></li>
+                        <li><button class="btn btn-link">Animes</button></li>
+                        <li><button class="btn btn-link">Navideños</button></li>
+                        <li><button class="btn btn-link">Películas</button></li>
+                        <li><button class="btn btn-link">Personalizados</button></li>
+                    </ul>
+                    <hr>
+                    <h6 class="fw-bold">Nivel de dificultad</h6>
+                    <input type="range" class="form-range" min="1" max="3">
+                    <div class="d-flex justify-content-between small">
+                        <span>Fácil</span><span>Intermedio</span><span>Difícil</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos / Patrones -->
+            <div class="col-md-9">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="products-container">
+                    <!-- Productos por defecto (amigurumis) -->
+                    <div class="col product-item" data-type="amigurumis">
+                        <div class="card h-100">
+                            <img src="img/amigurumi1.jpg" class="card-img-top" alt="Amigurumi 1">
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Artistas</p>
+                                <h5 class="card-title">Karol G</h5>
+                                <p class="fw-bold">$11</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repite este bloque con diferentes productos -->
+                    <div class="col product-item" data-type="amigurumis">
+                        <div class="card h-100">
+                            <img src="img/amigurumi2.jpg" class="card-img-top" alt="Amigurumi 2">
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Clásicos</p>
+                                <h5 class="card-title">Virgen de Guadalupe</h5>
+                                <p class="fw-bold">$10</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col product-item" data-type="amigurumis">
+                        <div class="card h-100">
+                            <img src="img/amigurumi3.jpg" class="card-img-top" alt="Amigurumi 3">
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Animados</p>
+                                <h5 class="card-title">Luffy</h5>
+                                <p class="fw-bold">$12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Patrones -->
+                    <div class="col product-item d-none" data-type="patrones">
+                        <div class="card h-100">
+                            <img src="img/patron1.jpg" class="card-img-top" alt="Patrón 1">
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Patrón PDF</p>
+                                <h5 class="card-title">Patrón Flor</h5>
+                                <p class="fw-bold">$5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col product-item d-none" data-type="patrones">
+                        <div class="card h-100">
+                            <img src="img/patron2.jpg" class="card-img-top" alt="Patrón 2">
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Patrón PDF</p>
+                                <h5 class="card-title">Conejito tierno</h5>
+                                <p class="fw-bold">$6</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Paginación -->
+                <div class="text-center mt-4">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer completo -->
+    <footer>
+        <div class="container">
+            <div class="row text-center text-lg-start align-items-center">
+                <!-- Logo -->
+                <div class="col-lg-2 mb-3 d-flex justify-content-lg-start justify-content-center">
+                    <img src="" alt="Logo" class="footer-logo">
+                </div>
+                <!-- Menú -->
+                <div class="col-lg-2 mb-3">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="#" class="text-white">Sobre Mí</a></li>
+                        <li><a href="products.html" class="text-white">Productos</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales + normativas -->
+                <div class="col-lg-4 mb-3 text-center">
+                    <div class="footer-icons mb-2">
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-heart"></i></a>
+                    </div>
+                    <small>Normativas</small>
+                </div>
+                <!-- Contacto -->
+                <div class="col-lg-3 mb-3 text-lg-end text-center footer-contact">
+                    <p><i class="bi bi-telephone"></i> +51 999245585</p>
+                    <p><i class="bi bi-envelope"></i> tannysamiwis@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.category-tab');
+        const banner = document.getElementById('categoryBanner');
+        const items = document.querySelectorAll('.product-item');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelector('.active-tab')?.classList.remove('active-tab');
+                tab.classList.add('active-tab');
+
+                const type = tab.dataset.tab;
+                banner.src = type === 'amigurumis' ? 'img/amigurumis-banner.jpg' : 'img/patrones-banner.jpg';
+
+                // Aplicar fade-out a todos
+                items.forEach(item => {
+                    item.classList.remove('fade-in');
+                    item.classList.add('fade-out');
+                });
+
+                // Luego de un pequeño delay, mostrar solo los de la categoría
+                setTimeout(() => {
+                    items.forEach(item => {
+                        if (item.dataset.type === type) {
+                            item.classList.remove('d-none', 'fade-out');
+                            item.classList.add('fade-in');
+                        } else {
+                            item.classList.add('d-none');
+                        }
+                    });
+                }, 300); // Debe coincidir con el tiempo del fade-out
+            });
+        });
+    </script>
+
+</body>
+
+</html>
