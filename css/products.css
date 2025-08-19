@@ -24,6 +24,10 @@ h6 {
     font-weight: 600;
 }
 
+.navbar .container {
+    font-family: 'Quicksand';
+}
+
 .nav-link.active {
     border-bottom: 2px solid #6f2c91;
 }
@@ -153,6 +157,7 @@ section.text-center h4 {
 }
 
 .category-tab {
+    font-family: 'Quicksand';
     background: none;
     border: none;
     font-weight: bold;
@@ -185,11 +190,13 @@ section.text-center h4 {
 .category-btn.active-category {
     font-weight: bold;
     text-decoration: underline;
-    color: #6a1b9a !important; /* Un morado más oscuro o el que uses como principal */
+    color: #6a1b9a !important;
+    /* Un morado más oscuro o el que uses como principal */
 }
 
 .category-btn {
-    color: #b57cc4 !important; /* Color más claro o translúcido para inactivas */
+    color: #b57cc4 !important;
+    /* Color más claro o translúcido para inactivas */
     transition: color 0.2s ease;
     text-decoration: none !important;
 }
@@ -291,16 +298,50 @@ section.text-center h4 {
     margin: 0;
 }
 
+/* ===== BOTONES FLOTANTES ===== */
+.floating-buttons {
+    position: fixed;
+    bottom: 100px;
+    /* Altura desde el fondo */
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.floating-btn {
+    background-color: #6f2c91;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-btn:hover {
+    background-color: #a364d8;
+}
+
+
 /* ======== FOOTER ======== */
 footer {
-    background-color: #a54ccf;
+    background-color: #c96bf4;
     color: white;
-    padding: 30px 0;
-    position: relative;
+    padding: 2rem 2rem 0rem 2rem;
+
 }
 
 .footer-logo {
-    height: 60px;
+    height: 150px;
+    width: 150px;
 }
 
 .footer-icons a {
@@ -317,4 +358,13 @@ footer {
 .footer-contact p {
     margin: 0;
     font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* opcional si quieres subrayado al pasar el mouse */
 }

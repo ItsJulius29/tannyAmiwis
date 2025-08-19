@@ -6,7 +6,7 @@
         "category": "Fantasía",
         "price": 5,
         "difficulty": 2,
-        "image": "",
+        "image": "../assets/images/amigurumis/7.jpg",
         "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
     },
     {
@@ -16,7 +16,7 @@
         "category": "Animados",
         "price": 7,
         "difficulty": 3,
-        "image": "",
+        "image": "../assets/images/amigurumis/8.jpg",
         "description": "Patrón reversible de dinosaurio, incluye video tutorial."
     },
     {
@@ -26,7 +26,67 @@
         "category": "Clásicos",
         "price": 4,
         "difficulty": 3,
-        "image": "",
+        "image": "../assets/images/amigurumis/9.jpg",
+        "description": "Instrucciones paso a paso para crear un koala adorable."
+    },
+    {
+        "id": 4,
+        "type": "patrones",
+        "name": "Patrón Unicornio",
+        "category": "Fantasía",
+        "price": 5,
+        "difficulty": 2,
+        "image": "../assets/images/amigurumis/10.jpg",
+        "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
+    },
+    {
+        "id": 5,
+        "type": "patrones",
+        "name": "Patrón Dino Reversible",
+        "category": "Animados",
+        "price": 7,
+        "difficulty": 3,
+        "image": "../assets/images/amigurumis/11.jpg",
+        "description": "Patrón reversible de dinosaurio, incluye video tutorial."
+    },
+    {
+        "id": 6,
+        "type": "patrones",
+        "name": "Patrón Koala Tierno",
+        "category": "Clásicos",
+        "price": 4,
+        "difficulty": 3,
+        "image": "../assets/images/amigurumis/12.jpg",
+        "description": "Instrucciones paso a paso para crear un koala adorable."
+    },
+    {
+        "id": 7,
+        "type": "patrones",
+        "name": "Patrón Unicornio",
+        "category": "Fantasía",
+        "price": 5,
+        "difficulty": 2,
+        "image": "../assets/images/amigurumis/13.jpg",
+        "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
+    },
+    {
+        "id": 8,
+        "type": "patrones",
+        "name": "Patrón Dino Reversible",
+        "category": "Animados",
+        "price": 7,
+        "difficulty": 3,
+        "image": "../assets/images/amigurumis/14.jpg",
+        "description": "Patrón reversible de dinosaurio, incluye video tutorial."
+    },
+    {
+        "id": 9,
+        "type": "patrones",
+        "name": "Patrón Koala Tierno",
+        "category": "Clásicos",
+        "price": 4,
+        "difficulty": 3,
+        "image": "../assets/images/amigurumis/15.jpg",
         "description": "Instrucciones paso a paso para crear un koala adorable."
     }
 ]

@@ -1,54 +1,67 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f7f3fd;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f3fd;
 }
 
 /* ======== NAVBAR ======== */
 .bg-purple {
-    background-color: #a569bd;
+  background-color: #a569bd;
 }
 
 .btn-custom {
-    background-color: #e9c1f3;
-    color: #4b007d;
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
+  background-color: #e9c1f3;
+  color: #4b007d;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+.navbar {
+  height: 150px;
+  width: auto;
+}
+
+.navbar .container {
+  font-family: 'Quicksand';
+  width: 100%;
+  width: 100%;
 }
 
 .nav-link.active {
-    border-bottom: 2px solid #6f2c91;
+  border-bottom: 2px solid #6f2c91;
 }
 
 .btn-custom {
-    background-color: #d493f8;
-    color: white;
-    border-radius: 20px;
-    padding: 6px 20px;
-    font-weight: bold;
-    border: none;
-    transition: all 0.3s ease;
+  background-color: #d493f8;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #b364d8;
+  background-color: #b364d8;
 }
 
 /* SECCIÓN HERO */
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Fondo con mariposas */
 .hero-section {
-  background-color: #caa0f5; /* color lila de respaldo */
-  background-image: url('../assets/images/fondo-mariposas.png'); /* reemplázalo con tu ruta */
+  background-color: #caa0f5;
+  /* color lila de respaldo */
+  background-image: url('../assets/images/fondo-mariposas.png');
+  /* reemplázalo con tu ruta */
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -59,7 +72,8 @@ body {
 .hero-section .carousel-inner {
   padding: 2rem 1rem;
   height: 500px;
-  background: rgba(0, 0, 0, 0.2); /* fondo oscuro translúcido para legibilidad */
+  background: rgba(0, 0, 0, 0.2);
+  /* fondo oscuro translúcido para legibilidad */
   border-radius: 15px;
 }
 
@@ -91,7 +105,8 @@ body {
 
 .hero-section .btn-outline-light:hover {
   background-color: white;
-  color: #6d1a94; /* morado */
+  color: #6d1a94;
+  /* morado */
 }
 
 /* Indicadores personalizados */
@@ -106,22 +121,23 @@ body {
 }
 
 .hero-section .carousel-indicators .active {
-  background-color: #692688; /* morado activo */
+  background-color: #692688;
+  /* morado activo */
 }
 
 .carousel-caption {
-    bottom: 30%;
+  bottom: 30%;
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 40px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: white;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .carousel-indicators .active {
-    background-color: #6f2c91;
+  background-color: #6f2c91;
 }
 
 .carousel-item {
@@ -133,36 +149,150 @@ body {
 }
 
 .carousel-item.active {
-  display: flex; /* solo el slide activo se mostrará con flex */
+  display: flex;
+  /* solo el slide activo se mostrará con flex */
 }
 
 
 /* SECCIÓN HISTORY */
+/* Aplica la fuente */
 .history-section {
-    background-color: #e5c8f2;
-    position: relative;
-    padding: 4rem 2rem;
+  font-family: 'Croissant One', cursive;
+  background-color: #edd1f5;
+  padding: 4rem 2rem;
+  overflow: hidden;
 }
+
+/* Estilos comunes para las tuerquitas */
+.tuerca {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Posiciones decorativas */
+.tuerca-1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 5%;
+  background-image: url('../assets/logos/Tuerca.svg');
+}
+
+.tuerca-2 {
+  width: 50px;
+  height: 50px;
+  bottom: 20%;
+  right: 5%;
+  background-image: url('../assets/logos/Tuerca 2.svg');
+}
+
+.tuerca-3 {
+  width: 100px;
+  height: 100px;
+  top: 35%;
+  left: 10%;
+  transform: translateY(-50%);
+  background-image: url('../assets/logos/Tuerca 3.svg');
+}
+
+.tuerca-4 {
+  width: 50px;
+  height: 50px;
+  top: 35%;
+  right: 10%;
+  transform: translateY(-50%);
+  background-image: url('../assets/logos/Tuerca.svg');
+}
+
+.tuerca-5 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 30%;
+  background-image: url('../assets/logos/Tuerca 2.svg');
+}
+
+.tuerca-6 {
+  width: 50px;
+  height: 50px;
+  bottom: 40%;
+  right: 20%;
+  background-image: url('../assets/logos/Tuerca 3.svg');
+}
+
+.tuerca-7 {
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  left: 20%;
+  transform: translateY(-50%);
+  background-image: url('../assets/logos/Tuerca.svg');
+}
+
+.tuerca-8 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  right: 30%;
+  transform: translateY(-50%);
+  background-image: url('../assets/logos/Tuerca 2.svg');
+}
+
+.tuerca-9 {
+  width: 50px;
+  height: 50px;
+  top: 80%;
+  right: 40%;
+  transform: translateY(-50%);
+  background-image: url('../assets/logos/Tuerca 3.svg');
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tuerca {
+  animation: spin 20s linear infinite;
+}
+
+
 
 /* SECCIÓN FOOTER */
 footer {
-    background-color: #c96bf4;
-    color: white;
-    padding: 2rem 1rem;
+  background-color: #c96bf4;
+  color: white;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
 .footer-logo {
-    height: 50px;
+  height: 150px;
+  width: 150px;
 }
 
 .footer-icons a,
 .footer-contact a {
-    color: white;
-    margin: 0 0.25rem;
-    text-decoration: none;
+  color: white;
+  margin: 0 0.25rem;
+  text-decoration: none;
 }
 
+footer a {
+  text-decoration: none;
+}
 
-
-
-
+footer a:hover {
+  text-decoration: underline;
+  /* opcional si quieres subrayado al pasar el mouse */
+}
