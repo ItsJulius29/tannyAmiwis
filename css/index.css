@@ -46,6 +46,11 @@ body {
 }
 
 /* SECCIÓN HERO */
+.contCar{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .hero-text {
   position: absolute;
   top: 50%;
@@ -71,7 +76,7 @@ body {
 /* Contenedor del carrusel */
 .hero-section .carousel-inner {
   padding: 2rem 2rem;
-  height: 600px;
+  height: 800px;
   background: rgba(0, 0, 0, 0.2);
   /* fondo oscuro translúcido para legibilidad */
   border-radius: 15px;
