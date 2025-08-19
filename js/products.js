@@ -72,8 +72,8 @@ function setupTabs() {
             const source = tab.dataset.source;
 
             banner.src = currentType === "amigurumis"
-                ? "assets/images/amigurumis-banner.jpg"
-                : "assets/images/patrones-banner.jpg";
+                ? "assets/images/amigurumis/18.jpg"
+                : "assets/images/amigurumis/19.jpg";
 
             loadProductsFromJSON(source);
         });
