@@ -95,7 +95,7 @@ section.text-center h4 {
 .card-img-top {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    height: 220px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -210,6 +210,8 @@ section.text-center h4 {
 .product-item {
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    height: 400px;
 }
 
 .product-item.fade-out {
