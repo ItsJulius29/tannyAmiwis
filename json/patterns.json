@@ -6,7 +6,7 @@
         "category": "Fantasía",
         "price": 5,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/7.jpg",
+        "image": "/assets/images/amigurumis/7.jpg",
         "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
     },
     {
@@ -16,7 +16,7 @@
         "category": "Animados",
         "price": 7,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/8.jpg",
+        "image": "/assets/images/amigurumis/8.jpg",
         "description": "Patrón reversible de dinosaurio, incluye video tutorial."
     },
     {
@@ -26,7 +26,7 @@
         "category": "Clásicos",
         "price": 4,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/9.jpg",
+        "image": "/assets/images/amigurumis/9.jpg",
         "description": "Instrucciones paso a paso para crear un koala adorable."
     },
     {
@@ -36,7 +36,7 @@
         "category": "Fantasía",
         "price": 5,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/10.jpg",
+        "image": "/assets/images/amigurumis/10.jpg",
         "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
     },
     {
@@ -46,7 +46,7 @@
         "category": "Animados",
         "price": 7,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/11.jpg",
+        "image": "/assets/images/amigurumis/11.jpg",
         "description": "Patrón reversible de dinosaurio, incluye video tutorial."
     },
     {
@@ -56,7 +56,7 @@
         "category": "Clásicos",
         "price": 4,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/12.jpg",
+        "image": "/assets/images/amigurumis/12.jpg",
         "description": "Instrucciones paso a paso para crear un koala adorable."
     },
     {
@@ -66,7 +66,7 @@
         "category": "Fantasía",
         "price": 5,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/13.jpg",
+        "image": "/assets/images/amigurumis/13.jpg",
         "description": "Patrón PDF detallado para tejer un unicornio con materiales sugeridos."
     },
     {
@@ -76,7 +76,7 @@
         "category": "Animados",
         "price": 7,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/14.jpg",
+        "image": "/assets/images/amigurumis/14.jpg",
         "description": "Patrón reversible de dinosaurio, incluye video tutorial."
     },
     {
@@ -86,7 +86,7 @@
         "category": "Clásicos",
         "price": 4,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/15.jpg",
+        "image": "/assets/images/amigurumis/15.jpg",
         "description": "Instrucciones paso a paso para crear un koala adorable."
     }
 ]

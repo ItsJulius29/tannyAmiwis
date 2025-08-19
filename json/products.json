@@ -6,7 +6,7 @@
         "category": "Clásicos",
         "price": 15,
         "difficulty": 1,
-        "image": "../assets/images/amigurumis/1.jpg",
+        "image": "/assets/images/amigurumis/1.jpg",
         "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
     },
     {
@@ -16,7 +16,7 @@
         "category": "Fantasía",
         "price": 18,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/2.jpg",
+        "image": "/assets/images/amigurumis/2.jpg",
         "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
     },
     {
@@ -26,7 +26,7 @@
         "category": "Artistas",
         "price": 16,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/3.jpg",
+        "image": "/assets/images/amigurumis/3.jpg",
         "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
     },
     {
@@ -36,7 +36,7 @@
         "category": "Clásicos",
         "price": 15,
         "difficulty": 1,
-        "image": "../assets/images/amigurumis/4.jpg",
+        "image": "/assets/images/amigurumis/4.jpg",
         "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
     },
     {
@@ -46,7 +46,7 @@
         "category": "Fantasía",
         "price": 18,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/5.jpg",
+        "image": "/assets/images/amigurumis/5.jpg",
         "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
     },
     {
@@ -56,7 +56,7 @@
         "category": "Artistas",
         "price": 16,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/6.jpg",
+        "image": "/assets/images/amigurumis/6.jpg",
         "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
     },
     {
@@ -66,7 +66,7 @@
         "category": "Fantasía",
         "price": 18,
         "difficulty": 2,
-        "image": "../assets/images/amigurumis/16.jpg",
+        "image": "/assets/images/amigurumis/16.jpg",
         "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
     },
     {
@@ -76,7 +76,7 @@
         "category": "Artistas",
         "price": 16,
         "difficulty": 3,
-        "image": "../assets/images/amigurumis/17.jpg",
+        "image": "/assets/images/amigurumis/17.jpg",
         "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
     }
 ]
