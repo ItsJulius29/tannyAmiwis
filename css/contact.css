@@ -18,9 +18,37 @@
  }
 
  .navbar {
-     height: 150px;
+     height: auto;
      width: auto;
  }
+
+ .btn-custom {
+    background-color: #c89ae0;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    width: 150px;
+    height: 40px;
+}
+
+.btn-custom:hover {
+    background-color: #b364d8;
+}
+
+.btn-link {
+    color: #7a00b3;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+.btn-link:hover {
+    color: #b364d8;
+    text-decoration: underline;
+}
 
  /*SECCION*/
 
