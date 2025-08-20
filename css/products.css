@@ -40,6 +40,13 @@ h6 {
     font-weight: bold;
     border: none;
     transition: all 0.3s ease;
+    width: 150px;
+    height: 40px;
+}
+
+.navbar {
+    height: auto;
+    width: auto;
 }
 
 .btn-custom:hover {
@@ -82,9 +89,13 @@ section.text-center h4 {
 
 /* ======== GALERÍA DE PRODUCTOS ======== */
 .card {
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 15px;
+     border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: transform 0.2s ease;
 }
 
@@ -102,6 +113,24 @@ section.text-center h4 {
 .card-title {
     color: #7a00b3;
     font-weight: bold;
+    text-align: left;
+}
+
+.card-body p.small {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    color: #9c82c4;
+    text-align: left;
+}
+
+.card-body h5 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.card-body .fw-bold {
+    color: #7a00b3;
+    text-align: right;
 }
 
 .fade-in {
@@ -272,21 +301,7 @@ section.text-center h4 {
 }
 
 
-/* ======== TARJETAS DE PRODUCTO ======== */
-.card-body p.small {
-    font-size: 0.8rem;
-    margin-bottom: 4px;
-    color: #9c82c4;
-}
 
-.card-body h5 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
-
-.card-body .fw-bold {
-    color: #7a00b3;
-}
 
 /* ======== PAGINACIÓN SUPERIOR ======== */
 .top-pagination {
@@ -369,4 +384,76 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     /* opcional si quieres subrayado al pasar el mouse */
+}
+
+
+/* --- NAV móvil: panel en filas que empuja el contenido --- */
+@media (max-width: 991.98px) {
+
+  /* El nav deja de tener altura fija para no cortar nada */
+  .navbar {
+    height: auto;
+  }
+
+  .navbar-collapse--mobile {
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .navbar-collapse--mobile .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .navbar-collapse--mobile .mobile-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .navbar-collapse--mobile .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0 4px;
+    padding: 0;
+  }
+
+  .navbar-collapse--mobile .navbar-nav .nav-link {
+    display: block;
+    padding: .75rem 0;
+    font-weight: 700;
+    color: #4b007d;
+  }
+
+  .navbar-collapse--mobile .navbar-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .mobile-contact {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .hero-section .carousel-indicators button {
+    height: 10px;
+    width: 30%;
+  }
+}
+
+/* Oculta el panel móvil en desktop sí o sí */
+@media (min-width: 992px) {
+  #navbarResponsive { display: none !important; }
 }
