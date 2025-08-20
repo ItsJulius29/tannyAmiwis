@@ -89,7 +89,7 @@ section.text-center h4 {
 
 /* ======== GALERÍA DE PRODUCTOS ======== */
 .card {
-     border-radius: 15px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background: white;
@@ -104,8 +104,6 @@ section.text-center h4 {
 }
 
 .card-img-top {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     height: 300px;
     object-fit: cover;
 }
@@ -152,19 +150,31 @@ section.text-center h4 {
     }
 }
 
-
 /* ======== PAGINACIÓN ======== */
-.pagination .page-link {
-    color: #7a00b3;
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
+
+/* Paginación: activo morado fuerte, inactivo suave y sin subrayado */
+.pagination { gap: 16px; }
+
+.pagination .page-link{
+  border: 0;
+  background: transparent;
+  color: rgba(75, 0, 125, 0.45); /* inactivo */
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: none;
 }
 
-.pagination .page-item.active .page-link,
-.pagination .page-link:hover {
-    color: #b364d8;
-    text-decoration: underline;
+.pagination .page-link:hover,
+.pagination .page-link:focus{
+  color: rgba(75, 0, 125, 0.75);
+  text-decoration: none !important;
+  box-shadow: none;
+}
+
+.pagination .page-item.active .page-link{
+  color: #4b007d;                /* activo */
+  text-decoration: none !important;
+  pointer-events: none;          /* no clic en la página actual */
 }
 
 /* ======== BANNER CATEGORÍA ======== */
@@ -390,70 +400,85 @@ footer a:hover {
 /* --- NAV móvil: panel en filas que empuja el contenido --- */
 @media (max-width: 991.98px) {
 
-  /* El nav deja de tener altura fija para no cortar nada */
-  .navbar {
-    height: auto;
-  }
+    /* El nav deja de tener altura fija para no cortar nada */
+    .navbar {
+        height: auto;
+    }
 
-  .navbar-collapse--mobile {
-    background: transparent;
-    box-shadow: none;
-    width: 100%;
-  }
+    .navbar-collapse--mobile {
+        background: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
 
-  .navbar-collapse--mobile .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-  }
+    .navbar-collapse--mobile .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
 
-  .navbar-collapse--mobile .mobile-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+    .navbar-collapse--mobile .mobile-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 
-  .navbar-collapse--mobile .navbar-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    margin: 8px 0 4px;
-    padding: 0;
-  }
+    .navbar-collapse--mobile .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        margin: 8px 0 4px;
+        padding: 0;
+    }
 
-  .navbar-collapse--mobile .navbar-nav .nav-link {
-    display: block;
-    padding: .75rem 0;
-    font-weight: 700;
-    color: #4b007d;
-  }
+    .navbar-collapse--mobile .navbar-nav .nav-link {
+        display: block;
+        padding: .75rem 0;
+        font-weight: 700;
+        color: #4b007d;
+    }
 
-  .navbar-collapse--mobile .navbar-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-  }
+    .navbar-collapse--mobile .navbar-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
 
-  .mobile-contact {
-    width: 100%;
-    max-width: 480px;
-  }
+    .mobile-contact {
+        width: 100%;
+        max-width: 480px;
+    }
 
-  .hero-section .carousel-indicators button {
-    height: 10px;
-    width: 30%;
-  }
+    .hero-section .carousel-indicators button {
+        height: 10px;
+        width: 30%;
+    }
+
+    .product-item {
+        opacity: 1;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: 200px;
+        height: 330px;
+        margin-left: 5px;
+    }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
 }
 
 /* Oculta el panel móvil en desktop sí o sí */
 @media (min-width: 992px) {
-  #navbarResponsive { display: none !important; }
+    #navbarResponsive {
+        display: none !important;
+    }
 }
