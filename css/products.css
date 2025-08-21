@@ -337,19 +337,89 @@ section.text-center h4 {
 
 /* El mensaje de "sin productos" ocupa toda la fila, en cualquier viewport */
 #products-container .no-products-message {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 50px 50px;
-  color: #666;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-  border-radius: 12px;           /* opcional */
-  background: #f8f5ff;           /* opcional, para destacarlo */
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 50px 50px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    border-radius: 12px;
+    /* opcional */
+    background: #f8f5ff;
+    /* opcional, para destacarlo */
 }
+
+/* ===== Panel lila detrás de filtros + grilla ===== */
+:root {
+    --morado: #4b007d;
+    --lila-200: #f1e6ff;
+    --lila-300: #ead6ff;
+}
+
+/* El contenedor que ENVUELVE ambas columnas */
+section.text-center+.container.mb-5 {
+    background: var(--lila-200);
+    border: 1px solid var(--lila-300);
+    border-radius: 22px;
+    padding: 16px 16px 8px;
+    overflow: hidden;
+    /* recorta en las esquinas redondeadas */
+}
+
+/* Corrige gutters para que no “sangren” fuera del panel */
+section.text-center+.container.mb-5>.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Mantén padding lateral de columnas dentro del panel */
+section.text-center+.container.mb-5 [class^="col-"],
+section.text-center+.container.mb-5 [class*=" col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Quita el panel del lado derecho (ya no se necesita) */
+#products-top {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+/* Conserva estilos de cards y paginación dentro del nuevo panel */
+#products-top .card {
+    border: 1px solid var(--lila-300);
+    box-shadow: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#products-top .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(75, 0, 125, .08);
+}
+
+#products-top .pagination {
+    gap: 10px;
+}
+
+#products-top .pagination .page-link {
+    border: 0;
+    background: #ede1ff;
+    color: rgba(75, 0, 125, .85);
+    font-weight: 700;
+    border-radius: 999px;
+    padding: .4rem .7rem;
+}
+
+#products-top .page-item.active .page-link {
+    background: #7b41e6;
+    color: #fff;
+}
+
 
 /* ======== PAGINACIÓN SUPERIOR ======== */
 .top-pagination {
@@ -436,47 +506,69 @@ footer a:hover {
 
 
 /* Mobile */
-@media (max-width: 767.98px){
-  footer { padding: 1.75rem 1rem; }
+@media (max-width: 767.98px) {
+    footer {
+        padding: 1.75rem 1rem;
+    }
 
-  /* Las 3 columnas se apilan y centran */
-  footer .col-lg-2,
-  footer .col-lg-3,
-  footer .col-lg-4 {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    margin-bottom: 1rem;
-  }
+    /* Las 3 columnas se apilan y centran */
+    footer .col-lg-2,
+    footer .col-lg-3,
+    footer .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 
-  .footer-logo { width:200px; height:100px; }
+    .footer-logo {
+        width: 200px;
+        height: 100px;
+    }
 
-  /* Menú compacto */
-  footer ul { padding:0; margin:.25rem 0 .75rem; }
-  footer ul li { margin:.15rem 0; }
+    /* Menú compacto */
+    footer ul {
+        padding: 0;
+        margin: .25rem 0 .75rem;
+    }
 
-  /* Íconos más pequeños en móvil */
-  .footer-icons { gap:10px; margin-bottom:.5rem; }
-  .footer-icons img { height:24px; }
+    footer ul li {
+        margin: .15rem 0;
+    }
 
-  /* Línea de normativas en varias líneas y centrada */
-  footer small{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:center;
-    line-height:1.3;
-    margin-bottom:.75rem;
-  }
+    /* Íconos más pequeños en móvil */
+    .footer-icons {
+        gap: 10px;
+        margin-bottom: .5rem;
+    }
 
-  /* Contacto: líneas compactas */
-  .footer-contact p{ margin:.25rem 0; font-size:.95rem; }
+    .footer-icons img {
+        height: 24px;
+    }
+
+    /* Línea de normativas en varias líneas y centrada */
+    footer small {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        line-height: 1.3;
+        margin-bottom: .75rem;
+    }
+
+    /* Contacto: líneas compactas */
+    .footer-contact p {
+        margin: .25rem 0;
+        font-size: .95rem;
+    }
 }
 
 /* Desktop (opcional: alinear vertical) */
-@media (min-width: 992px){
-  footer .row{ align-items:center; }
+@media (min-width: 992px) {
+    footer .row {
+        align-items: center;
+    }
 }
 
 /* --- NAV móvil: panel en filas que empuja el contenido --- */

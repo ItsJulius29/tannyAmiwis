@@ -89,40 +89,43 @@
 
     <main class="container py-4" id="detail-root" hidden>
         <!-- Cabecera / breadcrumbs -->
-        <nav class="small text-muted mb-2" id="breadcrumbs"></nav>
+        <nav class="small text-muted mb-2"></nav>
 
         <div class="row g-4 align-items-start">
             <!-- GALERÍA -->
             <div class="col-lg-5">
-                <div class="detail-gallery card p-2">
-                    <img id="mainImg" class="w-100 rounded-3 object-cover" alt="">
+                <div class="detail-card p-3 rounded-4">
+                    <div class="ratio ratio-1x1 rounded-4 overflow-hidden">
+                        <img id="mainImg" class="w-100 h-100 object-fit-cover" alt="">
+                    </div>
+                    <div class="detail-thumbs d-flex gap-2 mt-3 flex-wrap" id="thumbs"></div>
                 </div>
-                <div class="detail-thumbs d-flex gap-2 mt-2" id="thumbs"></div>
             </div>
 
             <!-- INFO -->
             <div class="col-lg-7">
-                <h1 class="detail-title" id="title"></h1>
+                <div class="mb-2 small text-muted" id="crumbTrail"></div>
+                <h1 class="detail-title mb-3" id="title"></h1>
 
-                <div class="d-flex align-items-center gap-3 my-3">
-                    <div class="detail-price h4 mb-0" id="price"></div>
-                    <span class="badge rounded-pill bg-lila" id="badgeType"></span>
-                </div>
+                <div id="price" class="price-list mb-3"></div>
 
-                <p class="text-muted mb-2"><strong>Categoría:</strong> <span id="cat"></span></p>
-                <p class="text-muted mb-4"><strong>Dificultad:</strong> <span id="diff"></span></p>
+                <span id="patternPill" class="badge-pill" hidden>Patrón disponible</span>
 
-                <div class="d-flex gap-2 flex-wrap">
+                <div class="mt-4 d-flex gap-2 flex-wrap">
                     <a id="primaryBtn" class="btn btn-primary-lila"></a>
-                    <button class="btn btn-outline-secondary" id="backBtn">Regresar</button>
+                    <a class="back-link" id="backBtn" href="#"><span>Regresar</span><i
+                            class="bi bi-arrow-right-circle ms-2"></i></a>
                 </div>
             </div>
         </div>
 
-        <!-- RELACIONADOS -->
-        <hr class="my-5">
-        <h3 class="h5 mb-3">Productos Relacionados</h3>
-        <div class="row g-3" id="related"></div>
+        <hr class="divider">
+
+        <h3 class="section-title mb-3">Productos Relacionados</h3>
+        <div class="rel-panel p-3 rounded-4">
+            <div class="row g-3" id="related"></div>
+        </div>
+
     </main>
 
     <!-- Estado / errores -->
