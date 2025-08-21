@@ -351,10 +351,6 @@ section.text-center h4 {
   background: #f8f5ff;           /* opcional, para destacarlo */
 }
 
-
-
-
-
 /* ======== PAGINACIÓN SUPERIOR ======== */
 .top-pagination {
     display: flex;
@@ -370,7 +366,7 @@ section.text-center h4 {
 /* ===== BOTONES FLOTANTES ===== */
 .floating-buttons {
     position: fixed;
-    bottom: 100px;
+    bottom: 50px;
     /* Altura desde el fondo */
     right: 30px;
     display: flex;

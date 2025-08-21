@@ -16,10 +16,17 @@ const allDifficultyCheckbox = document.getElementById("allDifficulties");
 const paginationUl = document.querySelector(".pagination");
 const paginationNav = paginationUl?.closest("nav");
 const catCurrent = document.getElementById("catCurrent");
+let currentSource = "products.json"; // <— products o patterns
+
 
 // helpers
 const mm = window.matchMedia("(max-width: 991.98px)");
 const getPageSize = () => (mm.matches ? 8 : 9);
+const slugify = s => s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // quita acentos
+    .replace(/[^a-z0-9]+/g, '-')                     // separa no-alfanum
+    .replace(/(^-|-$)/g, '');                        // bordes
+
 
 // ===== Carga JSON
 function loadProductsFromJSON(source) {
@@ -56,7 +63,6 @@ function renderFilteredProducts() {
     const pageSize = getPageSize();
     const totalPages = Math.ceil(filtered.length / pageSize) || 1;
 
-    // ajustar página si quedó fuera de rango
     if (currentPage > totalPages) currentPage = totalPages;
     if (currentPage < 1) currentPage = 1;
 
@@ -64,19 +70,29 @@ function renderFilteredProducts() {
     const slice = filtered.slice(start, start + pageSize);
 
     slice.forEach((product) => {
+        const cover = Array.isArray(product.images) && product.images.length
+            ? product.images[0]
+            : product.image;
+
+        const href = product.id != null
+            ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
+            : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(product)}`;
+
         const card = document.createElement("div");
         card.className = "col product-item fade-in";
         card.innerHTML = `
-      <div class="card h-100">
-        <img src="${product.image}" class="card-img-top" alt="${product.name}">
-        <div class="card-body text-center">
-          <p class="card-text small text-muted">${product.category}</p>
-          <h5 class="card-title">${product.name}</h5>
-          <p class="fw-bold">$${product.price}</p>
-        </div>
-      </div>`;
+    <div class="card h-100 position-relative">
+      <img src="${cover}" class="card-img-top" alt="${product.name}">
+      <div class="card-body text-center">
+        <p class="card-text small text-muted">${product.category}</p>
+        <h5 class="card-title">${product.name}</h5>
+        <p class="fw-bold">$${product.price}</p>
+      </div>
+      <a class="stretched-link" href="${href}" aria-label="Ver ${product.name}"></a>
+    </div>`;
         container.appendChild(card);
     });
+
 
     renderPagination(totalPages);
 }
@@ -121,18 +137,19 @@ function setupTabs() {
             tab.classList.add("active-tab");
 
             currentType = tab.dataset.tab;
+            currentSource = tab.dataset.source;     // <— guarda el JSON activo
             const source = tab.dataset.source;
 
-            banner.src =
-                currentType === "amigurumis"
-                    ? "assets/images/amigurumis/18.jpg"
-                    : "assets/images/amigurumis/19.jpg";
+            banner.src = currentType === "amigurumis"
+                ? "assets/images/amigurumis/18.jpg"
+                : "assets/images/amigurumis/19.jpg";
 
             currentPage = 1;
             loadProductsFromJSON(source);
         });
     });
 }
+
 
 // ===== Categoría
 function setupCategoryFilters() {
