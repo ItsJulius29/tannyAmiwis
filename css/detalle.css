@@ -79,20 +79,30 @@
 
 /* modal de zoom */
 .zoom-wrap {
-    width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 3rem);
+    /* espacio para el botón de cerrar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    background: #000;
 }
 
 /* evita el drag fantasma y selecciones */
 #zoomImg {
+    max-width: 90vw;
+    /* hace que entre completa */
+    max-height: 85vh;
+    /* idem en alto */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* respeta proporciones */
+    transform-origin: center center;
+    transform: translate(0, 0) scale(1);
+    /* sin zoom inicial */
     user-select: none;
     -webkit-user-drag: none;
-    cursor: grab;
-    max-width: none;
-    transform-origin: center;
-    transition: transform .06s linear;
+    cursor: zoom-in;
 }
 
 #zoomImg.grabbing {
