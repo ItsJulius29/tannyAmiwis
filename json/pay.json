@@ -1,0 +1,640 @@
+[
+    {
+        "id": 1,
+        "type": "pago",
+        "name": "Coneja Girasol",
+        "category": "Animales",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/animales/ConejaGirasol1.jpg",
+            "assets/images/amigurumis/pago/animales/ConejaGirasol2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español",
+            "Queda de una medida aproximada de 20 cm.",
+            "Utilicé crochet 2.0 mm con hilo de hilo acrílico marca Silvigurumi de Silvia (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Básico",
+            "Incluye: Vestido y Diadema",
+            " Costo: S/. 25 - $9.5"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "pago",
+        "name": "Coneja Lyla",
+        "category": "Animales",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/animales/ConejaLyla.jpg",
+            "assets/images/amigurumis/pago/animales/ConejaLyla2.jpg",
+            "assets/images/amigurumis/pago/animales/ConejaLyla3.jpg",
+            "assets/images/amigurumis/pago/animales/ConejaLyla4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español.",
+            "Queda de una medida aproximada de 20cm de altura.",
+            "Utilicé crochet 2.50mm con hilo acrílico marca Silvigurumi de Silvia (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices.",
+            "Incluye: Patrón de Conejito con saco y corbata",
+            "Nivel de dificultad: Intermedio",
+            "Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "pago",
+        "name": "Familia de Gatitos",
+        "category": "Animales",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/animales/FamGatos1.jpg",
+            "assets/images/amigurumis/pago/animales/FamGatos2.jpg",
+            "assets/images/amigurumis/pago/animales/FamGatos3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español ",
+            "Queda de una medida aproximada de 14cm.",
+            "Utilicé crochet 2.00mm con hilo acrílico marca Silvigurumi de Silvia (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: Patrón de Gatito bebé",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 25 - $9.5"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "pago",
+        "name": "Hipo Violet",
+        "category": "Animales",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/animales/Hipo1.jpg",
+            "assets/images/amigurumis/pago/animales/Hipo2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español ",
+            "Queda de una medida aproximada de 24cm sentada y 14 cm de altura.",
+            "Utilicé crochet 2.50mm con hilo de algodón (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: Vestido y Diadema",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 25 - $9.5"
+        ]
+    },
+    {
+        "id": 5,
+        "type": "pago",
+        "name": "Vaquita",
+        "category": "Animales",
+        "price": 5,
+        "difficulty": 2,
+        "image": "assets/images/amigurumis/pago/animales/Vaquita.jpg",
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de     14 cm.",
+            "Utilicé crochet 2.0 mm con hilo de hilo acrílico marca Silvigurumi de Silvia (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Avanzada",
+            " Costo: S/. 25 - $9.5"
+        ]
+    },
+    {
+        "id": 6,
+        "type": "pago",
+        "name": "Karol G Fornite",
+        "category": "Artistas",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/KarolgFornite1.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite2.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite3.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español ",
+            "Queda de una medida aproximada de 16 cm.",
+            "Utilicé crochet 1.75mm con hilo de hilo algodón marca Noreli (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: Sombrero Colombiano.",
+            "Cuenta con Videos de apoyo",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 7,
+        "type": "pago",
+        "name": "Karol G Mañana sera mas bonito",
+        "category": "Artistas",
+        "price": 5,
+        "difficulty": 2,
+        "image": "assets/images/amigurumis/pago/artistas/KarolgMSB.jpg",
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla.",
+            "Idioma español ",
+            "Queda de una medida aproximada de 20 cm.",
+            "Utilicé crochet 1.75mm con hilo de hilo algodón marca Noreli (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices.",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 8,
+        "type": "pago",
+        "name": "Rosario Tijeras",
+        "category": "Artistas",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras1.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras2.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras3.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 16 cm.",
+            "Utilicé crochet 1.75mm con hilo de hilo algodón marca Noreli (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices.",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 9,
+        "type": "pago",
+        "name": "Selena",
+        "category": "Artistas",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/Selena.jpg",
+            "assets/images/amigurumis/pago/artistas/Selena2.jpg",
+            "assets/images/amigurumis/pago/artistas/Selena3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 16 cm.",
+            "Utilicé crochet 1.75mm con hilo de hilo algodón marca Noreli (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "💜Incluye: Sombrero Colombiano y videos de apoyo.💜Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 10,
+        "type": "pago",
+        "name": "Shakira",
+        "category": "Artistas",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/Shakira.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira2.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira3.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 22 cm.",
+            "Utilicé crochet 2.0mm con hilo Acrílico Silvigurumi de Silvia (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: patrón de la Lobita",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 11,
+        "type": "pago",
+        "name": "Arbol Navideño",
+        "category": "Navidad",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/navidad/Arbol1.jpg",
+            "assets/images/amigurumis/pago/navidad/Arbol2.jpg",
+            "assets/images/amigurumis/pago/navidad/Arbol3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 20 cm.",
+            "Utilicé crochet 2.50mm con hilo de hilo algodón marca Noreli a doble hebra (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: básico",
+            " Costo: S/. 15 - $6.5"
+        ]
+    },
+    {
+        "id": 12,
+        "type": "pago",
+        "name": "Duende",
+        "category": "Navidad",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/navidad/Duende1.jpg",
+            "assets/images/amigurumis/pago/navidad/Duende2.jpg",
+            "assets/images/amigurumis/pago/navidad/Duende3.jpg",
+            "assets/images/amigurumis/pago/navidad/Duende4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 15 cm y con el gorrito de 18CM",
+            "Utilicé crochet 1.75mm con hilo acrílico de Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: gorrito, lámpara y bolsita de regalitos.",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 13,
+        "type": "pago",
+        "name": "Mini Nacimiento",
+        "category": "Navidad",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/navidad/Naci1.jpg",
+            "assets/images/amigurumis/pago/navidad/Naci2.jpg",
+            "assets/images/amigurumis/pago/navidad/Naci3.jpg",
+            "assets/images/amigurumis/pago/navidad/Naci4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 8 cm .",
+            "Utilicé crochet 1.75 mm con hilo de hilo algodón marca Noreli a doble hebra (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "incluye: Carita de ángel y estrellita",
+            "Nivel de dificultad: básico",
+            " Costo: S/. 25 – $9"
+        ]
+    },
+    {
+        "id": 14,
+        "type": "pago",
+        "name": "Psicologia",
+        "category": "Profesiones",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/profesiones/Psicologa1.jpg",
+            "assets/images/amigurumis/pago/profesiones/Psicologa2.jpg",
+            "assets/images/amigurumis/pago/profesiones/Psicologo3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo.",
+            "Idioma español ",
+            "Queda de una medida aproximada de 15cm ",
+            "Utilicé crochet 1.75 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: Incluye patrón para realizar versión masculino, bata, mascarilla y una versión de cabello suelto para mujer.",
+            "Incluye: videos de apoyo",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 15,
+        "type": "pago",
+        "name": "Blanca nieves",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/Bnieves1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Bnieves2.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Bnieves3.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Bnieves4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: BÁSICO",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 16,
+        "type": "pago",
+        "name": "Mafalda",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/Mafalda1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Mafalda2.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Mafalda3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 35cm",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Cuenta con Videos de apoyo",
+            "Nivel de dificultad: básico",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 17,
+        "type": "pago",
+        "name": "Virgen de guadalupe",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "image": "assets/images/amigurumis/pago/rosasrev/guadalupe.jpg",
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices.",
+            "Nivel de dificultad: básico",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 18,
+        "type": "pago",
+        "name": "Santa Rosa",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa2.jpg",
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa3.jpg",
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa4.jpg",
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa5.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: básico",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 19,
+        "type": "pago",
+        "name": "Stich",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/Stich.jpg",
+            "assets/images/amigurumis/pago/rosasrev/StichAngela.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices.",
+            "Cuenta con Videos de apoyo",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 20,
+        "type": "pago",
+        "name": "Tinkerbell",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/Tinkerbell1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Tinkerbell2.jpg",
+            "assets/images/amigurumis/pago/rosasrev/Tinkerbell3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: BÁSICO",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 21,
+        "type": "pago",
+        "name": "Virgen Maria",
+        "category": "Reversibles",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/rosasrev/VirgenMaria1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/VirgenMaria2.jpg",
+            "assets/images/amigurumis/pago/rosasrev/VirgenMaria3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 35cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN y acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: básico",
+            "Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 22,
+        "type": "pago",
+        "name": "Cupido",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/Cupido1.jpg",
+            "assets/images/amigurumis/pago/tv/Cupido2.jpg",
+            "assets/images/amigurumis/pago/tv/Cupido3.jpg",
+            "assets/images/amigurumis/pago/tv/Cupido4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 13cm ",
+            "Utilicé crochet 1.75 mm con hilo acrílico Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: Guía para realizar la flecha y arco.",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 23,
+        "type": "pago",
+        "name": "Garfiled Bebé",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/GarfieldBby1.jpg",
+            "assets/images/amigurumis/pago/tv/GarfieldBby2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 14CM",
+            "Utilicé crochet 2.0 mm con hilo de algodón Noreli (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedio ",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 24,
+        "type": "pago",
+        "name": "Gato con Botas",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/GatoBotas1.jpg",
+            "assets/images/amigurumis/pago/tv/GatoBotas2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 20cm la gatita Kitty y el gato con botas de 23 cm aprox.",
+            "Utilicé crochet 1.8 mm con hilo de algodón Noreli (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 50 - $22"
+        ]
+    },
+    {
+        "id": 25,
+        "type": "pago",
+        "name": "Harry Potter Version 1",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/Harry1.jpg",
+            "assets/images/amigurumis/pago/tv/Harry2.jpg",
+            "assets/images/amigurumis/pago/tv/Harry3.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 13cm y con el gorro de 18cm",
+            "Utilicé crochet 1.75 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye gorro seleccionador, la nimbus 2000 y  Golden Snitch.",
+            "Cuenta con Videos de apoyo",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 26,
+        "type": "pago",
+        "name": "Harry Potter Version 2",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/HarryP1.jpg",
+            "assets/images/amigurumis/pago/tv/HarryP2.jpg",
+            "assets/images/amigurumis/pago/tv/HarryP3.jpg",
+            "assets/images/amigurumis/pago/tv/HarryP4.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 13cm y con el gorro de 18cm",
+            "Utilicé crochet 1.75 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye gorro seleccionador, la nimbus 2000 y  Golden Snitch.",
+            "Cuenta con Videos de apoyo",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 27,
+        "type": "pago",
+        "name": "Vicky pequeña",
+        "category": "Tv",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/tv/Vicky1.jpg",
+            "assets/images/amigurumis/pago/tv/Vicky2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerla. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 20CM",
+            "Utilicé crochet 2.0 mm con hilo de algodón Noreli (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 30 - $12"
+        ]
+    },
+    {
+        "id": 28,
+        "type": "pago",
+        "name": "Virgen de guadalupe Versión 1",
+        "category": "Virgenes",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/virgenes/guada1.jpg",
+            "assets/images/amigurumis/pago/virgenes/guada2.jpg",
+            "assets/images/amigurumis/pago/virgenes/guada3.jpg",
+            "assets/images/amigurumis/pago/virgenes/guada4.jpg",
+            "assets/images/amigurumis/pago/virgenes/guada5.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 23cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedia",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 29,
+        "type": "pago",
+        "name": "Virgen de guadalupe Versión 2",
+        "category": "Virgenes",
+        "price": 5,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/virgenes/lupe1.jpg",
+            "assets/images/amigurumis/pago/virgenes/lupe2.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 23cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedia",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 30,
+        "type": "pago",
+        "name": "Virgen del Carmen",
+        "category": "Virgenes",
+        "price": 5,
+        "difficulty": 2,
+        "image": "assets/images/amigurumis/pago/virgenes/carmen1.jpg",
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 23cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedia",
+            " Costo: S/. 35 - $13"
+        ]
+    }
+]

@@ -1,9 +1,9 @@
 let allProducts = [];
-let currentType = "amigurumis";          // "amigurumis" | "patrones" | "free"
+let currentType = "amigurumis";          // "amigurumis" | "pago" | "free"
 let currentCategory = "Todos";
 let currentDifficulty = "all";
 let currentPage = 1;
-let currentSource = "products.json";     // "products.json" | "patterns.json" | "free.json"
+let currentSource = "products.json";     // "products.json" | "pay.json" | "free.json"
 
 // DOM
 const container = document.getElementById("products-container");
@@ -26,27 +26,27 @@ const slugify = s => s.toLowerCase()
 
 const BANNERS = {
   amigurumis: "assets/images/amigurumis/18.jpg",
-  patrones:   "assets/images/amigurumis/19.jpg",
-  free:       "assets/images/amigurumis/18.jpg"
+  pago: "assets/images/amigurumis/19.jpg",
+  free: "assets/images/amigurumis/18.jpg"
 };
 
-// ===== Carga JSON
+// ===== Carga JSON (sin autollenado de descripción)
 function loadProductsFromJSON(source) {
   fetch(`json/${source}`)
-    .then((res) => res.json())
-    .then((data) => {
-      allProducts = data;
+    .then(res => res.json())
+    .then(data => {
+      allProducts = data;        // <-- no tocar description
       currentPage = 1;
       renderFilteredProducts();
     })
-    .catch((err) => console.error("Error cargando JSON:", err));
+    .catch(err => console.error("Error cargando JSON:", err));
 }
 
 // ===== Render con filtros + paginación
 function renderFilteredProducts() {
   container.innerHTML = "";
 
-  const mustMatchType = (currentSource === "products.json" || currentSource === "patterns.json");
+  const mustMatchType = (currentSource === "products.json" || currentSource === "pay.json");
 
   const filtered = allProducts.filter((p) => {
     const matchType = mustMatchType ? (p.type === currentType) : true;
@@ -81,7 +81,6 @@ function renderFilteredProducts() {
       ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
       : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(product)}`;
 
-    // JSON solo guarda USD en "price"
     const usd = firstNumber(product.price ?? product.price_usd ?? product.usd);
     const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : 'Gratis';
 
@@ -97,6 +96,7 @@ function renderFilteredProducts() {
         </div>
         <a class="stretched-link" href="${href}" aria-label="Ver ${product.name}"></a>
       </div>`;
+
     container.appendChild(card);
   });
 
@@ -153,7 +153,7 @@ function setupTabs() {
 
       const usingDifficulty = (currentSource !== "free.json");
       allDifficultyCheckbox.disabled = !usingDifficulty;
-      allDifficultyCheckbox.checked  = usingDifficulty;
+      allDifficultyCheckbox.checked = usingDifficulty;
       difficultySlider.disabled = !usingDifficulty || allDifficultyCheckbox.checked;
 
       currentDifficulty = "all";

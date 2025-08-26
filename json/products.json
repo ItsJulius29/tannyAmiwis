@@ -2,135 +2,14 @@
     {
         "id": 1,
         "type": "amigurumis",
-        "name": "Perrito Cute",
-        "category": "Clásicos",
+        "name": "Coneja Girasol",
+        "category": "Animales",
         "price": 15,
         "difficulty": 1,
-        "image": "assets/images/amigurumis/1.jpg",
-        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
-    },
-    {
-        "id": 2,
-        "type": "amigurumis",
-        "name": "Conejita Rosa",
-        "category": "Fantasía",
-        "price": 18,
-        "difficulty": 2,
-        "image": "assets/images/amigurumis/2.jpg",
-        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
-    },
-    {
-        "id": 3,
-        "type": "amigurumis",
-        "name": "Gato Elegante",
-        "category": "Artistas",
-        "price": 16,
-        "difficulty": 3,
-        "image": "assets/images/amigurumis/3.jpg",
-        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
-    },
-    {
-        "id": 4,
-        "type": "amigurumis",
-        "name": "Perrito Cute",
-        "category": "Clásicos",
-        "price": 15,
-        "difficulty": 1,
-        "image": "assets/images/amigurumis/4.jpg",
-        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
-    },
-    {
-        "id": 5,
-        "type": "amigurumis",
-        "name": "Conejita Rosa",
-        "category": "Fantasía",
-        "price": 18,
-        "difficulty": 2,
-        "image": "assets/images/amigurumis/5.jpg",
-        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
-    },
-    {
-        "id": 6,
-        "type": "amigurumis",
-        "name": "Gato Elegante",
-        "category": "Artistas",
-        "price": 16,
-        "difficulty": 3,
-        "image": "assets/images/amigurumis/6.jpg",
-        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
-    },
-    {
-        "id": 7,
-        "type": "amigurumis",
-        "name": "Conejita Rosa",
-        "category": "Fantasía",
-        "price": 18,
-        "difficulty": 2,
-        "image": "assets/images/amigurumis/16.jpg",
-        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
-    },
-    {
-        "id": 8,
-        "type": "amigurumis",
-        "name": "Gato Elegante",
-        "category": "Artistas",
-        "price": 16,
-        "difficulty": 3,
-        "image": "assets/images/amigurumis/17.jpg",
-        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
-    },
-    {
-        "id": 9,
-        "type": "amigurumis",
-        "name": "Perrito Cute",
-        "category": "Clásicos",
-        "price": 15,
-        "difficulty": 1,
-        "image": "assets/images/amigurumis/4.jpg",
-        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
-    },
-    {
-        "id": 10,
-        "type": "amigurumis",
-        "name": "Conejita Rosa",
-        "category": "Fantasía",
-        "price": 18,
-        "difficulty": 2,
-        "image": "assets/images/amigurumis/5.jpg",
-        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
-    },
-    {
-        "id": 11,
-        "type": "amigurumis",
-        "name": "Gato Elegante",
-        "category": "Artistas",
-        "price": 16,
-        "difficulty": 3,
-        "image": "assets/images/amigurumis/6.jpg",
-        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
-    },
-    {
-        "id": 12,
-        "type": "amigurumis",
-        "name": "Conejita Rosa",
-        "category": "Fantasía",
-        "price": 18,
-        "difficulty": 2,
-        "image": "assets/images/amigurumis/16.jpg",
-        "description": "Amigurumi de conejita rosa con moño adorable, hecho a crochet."
-    },
-    {
-        "id": 13,
-        "type": "amigurumis",
-        "name": "nUMERO 13 SI FUNCIONA",
-        "category": "Artistas",
-        "price": 16,
-        "difficulty": 3,
         "images": [
-            "assets/images/amigurumis/17.jpg",
-            "assets/images/amigurumis/16.jpg",
-            "assets/images/amigurumis/15.jpg"
+            "assets/images/amigurumis/pago/animales/Coneja Girasol  1.jpg",
+            "assets/images/amigurumis/pago/animales/Coneja Girasol 2.jpg"
         ],
-        "description": "Amigurumi de gato elegante con sombrero, tierno y detallado."
+        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
     }
 ]

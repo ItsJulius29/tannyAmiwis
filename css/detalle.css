@@ -237,6 +237,35 @@ footer a:hover {
     border-color: #a64ad7
 }
 
+.heart-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.heart-list li {
+    position: relative;
+    padding-left: 26px;
+    margin: 8px 0;
+    color: #222
+}
+
+.heart-list li::before {
+    content: "\2665";
+    /* ♥ */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #a64ad7;
+    font-weight: 700
+}
+
+.detail-desc h5 {
+    color: #4b007d;
+    font-weight: 800
+}
+
+
 /* Lista de precios con banderas */
 .price-list .price-row {
     display: flex;
@@ -291,7 +320,8 @@ footer a:hover {
 .divider {
     margin-top: 100px;
     margin-bottom: 100px;
-    border-top: 20px solid var(--lila);;
+    border-top: 20px solid var(--lila);
+    ;
     opacity: 1;
     border-radius: 50px;
 }

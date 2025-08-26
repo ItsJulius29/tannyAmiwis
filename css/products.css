@@ -433,6 +433,43 @@ section.text-center+.container.mb-5 [class*=" col-"] {
     margin: 0;
 }
 
+
+/* CTA contacto en sidebar */
+.contact-cta {
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+}
+
+.contact-cta-link {
+    display: block;
+    text-decoration: none;
+    color: #b57cc4 !important;
+}
+
+.contact-cta p {
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 8px;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: #d493f8;
+    color: #fff;
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+.contact-cta:hover .btn-cta {
+    filter: brightness(1.05);
+}
+
+
 /* ===== BOTONES FLOTANTES ===== */
 .floating-buttons {
     position: fixed;

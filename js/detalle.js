@@ -2,9 +2,24 @@
 const $ = s => document.querySelector(s);
 const qs = new URLSearchParams(location.search);
 
+const escapeHtml = s => String(s).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+
+// Convierte description a bullets si existe; si no, devuelve null
+function getBullets(p) {
+    if (Array.isArray(p.description)) {
+        return p.description.map(t => String(t).trim()).filter(Boolean);
+    }
+    if (typeof p.description === 'string' && p.description.trim()) {
+        return p.description.split(/[\r\n;]+/).map(t => t.trim()).filter(Boolean);
+    }
+    return null; // sin fallback
+}
+
 const rawSrc = qs.get('src') || 'products.json';
 // acepta rutas con o sin carpeta "json/"
-const srcParam = /\/|\\.json$/i.test(rawSrc) ? rawSrc : `json/${rawSrc}`;
+// si ya trae 'http(s)://' o una '/', úsalo tal cual; si no, antepone 'json/'
+const srcParam =
+    (/^https?:\/\//i.test(rawSrc) || rawSrc.includes('/')) ? rawSrc : `json/${rawSrc}`;
 const idParam = qs.get('id');
 const idxParam = qs.get('idx');
 const slugParam = (qs.get('slug') || '').toLowerCase();
@@ -75,10 +90,10 @@ function showStatus(msg) {
 function renderDetail(p, all, fx) {
     // migas
     const typeTitle = capitalize(p.type || '');
-    $('#crumbTrail').textContent = `Productos / ${typeTitle} / ${p.category || '—'}`;
+    $('#crumbTrail') && ($('#crumbTrail').textContent = `Productos / ${typeTitle} / ${p.category || '—'}`);
 
     // título
-    $('#title').textContent = p.name || '';
+    $('#title') && ($('#title').textContent = p.name || '');
 
     // precios: JSON trae solo "price" en USD
     let usd = firstNumber(p.price ?? p.price_usd ?? p.usd);
@@ -86,67 +101,90 @@ function renderDetail(p, all, fx) {
 
     const isFree = (usd === 0) || (usd == null);
     const priceBox = $('#price');
-    priceBox.innerHTML = '';
-
-    if (isFree) {
-        priceBox.innerHTML = `<span class="price-free">Gratis</span>`;
-    } else {
-        priceBox.appendChild(priceRow('🇺🇸', `$${usd.toFixed(2)}`));
-        if (pen != null) priceBox.appendChild(priceRow('🇵🇪', `S/${pen.toFixed(2)}`));
+    if (priceBox) {
+        priceBox.innerHTML = '';
+        if (isFree) {
+            priceBox.innerHTML = `<span class="price-free">Gratis</span>`;
+        } else {
+            priceBox.appendChild(priceRow('🇺🇸', `$${usd.toFixed(2)}`));
+            if (pen != null) priceBox.appendChild(priceRow('🇵🇪', `S/${pen.toFixed(2)}`));
+        }
     }
 
     // tipo y CTA
-    const isPatternType = String(p.type || '').toLowerCase() === 'patrones';
+    const isPatternType = String(p.type || '').toLowerCase() === 'pago';
     const hasPattern = !!p.hasPattern || isPatternType;
-    $('#patternPill').hidden = !hasPattern;
+    const pill = $('#patternPill');
+    if (pill) pill.hidden = !hasPattern;
 
     const cta = $('#primaryBtn');
-    cta.textContent = isPatternType ? 'Comprar patrón' : 'Solicitar amigurumi';
-    cta.href = p.cta || '#';
+    if (cta) {
+        cta.textContent = isPatternType ? 'Comprar patrón' : 'Solicitar amigurumi';
+        cta.href = p.cta || '#';
+    }
 
     // imágenes
     const imgs = Array.isArray(p.images) && p.images.length ? p.images : [p.image].filter(Boolean);
     const main = $('#mainImg');
-    main.src = imgs[0] || '';
-    main.alt = p.name || '';
+    if (main) {
+        main.src = imgs[0] || '';
+        main.alt = p.name || '';
+    }
 
     const thumbs = $('#thumbs');
-    thumbs.innerHTML = '';
-    imgs.forEach((src, i) => {
-        const im = document.createElement('img');
-        im.src = src; im.alt = p.name || '';
-        if (i === 0) im.classList.add('active');
-        im.addEventListener('click', () => {
-            main.src = src;
-            thumbs.querySelectorAll('img').forEach(x => x.classList.remove('active'));
-            im.classList.add('active');
+    if (thumbs) {
+        thumbs.innerHTML = '';
+        imgs.forEach((src, i) => {
+            const im = document.createElement('img');
+            im.src = src; im.alt = p.name || '';
+            if (i === 0) im.classList.add('active');
+            im.addEventListener('click', () => {
+                if (main) main.src = src;
+                thumbs.querySelectorAll('img').forEach(x => x.classList.remove('active'));
+                im.classList.add('active');
+            });
+            thumbs.appendChild(im);
         });
-        thumbs.appendChild(im);
-    });
+    }
 
     // volver
-    $('#backBtn').addEventListener('click', (e) => {
-        e.preventDefault();
-        history.length ? history.back() : location.href = 'products.html';
-    });
+    const backBtn = $('#backBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            history.length ? history.back() : location.href = 'products.html';
+        });
+    }
 
-    // relacionados: calcula PEN desde USD
+    // descripción: SIN autollenado
+    const bullets = getBullets(p);
+    const dl = $('#descList');
+    const wrap = $('#descWrap') || dl?.parentElement;
+    if (!bullets || bullets.length === 0) {
+        if (wrap) wrap.hidden = true;
+    } else {
+        if (dl) dl.innerHTML = bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+        if (wrap) wrap.hidden = false;
+    }
+
+    // relacionados
     const related = all
         .filter(x => x !== p && x.type === p.type && x.category === p.category)
         .slice(0, 4);
 
     const relBox = $('#related');
-    if (!related.length) {
-        relBox.innerHTML = '<p class="text-muted mb-0">No hay relacionados.</p>';
-    } else {
-        relBox.innerHTML = related.map(r => {
-            const cover = (Array.isArray(r.images) && r.images[0]) || r.image || '';
-            const link = r.id != null
-                ? `detalle.html?src=${encodeURIComponent(rawSrc)}&id=${encodeURIComponent(r.id)}`
-                : `detalle.html?src=${encodeURIComponent(rawSrc)}&idx=${all.indexOf(r)}`;
-            const usdR = firstNumber(r.price ?? r.price_usd ?? r.usd);
-            const penR = (usdR != null && usdR > 0) ? +(usdR * fx).toFixed(2) : null;
-            return `
+    if (relBox) {
+        if (!related.length) {
+            relBox.innerHTML = '<p class="text-muted mb-0">No hay relacionados.</p>';
+        } else {
+            relBox.innerHTML = related.map(r => {
+                const cover = (Array.isArray(r.images) && r.images[0]) || r.image || '';
+                const link = r.id != null
+                    ? `detalle.html?src=${encodeURIComponent(rawSrc)}&id=${encodeURIComponent(r.id)}`
+                    : `detalle.html?src=${encodeURIComponent(rawSrc)}&idx=${all.indexOf(r)}`;
+                const usdR = firstNumber(r.price ?? r.price_usd ?? r.usd);
+                const penR = (usdR != null && usdR > 0) ? +(usdR * fx).toFixed(2) : null;
+                return `
         <div class="col-6 col-md-4 col-lg-3">
           <a class="text-decoration-none" href="${link}">
             <div class="card card-related">
@@ -159,13 +197,15 @@ function renderDetail(p, all, fx) {
             </div>
           </a>
         </div>`;
-        }).join('');
+            }).join('');
+        }
     }
 
     // zoom modal
-    initZoomWith(main);
+    if (main) initZoomWith(main);
 
-    $('#detail-root').hidden = false;
+    const root = $('#detail-root');
+    if (root) root.hidden = false;
 }
 
 function priceRow(flag, text) {

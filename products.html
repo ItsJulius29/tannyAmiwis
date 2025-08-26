@@ -95,11 +95,10 @@
             <img id="categoryBanner" src="assets/images/amigurumis/18.jpg" class="category-banner" alt="Banner">
 
             <div class="category-tabs d-flex justify-content-center gap-5">
-                <button class="category-tab active-tab" data-tab="amigurumis" data-source="products.json">Amigurumis
-                    Terminados</button>
-                <button class="category-tab" data-tab="patrones" data-source="patterns.json">Patrones</button>
+                <button class="category-tab active-tab" data-tab="amigurumis" data-source="products.json">Productos a pedidos</button>
+                <button class="category-tab" data-tab="pago" data-source="pay.json">Patrones de Pago</button>
 
-                <button class="category-tab" data-tab="gratuitos" data-source="free.json">Gratuitos</button>
+                <button class="category-tab" data-tab="gratuitos" data-source="free.json">Patrones Gratuitos</button>
 
             </div>
         </div>
@@ -161,13 +160,23 @@
                     </div>
                     <input type="range" class="form-range" min="1" max="3" id="difficultyRange" disabled>
                     <div class="d-flex justify-content-between small">
-                        <span>Fácil</span><span>Intermedio</span><span>Difícil</span>
+                        <span>Básico</span><span>Intermedio</span><span>Avanzado</span>
                     </div>
-
                 </div>
+
+                <!-- CTA contacto en sidebar -->
+                    <div class="contact-cta mt-3">
+                        <a href="contact.html" class="contact-cta-link">
+                            <p class="mb-2">
+                                Si no eres tejedor/a y quieres una cotización,<br>
+                                comunícate con nosotros.
+                            </p>
+                            <span class="btn-cta">Ir a Contáctanos</span>
+                        </a>
+                    </div>
             </div>
 
-            <!-- Productos / Patrones -->
+            <!-- Productos / Pago -->
             <div class="col-md-9" id="products-top">
                 <div class="row row-cols-2 row-cols-lg-3 g-4" id="products-container">
 
