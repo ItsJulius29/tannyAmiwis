@@ -20,9 +20,6 @@ const catCurrent = document.getElementById("catCurrent");
 const mm = window.matchMedia("(max-width: 991.98px)");
 const getPageSize = () => (mm.matches ? 8 : 9);
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
-const slugify = s => s.toLowerCase()
-  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-  .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 const BANNERS = {
   amigurumis: "assets/images/amigurumis/18.jpg",
@@ -30,17 +27,72 @@ const BANNERS = {
   free: "assets/images/amigurumis/18.jpg"
 };
 
+// Cache JSON en memoria + sessionStorage
+const JSON_CACHE = {};
+const SESSION_KEY = src => `prod_json_${src}`;
+
+// Pixel transparente para placeholder
+const BLANK_IMG = 'data:image/gif;base64,R0lGLAAQABAAAAACwAAAAAAQABAAACAkQBADs=';
+
+// Lazy loader de imágenes
+const imgObserver = new IntersectionObserver((entries, obs) => {
+  for (const e of entries) {
+    if (!e.isIntersecting) continue;
+    const img = e.target;
+    const src = img.dataset.src;
+    if (src) {
+      img.src = src;
+      img.removeAttribute('data-src');
+      img.addEventListener('load', () => img.classList.remove('lazy'), { once: true });
+    }
+    obs.unobserve(img);
+  }
+}, { rootMargin: '300px 0px', threshold: 0.01 });
+
+
 // ===== Carga JSON (sin autollenado de descripción)
 function loadProductsFromJSON(source) {
-  fetch(`json/${source}`)
+  const key = SESSION_KEY(source);
+
+  // 1) memoria
+  if (JSON_CACHE[source]) {
+    allProducts = JSON_CACHE[source];
+    currentPage = 1;
+    renderFilteredProducts();
+    return;
+  }
+
+  // 2) sessionStorage
+  try {
+    const cached = sessionStorage.getItem(key);
+    if (cached) {
+      JSON_CACHE[source] = JSON.parse(cached);
+      allProducts = JSON_CACHE[source];
+      currentPage = 1;
+      renderFilteredProducts();
+      // refresco en idle para no bloquear
+      (window.requestIdleCallback || setTimeout)(() => fetchAndStore(source), 0);
+      return;
+    }
+  } catch { }
+
+  // 3) red
+  fetchAndStore(source);
+}
+
+function fetchAndStore(source) {
+  fetch(`json/${source}`, { cache: 'force-cache' })
     .then(res => res.json())
     .then(data => {
-      allProducts = data;        // <-- no tocar description
+      JSON_CACHE[source] = data;
+      try { sessionStorage.setItem(SESSION_KEY(source), JSON.stringify(data)); } catch { }
+      allProducts = data;
       currentPage = 1;
       renderFilteredProducts();
     })
     .catch(err => console.error("Error cargando JSON:", err));
 }
+
 
 // ===== Render con filtros + paginación
 function renderFilteredProducts() {
@@ -72,10 +124,8 @@ function renderFilteredProducts() {
   const start = (currentPage - 1) * pageSize;
   const slice = filtered.slice(start, start + pageSize);
 
-  slice.forEach((product) => {
-    const cover = Array.isArray(product.images) && product.images.length
-      ? product.images[0]
-      : product.image;
+  slice.forEach((product, i) => {
+    const cover = Array.isArray(product.images) && product.images.length ? product.images[0] : product.image;
 
     const href = product.id != null
       ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
@@ -84,11 +134,16 @@ function renderFilteredProducts() {
     const usd = firstNumber(product.price ?? product.price_usd ?? product.usd);
     const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : 'Gratis';
 
-    const card = document.createElement("div");
-    card.className = "col product-item fade-in";
-    card.innerHTML = `
+    const priority = (currentPage === 1 && i < 3) ? 'high' : 'low'; // prioriza arriba del fold
+
+    const col = document.createElement("div");
+    col.className = "col product-item fade-in";
+    col.innerHTML = `
       <div class="card h-100 position-relative">
-        <img src="${cover}" class="card-img-top" alt="${product.name}">
+        <img src="${BLANK_IMG}" data-src="${cover || ''}"
+             class="card-img-top lazy"
+             alt="${product.name || ''}"
+             loading="lazy" decoding="async" fetchpriority="${priority}">
         <div class="card-body text-center">
           <p class="card-text small text-muted">${product.category ?? ""}</p>
           <h5 class="card-title">${product.name}</h5>
@@ -96,12 +151,15 @@ function renderFilteredProducts() {
         </div>
         <a class="stretched-link" href="${href}" aria-label="Ver ${product.name}"></a>
       </div>`;
+    container.appendChild(col);
 
-    container.appendChild(card);
+    const img = col.querySelector('img');
+    if (img) imgObserver.observe(img);
   });
 
   renderPagination(totalPages);
 }
+
 
 function renderPagination(totalPages) {
   if (!paginationUl) return;
@@ -111,7 +169,6 @@ function renderPagination(totalPages) {
     paginationUl.innerHTML = "";
     return;
   }
-
   if (paginationNav) paginationNav.style.display = "";
 
   paginationUl.innerHTML = "";
@@ -208,7 +265,7 @@ function setupDifficultyFilter() {
   });
 }
 
-// ===== Cambios de viewport
+// ===== Viewport change
 mm.addEventListener("change", () => {
   currentPage = 1;
   renderFilteredProducts();

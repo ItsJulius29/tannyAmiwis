@@ -2,9 +2,11 @@
 const $ = s => document.querySelector(s);
 const qs = new URLSearchParams(location.search);
 
-const escapeHtml = s => String(s).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+const escapeHtml = s => String(s).replace(/[&<>"']/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[m]));
 
-// Convierte description a bullets si existe; si no, devuelve null
+// Convierte description a bullets si existe; si no, devuelve null (SIN fallback)
 function getBullets(p) {
     if (Array.isArray(p.description)) {
         return p.description.map(t => String(t).trim()).filter(Boolean);
@@ -12,14 +14,12 @@ function getBullets(p) {
     if (typeof p.description === 'string' && p.description.trim()) {
         return p.description.split(/[\r\n;]+/).map(t => t.trim()).filter(Boolean);
     }
-    return null; // sin fallback
+    return null;
 }
 
 const rawSrc = qs.get('src') || 'products.json';
 // acepta rutas con o sin carpeta "json/"
-// si ya trae 'http(s)://' o una '/', úsalo tal cual; si no, antepone 'json/'
-const srcParam =
-    (/^https?:\/\//i.test(rawSrc) || rawSrc.includes('/')) ? rawSrc : `json/${rawSrc}`;
+const srcParam = (/^https?:\/\//i.test(rawSrc) || rawSrc.includes('/')) ? rawSrc : `json/${rawSrc}`;
 const idParam = qs.get('id');
 const idxParam = qs.get('idx');
 const slugParam = (qs.get('slug') || '').toLowerCase();
@@ -28,8 +28,6 @@ const slugify = s => String(s || '').toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-const DIFF = { 1: "Fácil", 2: "Intermedio", 3: "Difícil" };
-const diffLabel = d => DIFF[d] || "—";
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
 
 // --- FX USD→PEN con caché 12h ---
@@ -43,10 +41,9 @@ async function getUsdPenRate() {
         const r = await fetch(url, { cache: 'no-store' });
         if (!r.ok) throw 0;
         const j = await r.json();
-        const v =
-            pick === 'fawaz' ? Number(j.usd?.pen) :
-                pick === 'host' ? Number(j.rates?.PEN) :
-                    pick === 'erapi' ? Number(j.rates?.PEN) : NaN;
+        const v = pick === 'fawaz' ? Number(j.usd?.pen)
+            : pick === 'host' ? Number(j.rates?.PEN)
+                : pick === 'erapi' ? Number(j.rates?.PEN) : NaN;
         if (!Number.isFinite(v)) throw 0;
         localStorage.setItem('fx_usd_pen', JSON.stringify({ v, t: Date.now() }));
         return v;
@@ -54,7 +51,7 @@ async function getUsdPenRate() {
     try { return await tryFetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json', 'fawaz'); } catch { }
     try { return await tryFetch('https://api.exchangerate.host/latest?base=USD&symbols=PEN', 'host'); } catch { }
     try { return await tryFetch('https://open.er-api.com/v6/latest/USD', 'erapi'); } catch { }
-    return 3.70; // fallback
+    return 3.70;
 }
 
 // -------- carga y búsqueda --------
@@ -88,22 +85,20 @@ function showStatus(msg) {
 }
 
 function renderDetail(p, all, fx) {
-    // migas
-    const typeTitle = capitalize(p.type || '');
-    $('#crumbTrail') && ($('#crumbTrail').textContent = `Productos / ${typeTitle} / ${p.category || '—'}`);
+    // migas + título
+    const crumb = $('#crumbTrail');
+    if (crumb) crumb.textContent = `Productos / ${p.type || ''} / ${p.category || '—'}`;
+    const title = $('#title');
+    if (title) title.textContent = p.name || '';
 
-    // título
-    $('#title') && ($('#title').textContent = p.name || '');
-
-    // precios: JSON trae solo "price" en USD
+    // precios (price en USD)
     let usd = firstNumber(p.price ?? p.price_usd ?? p.usd);
     let pen = (usd != null) ? +(usd * fx).toFixed(2) : null;
 
-    const isFree = (usd === 0) || (usd == null);
     const priceBox = $('#price');
     if (priceBox) {
         priceBox.innerHTML = '';
-        if (isFree) {
+        if (usd == null || usd === 0) {
             priceBox.innerHTML = `<span class="price-free">Gratis</span>`;
         } else {
             priceBox.appendChild(priceRow('🇺🇸', `$${usd.toFixed(2)}`));
@@ -111,24 +106,23 @@ function renderDetail(p, all, fx) {
         }
     }
 
-    // tipo y CTA
-    const isPatternType = String(p.type || '').toLowerCase() === 'pago';
-    const hasPattern = !!p.hasPattern || isPatternType;
+    // pill patrón (mostrar en pago y gratuitos/free)
+    const t = String(p.type || '').toLowerCase();
+    const isPatternType = t === 'pago' || t === 'gratuitos' || t === 'free';
+    const hasPattern = Boolean(p.hasPattern) || isPatternType;
+
     const pill = $('#patternPill');
     if (pill) pill.hidden = !hasPattern;
 
-    const cta = $('#primaryBtn');
-    if (cta) {
-        cta.textContent = isPatternType ? 'Comprar patrón' : 'Solicitar amigurumi';
-        cta.href = p.cta || '#';
-    }
 
     // imágenes
     const imgs = Array.isArray(p.images) && p.images.length ? p.images : [p.image].filter(Boolean);
     const main = $('#mainImg');
     if (main) {
         main.src = imgs[0] || '';
-        main.alt = p.name || '';
+        main.alt = p.name || 'Foto principal';
+        main.loading = 'eager';
+        main.decoding = 'async';
     }
 
     const thumbs = $('#thumbs');
@@ -136,7 +130,10 @@ function renderDetail(p, all, fx) {
         thumbs.innerHTML = '';
         imgs.forEach((src, i) => {
             const im = document.createElement('img');
-            im.src = src; im.alt = p.name || '';
+            im.src = src;
+            im.alt = p.name || '';
+            im.loading = 'lazy';
+            im.decoding = 'async';
             if (i === 0) im.classList.add('active');
             im.addEventListener('click', () => {
                 if (main) main.src = src;
@@ -156,10 +153,10 @@ function renderDetail(p, all, fx) {
         });
     }
 
-    // descripción: SIN autollenado
+    // descripción (SIN fallback)
     const bullets = getBullets(p);
     const dl = $('#descList');
-    const wrap = $('#descWrap') || dl?.parentElement;
+    const wrap = $('#descWrap');
     if (!bullets || bullets.length === 0) {
         if (wrap) wrap.hidden = true;
     } else {
@@ -168,10 +165,7 @@ function renderDetail(p, all, fx) {
     }
 
     // relacionados
-    const related = all
-        .filter(x => x !== p && x.type === p.type && x.category === p.category)
-        .slice(0, 4);
-
+    const related = all.filter(x => x !== p && x.type === p.type && x.category === p.category).slice(0, 4);
     const relBox = $('#related');
     if (relBox) {
         if (!related.length) {
@@ -185,18 +179,20 @@ function renderDetail(p, all, fx) {
                 const usdR = firstNumber(r.price ?? r.price_usd ?? r.usd);
                 const penR = (usdR != null && usdR > 0) ? +(usdR * fx).toFixed(2) : null;
                 return `
-        <div class="col-6 col-md-4 col-lg-3">
-          <a class="text-decoration-none" href="${link}">
-            <div class="card card-related">
-              <img src="${cover}" alt="${r.name || ''}">
-              <div class="p-2">
-                <div class="small text-muted">${r.category || ''}</div>
-                <div class="title">${r.name || ''}</div>
-                ${penR != null ? `<div class="mt-2"><button class="btn-more">Ver más</button> <span class="ms-2 small">S/${penR.toFixed(2)}</span></div>` : `<div class="mt-2"><button class="btn-more">Ver más</button></div>`}
+          <div class="col-6 col-md-4 col-lg-3">
+            <a class="text-decoration-none" href="${link}">
+              <div class="card card-related">
+                <img src="${cover}" alt="${r.name || ''}" loading="lazy" decoding="async">
+                <div class="p-2">
+                  <div class="small text-muted">${r.category || ''}</div>
+                  <div class="title">${r.name || ''}</div>
+                  ${penR != null
+                        ? `<div class="mt-2"><button class="btn-more">Ver más</button> <span class="ms-2 small">S/${penR.toFixed(2)}</span></div>`
+                        : `<div class="mt-2"><button class="btn-more">Ver más</button></div>`}
+                </div>
               </div>
-            </div>
-          </a>
-        </div>`;
+            </a>
+          </div>`;
             }).join('');
         }
     }
@@ -216,8 +212,6 @@ function priceRow(flag, text) {
     row.appendChild(f); row.appendChild(t);
     return row;
 }
-
-function capitalize(s) { return s ? s[0].toUpperCase() + s.slice(1) : s; }
 
 // --- Zoom modal ---
 const zoomModalEl = document.querySelector('#zoomModal');

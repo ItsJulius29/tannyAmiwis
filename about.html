@@ -1,129 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--bootstrap-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre Mí</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <!-- Fonts (mismas que index) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Croissant+One&display=swap"
+        rel="stylesheet">
 
-    <link href="css/about.css" rel="stylesheet">
-    <title>Sobre Mí</title>
+    <!-- CSS compartido + específico -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <!-- HEADER / NAV -->
-    <nav class="navbar navbar-expand-lg navbar-white bg-white py-3">
+    <!-- HEADER / NAV (idéntico a index) -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <!-- Botón Hamburguesa (solo móvil) -->
             <button class="navbar-toggler border-0 d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menú izquierdo -->
             <div class="d-none d-lg-flex">
                 <ul class="navbar-nav flex-row gap-4">
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">SOBRE MÍ</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="products.html">PRODUCTOS</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="products.html">Productos</a></li>
                 </ul>
             </div>
 
-            <!-- Logo central -->
-            <a class="navbar-brand mx-4" href="#">
-                <img class="navbar-mariposa" src="assets/logos/LOGO A COLOR.svg" alt="Logo" height="100">
+            <a class="navbar-brand mx-4" href="index.html" aria-label="TannyAmiwis">
+                <img class="navbar-mariposa" src="assets/logos/LOGO A COLOR.svg" alt="Logo TannyAmiwis" height="100"
+                    loading="eager">
             </a>
 
-            <!-- Redes y botón derecho -->
             <div class="d-none d-lg-flex align-items-center gap-3">
-                <a href="https://www.youtube.com/@tannysamiwis" target="_blank"><img
-                        src="assets/logos/Youtube color.svg" height="30"></a>
-                <a href="http://tiktok.com/@tannysamiwis" target="_blank"><img src="assets/logos/Tiktok color.svg"
-                        height="30"></a>
-                <a href="https://www.instagram.com/tannysamiwis/" target="_blank"><img
-                        src="assets/logos/Instagram color.svg" height="30"></a>
-                <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank"><img
-                        src="assets/logos/Facebook color.svg" height="30"></a>
-
+                <a href="https://www.youtube.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                        src="assets/logos/Youtube color.svg" height="30" alt="YouTube" loading="lazy"></a>
+                <a href="http://tiktok.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                        src="assets/logos/Tiktok color.svg" height="30" alt="TikTok" loading="lazy"></a>
+                <a href="https://www.instagram.com/tannysamiwis/" target="_blank" rel="noopener"><img
+                        src="assets/logos/Instagram color.svg" height="30" alt="Instagram" loading="lazy"></a>
+                <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank" rel="noopener"><img
+                        src="assets/logos/Facebook color.svg" height="30" alt="Facebook" loading="lazy"></a>
                 <a href="contact.html" class="btn btn-custom">Contáctanos</a>
             </div>
 
-            <!-- Menú expandible (MÓVIL). Está en el flujo del documento y EMPUJA el contenido -->
+            <!-- Menú móvil -->
             <div id="navbarResponsive" class="collapse navbar-collapse--mobile">
                 <div class="container py-3">
                     <button class="btn-close mobile-close" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarResponsive" aria-label="Cerrar"></button>
 
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">SOBRE MÍ</a>
+                        <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-uppercase" href="#">Sobre mí</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-uppercase" href="products.html">PRODUCTOS</a></li>
+                        <li class="nav-item"><a class="nav-link text-uppercase" href="products.html">Productos</a></li>
                     </ul>
 
                     <div class="navbar-social">
-                        <a href="https://www.youtube.com/@tannysamiwis" target="_blank"><img
-                                src="assets/logos/Youtube color.svg" height="30" alt=""></a>
-                        <a href="http://tiktok.com/@tannysamiwis" target="_blank"><img
-                                src="assets/logos/Tiktok color.svg" height="30" alt=""></a>
-                        <a href="https://www.instagram.com/tannysamiwis/" target="_blank"><img
-                                src="assets/logos/Instagram color.svg" height="30" alt=""></a>
-                        <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank"><img
-                                src="assets/logos/Facebook color.svg" height="30" alt=""></a>
+                        <a href="https://www.youtube.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                                src="assets/logos/Youtube color.svg" height="30" alt="YouTube" loading="lazy"></a>
+                        <a href="http://tiktok.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                                src="assets/logos/Tiktok color.svg" height="30" alt="TikTok" loading="lazy"></a>
+                        <a href="https://www.instagram.com/tannysamiwis/" target="_blank" rel="noopener"><img
+                                src="assets/logos/Instagram color.svg" height="30" alt="Instagram" loading="lazy"></a>
+                        <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank" rel="noopener"><img
+                                src="assets/logos/Facebook color.svg" height="30" alt="Facebook" loading="lazy"></a>
                     </div>
 
                     <a href="contact.html" class="btn btn-custom mobile-contact">Contáctanos</a>
                 </div>
             </div>
+        </div>
     </nav>
 
-    <!-- Sección principal -->
+    <!-- SOBRE MÍ -->
     <section class="about-me-section py-5">
         <div class="container d-flex flex-column flex-lg-row align-items-center gap-5">
 
-            <!-- Imagen circular -->
             <div class="profile-img">
-                <img src="assets/images/profile.jpg" alt="Foto de Sthefanny" class="rounded-circle img-fluid shadow">
+                <img src="assets/images/profile.jpg" alt="Foto de Sthefanny" class="rounded-circle img-fluid shadow"
+                    loading="lazy" decoding="async">
             </div>
 
-            <!-- Texto de presentación -->
             <div class="about-text">
-                <h3 class="fw-bold text-purple"><img class="tuerca" src="assets/logos/Tuerca.svg"> Sthefanny Liss</h3>
+                <h3 class="fw-bold text-purple"><img class="obillo" src="assets/logos/Tuerca.svg" alt="" loading="lazy">
+                    Sthefanny Liss</h3>
 
-                <div class="container mx-5">
+                <div class="container mx-0 mx-md-5">
                     <div class="mb-3">
-                        <h5 class="fw-semibold">Mi pasión por el crochet </h5>
+                        <h5 class="fw-semibold">Mi pasión por el crochet</h5>
                         <p>
-                            Desde la enseñanza de mi abuela paterna tuve mis inicios con el crochet en prendas, tapetes.
-                            Con
-                            mi embarazo desde el 2019, me refugié en el tejido para olvidar la depresión, también me
-                            refugié
-                            por el apoyo emocional de quienes me hacían encargos, sentir el diagnóstico de autismo de mi
-                            Zoé
-                            me fijó el rumbo, me ayudó a superar esas momentos difíciles.
+                            Desde la enseñanza de mi abuela paterna tuve mis inicios con el crochet en prendas y
+                            tapetes.
+                            Con mi embarazo desde 2019, me refugié en el tejido para olvidar la depresión y también por
+                            el apoyo
+                            emocional de quienes me hacían encargos. Sentir el diagnóstico de autismo de mi Zoé me fijó
+                            el rumbo
+                            y me ayudó a superar esos momentos difíciles.
                         </p>
                     </div>
 
                     <div>
-                        <h5 class="fw-semibold">Mis inicios </h5>
+                        <h5 class="fw-semibold">Mis inicios</h5>
                         <p>
-                            Con respecto a los trabajos terminados en el 2018, empecé con Llavero pequeñas de unicornios
-                            vendiéndolas en el colegio de mi hijo mayor. Con la creación y diseño de amigurumis empecé
-                            el
-                            2019 con la idea de comprar al mayorista lo que necesitaba en mi distrito, en menos tiempo y
-                            con
-                            mayor facilidad para obtener ganancias y puedan hacer crecer sus propios emprendimientos.
+                            En 2018 empecé con llaveros pequeños de unicornios, vendiéndolos en el colegio de mi hijo
+                            mayor.
+                            Con la creación y diseño de amigurumis inicié en 2019, buscando materiales con mayor
+                            facilidad para
+                            hacer crecer el emprendimiento.
                         </p>
                     </div>
                 </div>
@@ -135,34 +135,37 @@
     <!-- INSPIRACIÓN -->
     <section class="inspiration-section py-5">
         <div class="container rounded-5 p-5 text-white">
-
-            <h3 class="section-title mb-3"><img class="tuerca" src="assets/logos/Tuerca 2.svg"> Inspiración</h3>
+            <h3 class="section-title mb-3"><img class="obillo" src="assets/logos/Tuerca 2.svg" alt="" loading="lazy">
+                Inspiración</h3>
 
             <div class="row">
                 <div class="col-md-6">
                     <p class="mb-3">
-                        Me inspira en tener una versión tema de cada personaje que realizo, según la temporada, la que
-                        esté de moda en personajes animados, de películas, artistas etc. (San Valentín, Día de la Madre,
-                        Padre, Niño, Primavera y navidad etc)
+                        Me inspiro en tener una versión tierna de cada
+                        personaje que realizo, según la temporada, lo
+                        que esté de moda en personajes animes, de
+                        películas, artistas etc. (San Valentin, Dia de la
+                        Madre, Padre, Niño, Primavera y navidad etc)
                     </p>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center gap-3 p-2">
-                    <img src="assets/images/inspiration/1.jpg" alt="inspiración 1" class="inspiration-img">
-                    <img src="assets/images/inspiration/2.jpg" alt="inspiración 2" class="inspiration-img">
-                    <img src="assets/images/inspiration/3.jpg" alt="inspiración 3" class="inspiration-img">
+                <div class="col-md-6 d-flex justify-content-center gap-3">
+                    <img src="assets/images/inspiration/1.jpg" alt="Inspiración 1" class="inspiration-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/images/inspiration/2.jpg" alt="Inspiración 2" class="inspiration-img"
+                        loading="lazy" decoding="async">
+                    <img src="assets/images/inspiration/3.jpg" alt="Inspiración 3" class="inspiration-img"
+                        loading="lazy" decoding="async">
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- VALORES -->
     <section class="value-section">
-
-        <div class=" text-center">
+        <div class="text-center">
             <h3 class="values-title mb-4">
-                <img class="tuerca" src="assets/logos/Tuerca 3.svg"> Valores que guían la marca <img class="tuerca"
-                    src="assets/logos/Tuerca 3.svg">
+                <img class="obillo" src="assets/logos/Tuerca 3.svg" alt="" loading="lazy"> Valores que guían la marca
+                <img class="obillo" src="assets/logos/Tuerca 3.svg" alt="" loading="lazy">
             </h3>
             <div class="container d-flex justify-content-center flex-wrap gap-4">
                 <div class="value-pill">Originalidad</div>
@@ -172,11 +175,8 @@
         </div>
     </section>
 
-
     <!-- ANÉCDOTA -->
     <section class="anecdote-section position-relative text-white py-5">
-
-        <!-- Borde ondulado superior -->
         <div class="wave-top"></div>
 
         <div class="container d-flex flex-column flex-md-row align-items-start justify-content-between py-5">
@@ -184,69 +184,63 @@
                 <h5 class="anecdote-subtitle">Anécdota</h5>
                 <h3 class="anecdote-title">Mi cliente más fiel</h3>
                 <p class="anecdote-text">
-                    Hace 18 años no sabía de un amigo, y me encontró por la red social de Tiktok, cuando daba clases de
-                    amigurumis por lives, y desde que supo que realizaba amigurumis, cada mes me pide siempre un nuevo
-                    tejido referente a algo que le gustaba, como personajes de animes, personajes de películas y siempre
-                    lo asumía como un nuevo reto, hoy en día soy la mejor opción que toma para poder regalar a sus seres
-                    queridos, ya que aprecia la originalidad y los detalles que logro plasmar en tejido sus
-                    requerimientos para que sus obsequios sean únicos y hermosos.
-                    <br><br>
-                    Creo que ya perdí la cuenta de la cantidad de amigurumis que le han sido entregados, pero sí
-                    recuerdo que los primeros fueron un nacimiento completo tejido en la navidad del 2021, los
-                    personajes de Mario Bross completos, cantantes como Selena Quintanilla, Laura Pausini y muchos más.
-                    <br><br>
-                    Estoy muy agradecida con él porque sabe valorar la magia que realizo con mi arte del tejido hecho a
-                    mano y porque me demuestra amistad leal siendo cada año muy buena persona hacia conmigo,
-                    definitivamente se ganó el título del cliente vip. Gracias por el apoyo siempre Julio Cesar.
+                    Hace 18 años no sabia de un amigo, y me encontró por la red social de Tiktok, cuando
+                    daba clases de amigurumis por lives, y desde que supo que realizaba amigurumis, cada
+                    mes me pide siempre un nuevo tejido referente a algo que le gustaba, como personajes de
+                    animes, personajes de películas y siempre lo asumía como un nuevo reto, hoy en dia soy
+                    la mejor opción que toma para poder regalar a sus seres queridos, ya que aprecia la originalidad
+                    y los detalles que logro plasmar en tejido sus requerimientos para que sus obsequios
+                    sean únicos y hermosos. Creo que ya perdí la cuenta de la cantidad de amigurumis
+                    que le han sido entregados, pero si recuerdo que los primeros fueron un nacimiento completo
+                    tejido en la navidad del 2021, los personajes de Mario Bross completos, cantantes
+                    como Selena Quintanilla, Laura Pausini y muchos más. Estoy muy agradecida con él
+                    porque sabe valorar la magia que realizo con mi arte del tejido hecho a mano y porque
+                    me demuestra amistad leal siendo cada año muy buena persona hacia conmigo, definitivamente
+                    se ganó el título del cliente vip. Gracias por el apoyo siempre Julio Cesar.
                 </p>
             </div>
             <div class="col-12 col-md-3 text-center text-md-end mt-4 mt-md-0">
-                <img src="assets/logos/Mariposa blanca.svg" alt="Mariposa decorativa" class="anecdote-butterfly">
+                <img src="assets/logos/Mariposa blanca.svg" alt="Mariposa decorativa" class="anecdote-butterfly"
+                    loading="lazy" decoding="async">
             </div>
         </div>
 
-        <!-- Borde ondulado inferior -->
         <div class="wave-bottom"></div>
     </section>
 
+    <!-- COLLAGE CLIENTES -->
     <section class="clientes-collage">
         <div class="container">
             <h3 class="cc-title">Clientes felices</h3>
 
             <div class="cc-grid">
-                <a class="cc-item " >
-                    <img src="assets\images\amigurumis\clientes\FB_IMG_1616199484090.jpg" alt="Cliente 1" loading="lazy" decoding="async">
-                </a>
-                <a class="cc-item" >
-                    <img src="assets\images\amigurumis\clientes\FB_IMG_1661871283583.jpg" alt="Cliente 2" loading="lazy" decoding="async">
-                </a>
-                <a class="cc-item ">
-                    <img src="assets\images\amigurumis\clientes\FB_IMG_1664768795448.jpg" alt="Cliente 3" loading="lazy" decoding="async">
-                </a>
-                <a class="cc-item" >
-                    <img src="assets\images\amigurumis\clientes\FB_IMG_1705029857674.jpg" alt="Cliente 4" loading="lazy" decoding="async">
-                </a>
-                <a class="cc-item " >
-                    <img src="assets\images\amigurumis\clientes\IMG-20250710-WA0091.jpg" alt="Cliente 5" loading="lazy" decoding="async">
-                </a>
-                <a class="cc-item ">
-                    <img src="assets\images\amigurumis\clientes\Screenshot_2023-01-27-20-56-43-935_com.whatsapp.jpg" alt="Cliente 6" loading="lazy" decoding="async">
-                </a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/1.jpg" alt="Cliente 1" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/2.jpg" alt="Cliente 2" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/3.jpg" alt="Cliente 3" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/4.jpg" alt="Cliente 4" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/5.jpg" alt="Cliente 5" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/6.jpg" alt="Cliente 6" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/7.jpg" alt="Cliente 7" loading="lazy"
+                        decoding="async"></a>
+                <a class="cc-item"><img src="assets/images/amigurumis/clientes/8.jpg" alt="Cliente 8" loading="lazy"
+                        decoding="async"></a>
             </div>
         </div>
     </section>
 
-
-
-    <!-- FOOTER -->
+    <!-- FOOTER (idéntico a index) -->
     <footer>
         <div class="container">
             <div class="row text-center text-lg-start align-items-center">
-                <!-- Logo -->
                 <div class="col-lg-2 mb-3 d-flex justify-content-lg-start justify-content-center">
-                    <img src="assets/logos/Logo blanco.svg" alt="Logo" class="footer-logo">
+                    <img src="assets/logos/Logo blanco.svg" alt="Logo TannyAmiwis" class="footer-logo" loading="lazy">
                 </div>
-                <!-- Menú -->
                 <div class="col-lg-2 mb-3">
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white">Inicio</a></li>
@@ -254,30 +248,26 @@
                         <li><a href="products.html" class="text-white">Productos</a></li>
                     </ul>
                 </div>
-                <!-- Redes sociales + normativas -->
                 <div class="col-lg-4 mb-3 text-center">
                     <div class="footer-icons mb-2">
-                        <a href="#"><i></i></a>
-                        <a href="https://www.youtube.com/@tannysamiwis" target="_blank"><img
-                                src="assets/logos/Youtube blanco.svg" height="30"></a>
-                        <a href="http://tiktok.com/@tannysamiwis" target="_blank"><img
-                                src="assets/logos/Tiktok blanco.svg" height="30"></a>
-                        <a href="https://www.instagram.com/tannysamiwis/" target="_blank"><img
-                                src="assets/logos/Instagram blanco.svg" height="30"></a>
-                        <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank"><img
-                                src="assets/logos/Facebook blanco.svg" height="30"></a>
-                        <a href="https://www.patronix.app/es/tienda/4418" target="_blank"><img
-                                src="assets/logos/Patronix blanco.svg" height="30"></a>
+                        <a href="https://www.youtube.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                                src="assets/logos/Youtube blanco.svg" height="30" alt="YouTube" loading="lazy"></a>
+                        <a href="http://tiktok.com/@tannysamiwis" target="_blank" rel="noopener"><img
+                                src="assets/logos/Tiktok blanco.svg" height="30" alt="TikTok" loading="lazy"></a>
+                        <a href="https://www.instagram.com/tannysamiwis/" target="_blank" rel="noopener"><img
+                                src="assets/logos/Instagram blanco.svg" height="30" alt="Instagram" loading="lazy"></a>
+                        <a href="https://www.facebook.com/share/16rzFQKA2G/" target="_blank" rel="noopener"><img
+                                src="assets/logos/Facebook blanco.svg" height="30" alt="Facebook" loading="lazy"></a>
+                        <a href="https://www.patronix.app/es/tienda/4418" target="_blank" rel="noopener"><img
+                                src="assets/logos/Patronix blanco.svg" height="30" alt="Patronix" loading="lazy"></a>
                     </div>
                     <small>
                         <a href="https://www.inei.gob.pe/media/libro_reclamaciones/DS011_2011_PCM.pdf" target="_blank"
-                            class="text-white me-2">Libro de Reclamaciones</a> |
+                            rel="noopener" class="text-white me-2">Libro de Reclamaciones</a> |
                         <a href="https://cdn.www.gob.pe/uploads/document/file/662494/Decreto_Supremo_N_011-2011-PCM.pdf?v=1588006949"
-                            target="_blank" class="text-white ms-2">Protección al
-                            Consumidor</a>
+                            target="_blank" rel="noopener" class="text-white ms-2">Protección al Consumidor</a>
                     </small>
                 </div>
-                <!-- Contacto -->
                 <div class="col-lg-3 mb-3 text-lg-end text-center footer-contact">
                     <p><i class="bi bi-telephone"></i> +51 999245585</p>
                     <p><i class="bi bi-envelope"></i> tannysamiwis@gmail.com</p>
@@ -286,7 +276,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    <!-- Bootstrap JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 </body>

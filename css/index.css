@@ -1,153 +1,52 @@
+/* Base */
+:root {
+  --morado: #6f2c91;
+  --morado-oscuro: #4b007d;
+}
+
+* {
+  box-sizing: border-box
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f7f3fd;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  background: #f7f3fd;
+  margin: 0;
 }
 
-/* ======== NAVBAR ======== */
-.bg-purple {
-  background-color: #a569bd;
-}
-
+/* ===== NAVBAR ===== */
 .btn-custom {
-  background-color: #e9c1f3;
-  color: #4b007d;
-  border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-  width: 150px;
-  height: 40px;
-}
-
-.navbar {
-  height: auto;
-  width: auto;
-}
-
-.navbar .container {
-  font-family: 'Quicksand';
-  width: 100%;
-  width: 100%;
-}
-
-.nav-link.active {
-  border-bottom: 2px solid #6f2c91;
-}
-
-.btn-custom {
-  background-color: #d493f8;
-  color: white;
+  background: #d493f8;
+  color: #fff;
   border-radius: 20px;
   padding: 6px 20px;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
-  transition: all 0.3s ease;
+  transition: .25s ease;
 }
 
 .btn-custom:hover {
-  background-color: #b364d8;
+  background: #b364d8;
 }
 
-/* SECCIÓN HERO */
-.contCar {
-  padding-left: 2%;
-  padding-right: 2%;
+.nav-link.active {
+  border-bottom: 2px solid var(--morado);
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Fondo con mariposas */
+/* ===== HERO ===== */
 .hero-section {
-  background-color: #caa0f5;
-  /* color lila de respaldo */
-  /*background-image: url('/tannyAmiwis/assets/images/FONDO MARIPOSAS.png');*/
-  /* reemplázalo con tu ruta */
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
+  background: #caa0f5;
   position: relative;
 }
 
-/* Contenedor del carrusel */
 .hero-section .carousel-inner {
-  padding: 2rem 2rem;
-  height: 800px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo del texto centrado dentro del slide */
-.hero-section .hero-content {
-  padding: 3rem 1rem;
-}
-
-.hero-section h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.hero-section .btn {
-  padding: 0.6rem 1.5rem;
-  font-weight: bold;
+  padding: 6rem 2rem;
+  min-height: clamp(420px, 55vh, 720px);
+  background: rgba(0, 0, 0, .2);
   border-radius: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Estilo del botón de catálogo */
-.hero-section .btn-outline-light {
-  border: 2px solid white;
-  color: white;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.hero-section .btn-outline-light:hover {
-  background-color: white;
-  color: #6d1a94;
-  /* morado */
-}
-
-/* Indicadores personalizados */
-.hero-section .carousel-indicators button {
-  width: 250px;
-  height: 5px;
-  border-radius: 50px;
-  margin: 0 5px;
-  background-color: white;
-  opacity: 1;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
-
-.hero-section .carousel-indicators .active {
-  background-color: #692688;
-  /* morado activo */
-}
-
-.carousel-caption {
-  bottom: 30%;
-}
-
-.carousel-indicators [data-bs-target] {
-  width: 40px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: white;
-}
-
-.carousel-indicators .active {
-  background-color: #6f2c91;
 }
 
 .carousel-item {
-  height: 95%;
   display: none;
   align-items: center;
   justify-content: center;
@@ -156,51 +55,95 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  padding: 20px;
+  height: 800px;
+  min-height: clamp(380px, 50vh, 680px);
 }
 
 .carousel-item.active {
   display: flex;
-  /* solo el slide activo se mostrará con flex */
 }
 
-/* Fondo de cada slide */
+.hero-section .hero-content {
+  padding: 3rem 1rem;
+}
+
+.hero-section h1 {
+  color: #fff;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.hero-section .btn {
+  padding: .6rem 1.5rem;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+/* Indicadores */
+.hero-section .carousel-indicators button {
+  width: 450px;
+  border-radius: 50px;
+  background: #fff;
+  opacity: 1;
+  margin-bottom: 30px;
+}
+
+.hero-section .carousel-indicators .active {
+  background: #692688;
+}
+
+@media (max-width:991.98px) {
+  .hero-section .carousel-indicators button {
+    width: 30%;
+  }
+}
+
+/* Fondos */
 .slide-bg-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/tannyAmiwis/assets/images/amigurumis/18.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
 }
 
 .slide-bg-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/tannyAmiwis/assets/images/amigurumis/18.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
 }
 
 .slide-bg-3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/tannyAmiwis/assets/images/amigurumis/18.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
 }
 
-
-
-/* SECCIÓN HISTORY */
-/* Aplica la fuente */
+/* ===== HISTORY ===== */
 .history-section {
   font-family: 'Croissant One', cursive;
-  background-color: #edd1f5;
-  padding: 4rem 2rem;
+  background: #edd1f5;
+  padding: 12rem 2rem;
   overflow: hidden;
 }
 
-/* Estilos comunes para las tuerquitas */
 .tuerca {
-  content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.3;
+  opacity: .3;
   z-index: 0;
+  animation: spin 20s linear infinite;
+  will-change: transform;
 }
 
-/* Posiciones decorativas */
+@keyframes spin {
+  from {
+    transform: rotate(0)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
 .tuerca-1 {
   width: 100px;
   height: 100px;
@@ -278,26 +221,11 @@ body {
   background-image: url('../assets/logos/Tuerca 3.svg');
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.tuerca {
-  animation: spin 20s linear infinite;
-}
-
-
-/* SECCIÓN FOOTER */
+/* ===== FOOTER ===== */
 footer {
-  background-color: #c96bf4;
-  color: white;
-  padding: 2rem 2rem 0rem 2rem;
+  background: #c96bf4;
+  color: #fff;
+  padding: 2rem 2rem 0;
 }
 
 .footer-logo {
@@ -307,8 +235,8 @@ footer {
 
 .footer-icons a,
 .footer-contact a {
-  color: white;
-  margin: 0 0.25rem;
+  color: #fff;
+  margin: 0 .25rem;
   text-decoration: none;
 }
 
@@ -318,57 +246,70 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-  /* opcional si quieres subrayado al pasar el mouse */
 }
 
-/* Mobile */
-@media (max-width: 767.98px){
-  footer { padding: 1.75rem 1rem; }
+/* Footer responsive */
+@media (max-width:767.98px) {
+  footer {
+    padding: 1.75rem 1rem;
+  }
 
-  /* Las 3 columnas se apilan y centran */
   footer .col-lg-2,
   footer .col-lg-3,
   footer .col-lg-4 {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
-  .footer-logo { width:200px; height:100px; }
-
-  /* Menú compacto */
-  footer ul { padding:0; margin:.25rem 0 .75rem; }
-  footer ul li { margin:.15rem 0; }
-
-  /* Íconos más pequeños en móvil */
-  .footer-icons { gap:10px; margin-bottom:.5rem; }
-  .footer-icons img { height:24px; }
-
-  /* Línea de normativas en varias líneas y centrada */
-  footer small{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:center;
-    line-height:1.3;
-    margin-bottom:.75rem;
+  .footer-logo {
+    width: 200px;
+    height: 100px;
   }
 
-  /* Contacto: líneas compactas */
-  .footer-contact p{ margin:.25rem 0; font-size:.95rem; }
+  footer ul {
+    padding: 0;
+    margin: .25rem 0 .75rem;
+  }
+
+  footer ul li {
+    margin: .15rem 0;
+  }
+
+  .footer-icons {
+    gap: 10px;
+    margin-bottom: .5rem;
+  }
+
+  .footer-icons img {
+    height: 24px;
+  }
+
+  footer small {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.3;
+    margin-bottom: .75rem;
+  }
+
+  .footer-contact p {
+    margin: .25rem 0;
+    font-size: .95rem;
+  }
 }
 
-/* Desktop (opcional: alinear vertical) */
-@media (min-width: 992px){
-  footer .row{ align-items:center; }
+@media (min-width:992px) {
+  footer .row {
+    align-items: center;
+  }
 }
 
-/* --- NAV móvil: panel en filas que empuja el contenido --- */
-@media (max-width: 991.98px) {
-
-  /* El nav deja de tener altura fija para no cortar nada */
+/* ===== NAV MÓVIL (empuja contenido) ===== */
+@media (max-width:991.98px) {
   .navbar {
     height: auto;
   }
@@ -410,7 +351,7 @@ footer a:hover {
     display: block;
     padding: .75rem 0;
     font-weight: 700;
-    color: #4b007d;
+    color: var(--morado-oscuro);
   }
 
   .navbar-collapse--mobile .navbar-social {
@@ -424,14 +365,11 @@ footer a:hover {
     width: 100%;
     max-width: 480px;
   }
-
-  .hero-section .carousel-indicators button {
-    height: 10px;
-    width: 30%;
-  }
 }
 
-/* Oculta el panel móvil en desktop sí o sí */
-@media (min-width: 992px) {
-  #navbarResponsive { display: none !important; }
+/* Oculta el panel móvil en desktop */
+@media (min-width:992px) {
+  #navbarResponsive {
+    display: none !important;
+  }
 }

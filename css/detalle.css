@@ -1,49 +1,17 @@
-/* ======== NAVBAR ======== */
-.bg-purple {
-    background-color: #a569bd;
+:root {
+    --morado: #4b007d;
+    --lila: #d493f8;
 }
 
-.btn-custom {
-    background-color: #e9c1f3;
-    color: #4b007d;
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-    width: 150px;
-    height: 40px;
-}
-
-.navbar .container {
-    font-family: 'Quicksand';
-}
-
-.nav-link.active {
-    border-bottom: 2px solid #6f2c91;
-}
-
-.btn-custom {
-    background-color: #d493f8;
-    color: white;
-    border-radius: 20px;
-    padding: 6px 20px;
-    font-weight: bold;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #b364d8;
-}
-
-/* --- Galería del producto --- */
-#detail-root #thumbs {
+/* --- Galería --- */
+#thumbs {
     display: flex;
     gap: .5rem;
     flex-wrap: wrap;
     margin-top: .75rem;
 }
 
-#detail-root #thumbs img {
+#thumbs img {
     width: 68px;
     height: 68px;
     object-fit: cover;
@@ -54,52 +22,38 @@
     transition: .2s;
 }
 
-#detail-root #thumbs img:hover {
+#thumbs img:hover {
     opacity: .9;
 }
 
-#detail-root #thumbs img.active {
+#thumbs img.active {
     opacity: 1;
     border-color: #a64ad7;
 }
 
-#detail-root #mainImg {
+#mainImg {
     width: 100%;
     height: auto;
     border-radius: 14px;
     object-fit: cover;
-}
-
-/*MODAL ZOOM*/
-
-/* cursor para la imagen principal */
-#mainImg {
     cursor: zoom-in;
 }
 
-/* modal de zoom */
+/* Modal zoom */
 .zoom-wrap {
     height: calc(100vh - 3rem);
-    /* espacio para el botón de cerrar */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-/* evita el drag fantasma y selecciones */
 #zoomImg {
     max-width: 90vw;
-    /* hace que entre completa */
     max-height: 85vh;
-    /* idem en alto */
-    width: auto;
-    height: auto;
     object-fit: contain;
-    /* respeta proporciones */
-    transform-origin: center center;
+    transform-origin: center;
     transform: translate(0, 0) scale(1);
-    /* sin zoom inicial */
     user-select: none;
     -webkit-user-drag: none;
     cursor: zoom-in;
@@ -109,176 +63,61 @@
     cursor: grabbing;
 }
 
-/* habilita pinch/drag con Pointer Events */
 .zoom-wrap,
 #zoomImg {
     touch-action: none;
 }
 
-
-
-
-/* ======== FOOTER ======== */
-footer {
-    background-color: #c96bf4;
-    color: white;
-    padding: 2rem 2rem 0rem 2rem;
-
+/* Panel galería */
+.detail-card {
+    background: #f4e6ff;
+    border: 1px solid #ead6ff;
+    border-radius: 14px;
 }
 
-.footer-logo {
-    height: 150px;
-    width: 150px;
-}
-
-.footer-icons a {
-    color: white;
-    font-size: 20px;
-    margin: 0 8px;
-    transition: color 0.3s ease;
-}
-
-.footer-icons a:hover {
-    color: #ffcbf2;
-}
-
-.footer-contact p {
-    margin: 0;
-    font-size: 14px;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    /* opcional si quieres subrayado al pasar el mouse */
-}
-
-
-/* DETALLE */
-:root {
-    --morado: #4b007d;
-    --lila: #d493f8;
-}
-
-.bg-lila {
-    background: var(--lila);
-    color: #fff;
-}
-
-.btn-primary-lila {
-    background: var(--lila);
-    border: none;
-    color: #fff;
-    font-weight: 700;
-}
-
-.btn-primary-lila:hover {
-    background: #b364d8;
-}
-
+/* Título / textos */
 .detail-title {
     color: var(--morado);
     font-weight: 800;
     line-height: 1.2;
 }
 
-.detail-price {
-    color: var(--morado);
-}
-
-.detail-gallery img.object-cover {
-    aspect-ratio: 1 / 1;
-    /* cuadrada; cambia si quieres */
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.detail-thumbs img {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.detail-thumbs img.active {
-    border-color: var(--lila);
-}
-
-/* Panel de galería estilo tarjeta lila */
-.detail-card {
-    background: #f4e6ff;
-    /* lila muy claro */
-    border: 1px solid #ead6ff;
-}
-
-/* Thumbs */
-.detail-thumbs img {
-    width: 68px;
-    height: 68px;
-    object-fit: cover;
-    border-radius: 12px;
-    opacity: .7;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.detail-thumbs img:hover {
-    opacity: .9
-}
-
-.detail-thumbs img.active {
-    opacity: 1;
-    border-color: #a64ad7
-}
-
+/* Lista de corazón */
 .heart-list {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .heart-list li {
     position: relative;
     padding-left: 26px;
     margin: 8px 0;
-    color: #222
+    color: #222;
 }
 
 .heart-list li::before {
     content: "\2665";
-    /* ♥ */
     position: absolute;
     left: 0;
     top: 0;
     color: #a64ad7;
-    font-weight: 700
+    font-weight: 700;
 }
 
-.detail-desc h5 {
-    color: #4b007d;
-    font-weight: 800
-}
-
-
-/* Lista de precios con banderas */
+/* Precios */
 .price-list .price-row {
     display: flex;
     align-items: center;
     gap: .5rem;
     margin: .25rem 0;
     font-size: 1.1rem;
-    color: var(--morado)
+    color: var(--morado);
 }
 
 .price-flag {
     font-size: 1.2rem;
-    line-height: 1
+    line-height: 1;
 }
 
 .price-free {
@@ -287,10 +126,10 @@ footer a:hover {
     font-weight: 700;
     padding: .25rem .6rem;
     border-radius: 10px;
-    display: inline-block
+    display: inline-block;
 }
 
-/* Pill de patrón disponible */
+/* Pill patrón */
 .badge-pill {
     display: inline-block;
     background: #7b41e6;
@@ -308,85 +147,95 @@ footer a:hover {
     gap: .25rem;
     color: #7b41e6;
     text-decoration: none;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .back-link:hover {
     color: #5b28c6;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
-/* Divisor morado fino */
-.divider {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-top: 20px solid var(--lila);
-    ;
-    opacity: 1;
-    border-radius: 50px;
-}
-
-/* Sección relacionados con fondo suave */
-.rel-panel {
-    background: #f7efff;
-    border: 1px solid #ead6ff
-}
-
-/* Cards relacionados */
-.card-related {
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #eee;
-    background: #fff
-}
-
-.card-related img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover
-}
-
-.card-related .title {
-    color: var(--morado);
+/* Back CTA alineado: texto izq + flecha redonda der */
+.back-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .75rem;
+    text-decoration: none;
+    color: #7b41e6;
     font-weight: 700;
-    font-size: .95rem
 }
 
-.card-related .btn-more {
+.back-cta:hover {
+    color: #5b28c6;
+    text-decoration: underline;
+}
+
+.back-cta-text {
+    line-height: 1;
+}
+
+.back-cta-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     background: #7b41e6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    transition: filter .2s ease, transform .15s ease;
+}
+
+.back-cta-circle i {
     color: #fff;
-    border: 0;
-    border-radius: 10px;
-    padding: .35rem .75rem;
-    font-weight: 700
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
-.card-related .btn-more:hover {
-    background: #5b28c6
+.back-cta:hover .back-cta-circle {
+    filter: brightness(.92);
+    transform: translateX(2px);
 }
 
-/* Título de sección */
-.section-title {
-    color: var(--morado);
-    font-weight: 800
-}
-
-/* Ajustes responsive */
+/* En móviles mantiene el layout */
 @media (max-width:575.98px) {
-    .card-related img {
-        height: 140px
+    .back-cta {
+        font-size: 1rem;
+    }
+
+    .back-cta-circle {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
     }
 }
 
 
-.card-related {
+/* Divisor y relacionados */
+.divider {
+    margin: 100px 0;
+    border-top: 20px solid var(--lila);
+    opacity: 1;
+    border-radius: 50px;
+}
+
+.rel-panel {
+    background: #f7efff;
+    border: 1px solid #ead6ff;
     border-radius: 14px;
+}
+
+.card-related {
+    border-radius: 16px;
     overflow: hidden;
+    border: 1px solid #eee;
+    background: #fff;
 }
 
 .card-related img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -396,148 +245,22 @@ footer a:hover {
     font-size: .95rem;
 }
 
+.card-related .btn-more {
+    background: #7b41e6;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    padding: .35rem .75rem;
+    font-weight: 700;
+}
 
-@media (max-width: 575.98px) {
-    .detail-gallery img.object-cover {
-        aspect-ratio: 4 / 5;
-    }
+.card-related .btn-more:hover {
+    background: #5b28c6;
+}
 
+/* Responsive */
+@media (max-width:575.98px) {
     .card-related img {
         height: 140px;
-    }
-}
-
-
-/* Mobile */
-@media (max-width: 767.98px) {
-    footer {
-        padding: 1.75rem 1rem;
-    }
-
-    /* Las 3 columnas se apilan y centran */
-    footer .col-lg-2,
-    footer .col-lg-3,
-    footer .col-lg-4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .footer-logo {
-        width: 200px;
-        height: 100px;
-    }
-
-    /* Menú compacto */
-    footer ul {
-        padding: 0;
-        margin: .25rem 0 .75rem;
-    }
-
-    footer ul li {
-        margin: .15rem 0;
-    }
-
-    /* Íconos más pequeños en móvil */
-    .footer-icons {
-        gap: 10px;
-        margin-bottom: .5rem;
-    }
-
-    .footer-icons img {
-        height: 24px;
-    }
-
-    /* Línea de normativas en varias líneas y centrada */
-    footer small {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-        line-height: 1.3;
-        margin-bottom: .75rem;
-    }
-
-    /* Contacto: líneas compactas */
-    .footer-contact p {
-        margin: .25rem 0;
-        font-size: .95rem;
-    }
-}
-
-/* Desktop (opcional: alinear vertical) */
-@media (min-width: 992px) {
-    footer .row {
-        align-items: center;
-    }
-}
-
-/* --- NAV móvil: panel en filas que empuja el contenido --- */
-@media (max-width: 991.98px) {
-
-    .contact-photo {
-        height: 100px;
-        min-height: 500px;
-    }
-
-    /* El nav deja de tener altura fija para no cortar nada */
-    .navbar {
-        height: auto;
-    }
-
-    .navbar-collapse--mobile {
-        background: transparent;
-        box-shadow: none;
-        width: 100%;
-    }
-
-    .navbar-collapse--mobile .container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-    }
-
-    .navbar-collapse--mobile .mobile-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-
-    .navbar-collapse--mobile .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        margin: 8px 0 4px;
-        padding: 0;
-    }
-
-    .navbar-collapse--mobile .navbar-nav .nav-link {
-        display: block;
-        padding: .75rem 0;
-        font-weight: 700;
-        color: #4b007d;
-    }
-
-    .navbar-collapse--mobile .navbar-social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-    }
-}
-
-/* Oculta el panel móvil en desktop sí o sí */
-@media (min-width: 992px) {
-    #navbarResponsive {
-        display: none !important;
     }
 }

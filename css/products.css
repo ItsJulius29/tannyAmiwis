@@ -1,43 +1,74 @@
-/* ======== GENERAL ======== */
+/* ===== GENERAL ===== */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
+    background: #fff;
 }
 
 h2,
 h4,
 h5,
 h6 {
-    font-weight: bold;
+    font-weight: 700;
 }
 
-/* ======== NAVBAR ======== */
-.bg-purple {
-    background-color: #a569bd;
+/* ===== BANNER + TABS ===== */
+.category-banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-.navbar .container {
-    font-family: 'Quicksand';
+.category-tabs {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+    gap: 40px;
+    border-bottom: 3px solid #dcd0f1;
 }
 
-.nav-link.active {
-    border-bottom: 2px solid #6f2c91;
+.category-tab {
+    font-family: 'Quicksand', sans-serif;
+    background: none;
+    border: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #d4a1f3;
+    position: relative;
+    padding-bottom: 8px;
+    transition: .3s;
 }
 
-.btn-custom {
-    background-color: #d493f8;
-    color: white;
+.category-tab.active-tab {
+    color: #4b007d;
+}
+
+.category-tab.active-tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ba54d3;
+    border-radius: 10px;
+}
+
+.category-tab:hover {
+    color: #a84cd4;
+}
+
+/* ===== SIDEBAR / FILTROS ===== */
+.sidebar .bg-light {
+    padding: 20px;
     border-radius: 20px;
-    padding: 6px 20px;
-    font-weight: bold;
-    border: none;
-    transition: all 0.3s ease;
-    width: 150px;
-    height: 40px;
+    background: #f5eafe;
 }
 
-.btn-custom:hover {
-    background-color: #b364d8;
+.sidebar h5 {
+    color: #7a00b3;
+    font-weight: 700;
 }
 
 .btn-link {
@@ -52,134 +83,26 @@ h6 {
     text-decoration: underline;
 }
 
-.navbar {
-    height: auto;
-    width: auto;
+.category-btn.active-category {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #6a1b9a !important;
 }
 
-
-
-/* ======== SECCIÓN TÍTULO ======== */
-section.text-center h2 {
-    color: #7a00b3;
+.category-btn {
+    color: #b57cc4 !important;
+    transition: color .2s;
+    text-decoration: none !important;
 }
-
-section.text-center h4 {
-    color: #d493f8;
-}
-
-/* ======== FILTROS LATERALES ======== */
-.bg-light {
-    border-radius: 20px;
-}
-
-
 
 .form-range::-webkit-slider-thumb {
-    background-color: #7a00b3;
+    background: #7a00b3;
 }
 
 .form-range::-moz-range-thumb {
-    background-color: #7a00b3;
+    background: #7a00b3;
 }
 
-/* ======== GALERÍA DE PRODUCTOS ======== */
-.card {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background: white;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: scale(1.02);
-}
-
-.card-img-top {
-    height: 300px;
-    object-fit: cover;
-}
-
-.card-title {
-    color: #7a00b3;
-    font-weight: bold;
-    text-align: left;
-}
-
-.card-body p.small {
-    font-size: 0.8rem;
-    margin-bottom: 4px;
-    color: #9c82c4;
-    text-align: left;
-}
-
-.card-body h5 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
-
-.card-body .fw-bold {
-    color: #7a00b3;
-    text-align: right;
-}
-
-.fade-in {
-    animation: fadeIn 0.3s ease-in;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* ======== PAGINACIÓN ======== */
-
-/* Paginación: activo morado fuerte, inactivo suave y sin subrayado */
-.pagination {
-    gap: 16px;
-}
-
-.pagination .page-link {
-    border: 0;
-    background: transparent;
-    color: rgba(75, 0, 125, 0.45);
-    /* inactivo */
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: none;
-}
-
-.pagination .page-link:hover,
-.pagination .page-link:focus {
-    color: rgba(75, 0, 125, 0.75);
-    text-decoration: none !important;
-    box-shadow: none;
-}
-
-.pagination .page-item.active .page-link {
-    color: #4b007d;
-    /* activo */
-    text-decoration: none !important;
-    pointer-events: none;
-    /* no clic en la página actual */
-}
-
-
-/* Toggle de filtros */
 .filter-toggle {
     display: flex;
     align-items: center;
@@ -191,10 +114,6 @@ section.text-center h4 {
     padding: .5rem .25rem;
     font-weight: 700;
     color: #4b007d;
-}
-
-.filter-toggle:hover {
-    color: #6a1b9a;
 }
 
 .filter-toggle .current {
@@ -211,88 +130,53 @@ section.text-center h4 {
     transform: rotate(180deg);
 }
 
-
-/* ======== BANNER CATEGORÍA ======== */
-.category-banner {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+/* ===== GRID / CARDS ===== */
+.card {
     border-radius: 15px;
-    margin-bottom: 20px;
-
-}
-
-/* ======== TABS DE CATEGORÍAS ======== */
-.category-tabs {
+    overflow: hidden;
+    background: #fff;
     display: flex;
-    justify-content: start;
-    margin-bottom: 20px;
-    gap: 40px;
-    border-bottom: 3px solid #dcd0f1;
+    flex-direction: column;
+    height: 100%;
+    transition: transform .2s ease;
+    border: 1px solid var(--lila-300, #ead6ff);
 }
 
-.category-tab {
-    font-family: 'Quicksand';
-    background: none;
-    border: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #d4a1f3;
-    position: relative;
-    padding-bottom: 8px;
-    transition: all 0.3s ease;
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(75, 0, 125, .08);
 }
 
-.category-tab.active-tab {
-    color: #4b007d;
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
-.category-tab.active-tab::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #ba54d3;
-    border-radius: 10px;
+.card-title {
+    color: #7a00b3;
+    font-weight: 700;
+    text-align: left;
 }
 
-.category-tab:hover {
-    color: #a84cd4;
+.card-body p.small {
+    font-size: .8rem;
+    margin-bottom: 4px;
+    color: #9c82c4;
+    text-align: left;
 }
 
-.category-btn.active-category {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #6a1b9a !important;
-    /* Un morado más oscuro o el que uses como principal */
+.card-body h5 {
+    font-size: 1rem;
+    margin-bottom: 4px;
 }
 
-.category-btn {
-    color: #b57cc4 !important;
-    /* Color más claro o translúcido para inactivas */
-    transition: color 0.2s ease;
-    text-decoration: none !important;
+.card-body .fw-bold {
+    color: #7a00b3;
+    text-align: right;
 }
 
-.category-btn:hover {
-    text-decoration: none !important;
-}
-
-
-/* ======== FILTROS PRODUCTOS ======== */
 .product-item {
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    width: 300px;
-    height: 400px;
-}
-
-.product-item.fade-out {
-    opacity: 0;
-    transform: scale(0.98);
-    pointer-events: none;
+    transition: opacity .3s, transform .3s;
 }
 
 .product-item.fade-in {
@@ -300,141 +184,68 @@ section.text-center h4 {
     transform: scale(1);
 }
 
-
-/* ======== FILTROS LATERALES PERSONALIZADOS ======== */
-.sidebar .bg-light {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #f5eafe;
+.product-item.fade-out {
+    opacity: 0;
+    transform: scale(.98);
+    pointer-events: none;
 }
 
-.sidebar h5 {
-    color: #7a00b3;
-    font-weight: bold;
-}
-
-.sidebar ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.sidebar ul li {
-    margin-bottom: 8px;
-}
-
-.sidebar .btn-link {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 6px 12px;
-    border-radius: 10px;
-    transition: background-color 0.2s;
-}
-
-.sidebar .btn-link:hover {
-    background-color: #e7d4fa;
-}
-
-/* El mensaje de "sin productos" ocupa toda la fila, en cualquier viewport */
 #products-container .no-products-message {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     text-align: center;
     font-size: 1.3rem;
-    padding: 50px 50px;
+    padding: 50px;
     color: #666;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 300px;
     border-radius: 12px;
-    /* opcional */
     background: #f8f5ff;
-    /* opcional, para destacarlo */
 }
 
-/* ===== Panel lila detrás de filtros + grilla ===== */
-:root {
-    --morado: #4b007d;
-    --lila-200: #f1e6ff;
-    --lila-300: #ead6ff;
-}
-
-/* El contenedor que ENVUELVE ambas columnas */
+/* Panel lila de fondo a filtros+grid */
 section.text-center+.container.mb-5 {
-    background: var(--lila-200);
-    border: 1px solid var(--lila-300);
+    background: #f1e6ff;
+    border: 1px solid #ead6ff;
     border-radius: 22px;
     padding: 16px 16px 8px;
     overflow: hidden;
-    /* recorta en las esquinas redondeadas */
 }
 
-/* Corrige gutters para que no “sangren” fuera del panel */
 section.text-center+.container.mb-5>.row {
     margin-left: 0;
     margin-right: 0;
 }
 
-/* Mantén padding lateral de columnas dentro del panel */
 section.text-center+.container.mb-5 [class^="col-"],
 section.text-center+.container.mb-5 [class*=" col-"] {
     padding-left: 12px;
     padding-right: 12px;
 }
 
-/* Quita el panel del lado derecho (ya no se necesita) */
-#products-top {
-    background: transparent !important;
-    border: 0 !important;
-    padding: 0 !important;
-}
-
-/* Conserva estilos de cards y paginación dentro del nuevo panel */
-#products-top .card {
-    border: 1px solid var(--lila-300);
-    box-shadow: none;
-    transition: transform .15s ease, box-shadow .15s ease;
-}
-
-#products-top .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(75, 0, 125, .08);
-}
-
-#products-top .pagination {
+/* Paginación */
+.pagination {
     gap: 10px;
 }
 
-#products-top .pagination .page-link {
+.pagination .page-link {
     border: 0;
     background: #ede1ff;
     color: rgba(75, 0, 125, .85);
     font-weight: 700;
     border-radius: 999px;
     padding: .4rem .7rem;
+    box-shadow: none;
 }
 
-#products-top .page-item.active .page-link {
+.page-item.active .page-link {
     background: #7b41e6;
     color: #fff;
 }
 
-
-/* ======== PAGINACIÓN SUPERIOR ======== */
-.top-pagination {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.top-pagination .pagination {
-    margin: 0;
-}
-
-
-/* CTA contacto en sidebar */
+/* CTA contacto */
 .contact-cta {
     background: #fff;
     border-radius: 16px;
@@ -469,12 +280,10 @@ section.text-center+.container.mb-5 [class*=" col-"] {
     filter: brightness(1.05);
 }
 
-
-/* ===== BOTONES FLOTANTES ===== */
+/* Botones flotantes */
 .floating-buttons {
     position: fixed;
     bottom: 50px;
-    /* Altura desde el fondo */
     right: 30px;
     display: flex;
     flex-direction: column;
@@ -483,14 +292,14 @@ section.text-center+.container.mb-5 [class*=" col-"] {
 }
 
 .floating-btn {
-    background-color: #6f2c91;
+    background: #6f2c91;
     border-radius: 50%;
     padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
 }
 
 .floating-btn img {
@@ -499,183 +308,30 @@ section.text-center+.container.mb-5 [class*=" col-"] {
 }
 
 .floating-btn:hover {
-    background-color: #a364d8;
+    background: #a364d8;
+}
+
+/* --- Lazy image + skeleton --- */
+.card-img-top.lazy {
+    background: linear-gradient(90deg, #eee, #f6f0ff, #eee);
+    background-size: 200% 100%;
+    animation: shimmer 1.1s linear infinite;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 200% 0
+    }
+
+    to {
+        background-position: -200% 0
+    }
 }
 
 
-/* ======== FOOTER ======== */
-footer {
-    background-color: #c96bf4;
-    color: white;
-    padding: 2rem 2rem 0rem 2rem;
-
-}
-
-.footer-logo {
-    height: 150px;
-    width: 150px;
-}
-
-.footer-icons a {
-    color: white;
-    font-size: 20px;
-    margin: 0 8px;
-    transition: color 0.3s ease;
-}
-
-.footer-icons a:hover {
-    color: #ffcbf2;
-}
-
-.footer-contact p {
-    margin: 0;
-    font-size: 14px;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    /* opcional si quieres subrayado al pasar el mouse */
-}
-
-
-/* Mobile */
-@media (max-width: 767.98px) {
-    footer {
-        padding: 1.75rem 1rem;
-    }
-
-    /* Las 3 columnas se apilan y centran */
-    footer .col-lg-2,
-    footer .col-lg-3,
-    footer .col-lg-4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .footer-logo {
-        width: 200px;
-        height: 100px;
-    }
-
-    /* Menú compacto */
-    footer ul {
-        padding: 0;
-        margin: .25rem 0 .75rem;
-    }
-
-    footer ul li {
-        margin: .15rem 0;
-    }
-
-    /* Íconos más pequeños en móvil */
-    .footer-icons {
-        gap: 10px;
-        margin-bottom: .5rem;
-    }
-
-    .footer-icons img {
-        height: 24px;
-    }
-
-    /* Línea de normativas en varias líneas y centrada */
-    footer small {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-        line-height: 1.3;
-        margin-bottom: .75rem;
-    }
-
-    /* Contacto: líneas compactas */
-    .footer-contact p {
-        margin: .25rem 0;
-        font-size: .95rem;
-    }
-}
-
-/* Desktop (opcional: alinear vertical) */
-@media (min-width: 992px) {
-    footer .row {
-        align-items: center;
-    }
-}
-
-/* --- NAV móvil: panel en filas que empuja el contenido --- */
-@media (max-width: 991.98px) {
-
-    /* El nav deja de tener altura fija para no cortar nada */
-    .navbar {
-        height: auto;
-    }
-
-    .navbar-collapse--mobile {
-        background: transparent;
-        box-shadow: none;
-        width: 100%;
-    }
-
-    .navbar-collapse--mobile .container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-    }
-
-    .navbar-collapse--mobile .mobile-close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-
-    .navbar-collapse--mobile .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        margin: 8px 0 4px;
-        padding: 0;
-    }
-
-    .navbar-collapse--mobile .navbar-nav .nav-link {
-        display: block;
-        padding: .75rem 0;
-        font-weight: 700;
-        color: #4b007d;
-    }
-
-    .navbar-collapse--mobile .navbar-social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-    }
-
-    .mobile-contact {
-        width: 100%;
-        max-width: 480px;
-    }
-
-    .hero-section .carousel-indicators button {
-        height: 10px;
-        width: 30%;
-    }
-
+/* Responsive */
+@media (max-width:991.98px) {
     .product-item {
-        opacity: 1;
-        transition: opacity 0.3s ease, transform 0.3s ease;
         width: 100%;
         height: 100%;
         margin-left: 0;
@@ -683,7 +339,6 @@ footer a:hover {
 
     .card-img-top {
         height: 250px;
-        object-fit: cover;
     }
 
     .category-banner {
@@ -693,31 +348,7 @@ footer a:hover {
     }
 }
 
-
-/* Móvil: se ve el toggle y funciona */
-.filter-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    background: transparent;
-    border: 0;
-    width: 100%;
-    padding: .5rem .25rem;
-    font-weight: 700;
-    color: #4b007d;
-}
-
-.filter-toggle .chevron {
-    transition: transform .25s ease;
-}
-
-.filter-toggle[aria-expanded="true"] .chevron {
-    transform: rotate(180deg);
-}
-
-/* Oculta el panel móvil en desktop sí o sí */
-@media (min-width: 992px) {
+@media (min-width:992px) {
     #navbarResponsive {
         display: none !important;
     }
@@ -738,8 +369,7 @@ footer a:hover {
     }
 }
 
-/* Forzar 2 columnas < 900px y 3 columnas >= 992px */
-@media (max-width: 900px) {
+@media (max-width:900px) {
     #products-container>* {
         flex: 0 0 50% !important;
         max-width: 50% !important;

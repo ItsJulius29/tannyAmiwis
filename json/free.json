@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "type": "patrones",
+        "type": "gratuitos",
         "name": "Angelito colgante",
         "category": "Fantasía",
         "price": 5,
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "type": "patrones",
+        "type": "gratuitos",
         "name": "Gatito risueño",
         "category": "Animales",
         "price": 7,
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "type": "patrones",
+        "type": "gratuitos",
         "name": "Gato dormilon",
         "category": "Animales",
         "price": 4,
@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "type": "patrones",
+        "type": "gratuitos",
         "name": "Llamitas ",
         "category": "Animales",
         "price": 5,
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "type": "patrones",
+        "type": "gratuitos",
         "name": "Maceta mini lirio",
         "category": "Animados",
         "price": 7,
