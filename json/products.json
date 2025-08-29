@@ -869,5 +869,553 @@
         "description": [
 
         ]
+    },
+    {
+        "id": 49,
+        "type": "amigurumis",
+        "name": "Bouquet de Novia",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/BouquetNovia.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 50,
+        "type": "amigurumis",
+        "name": "Girasoles",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Girasoles.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 51,
+        "type": "amigurumis",
+        "name": "Ramo de Rosa Lila",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/LilaRosa.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 52,
+        "type": "amigurumis",
+        "name": "Ramo de Lirio Rojo",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/LirioRojo.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 53,
+        "type": "amigurumis",
+        "name": "Ramo de Lirios",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Lirios.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 54,
+        "type": "amigurumis",
+        "name": "Ramo de Tulipanes",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/LiriosTulipanes.jpg",
+            "assets/images/amigurumis/entregado/flores/LiriosTulipanes2.jpg",
+            "assets/images/amigurumis/entregado/flores/LiriosTulipanes3.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 55,
+        "type": "amigurumis",
+        "name": "Ramo Amarillo",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Ramo1.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 56,
+        "type": "amigurumis",
+        "name": "Ramo Blanco",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Ramo2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 57,
+        "type": "amigurumis",
+        "name": "Ramo Abejita",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoAbejita.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 58,
+        "type": "amigurumis",
+        "name": "Ramo Kitty",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoKitty.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 59,
+        "type": "amigurumis",
+        "name": "Ramo Lila",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/RamoLila.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoLila2.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoLila3.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 60,
+        "type": "amigurumis",
+        "name": "Ramo Messi",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/RamoMessi.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoMessi2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 61,
+        "type": "amigurumis",
+        "name": "Ramo Minnie y Mickey",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoMinnieMickey.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 62,
+        "type": "amigurumis",
+        "name": "Ramo Novia",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoNovia.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 63,
+        "type": "amigurumis",
+        "name": "Ramo Pinguinos",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoPinguinos.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 63,
+        "type": "amigurumis",
+        "name": "Ramo Rosas",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/RamoRosas.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoRosas2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 64,
+        "type": "amigurumis",
+        "name": "Ramo Snoopy",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/RamoSnoopy.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoSnoopy2.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoSnoopy3.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 65,
+        "type": "amigurumis",
+        "name": "Ramo Spider gwen",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/RamoSpiderwen.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoSpiderwen2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 66,
+        "type": "amigurumis",
+        "name": "Ramo Stich",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoStich.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 67,
+        "type": "amigurumis",
+        "name": "Ramo Tulipanes",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RamoTulipanes.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 68,
+        "type": "amigurumis",
+        "name": "Ramo Reversible girasol",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/ReverGirasol.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 69,
+        "type": "amigurumis",
+        "name": "Rosa Celeste",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RosaCeleste.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 70,
+        "type": "amigurumis",
+        "name": "Rosa Gigante",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RosaGigante.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 71,
+        "type": "amigurumis",
+        "name": "Rosa Pasteles",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RosaPasteles.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 72,
+        "type": "amigurumis",
+        "name": "Rosa Rosadas",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/RosaRosadas.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 73,
+        "type": "amigurumis",
+        "name": "Tulipanes",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Tulipanes.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 74,
+        "type": "amigurumis",
+        "name": "Tulipanes Azules",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/TulipanesAzules.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 75,
+        "type": "amigurumis",
+        "name": "Hincha de Universitario",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/Universitario.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 76,
+        "type": "amigurumis",
+        "name": "Maceta Blanca",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/blanco.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 77,
+        "type": "amigurumis",
+        "name": "Maceta de colores",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/colores.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 78,
+        "type": "amigurumis",
+        "name": "Maceta Flor Amarilla",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/FlorAmarilla.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 79,
+        "type": "amigurumis",
+        "name": "Maceta Flor blanca",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/florblanca.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 80,
+        "type": "amigurumis",
+        "name": "Maceta Girasol",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/macetas/Girasol1.jpg",
+            "assets/images/amigurumis/entregado/macetas/Girasol2.jpg",
+            "assets/images/amigurumis/entregado/macetas/Girasol3.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 81,
+        "type": "amigurumis",
+        "name": "Maceta Lila",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/Lila.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 82,
+        "type": "amigurumis",
+        "name": "Maceta Orquideas Lilas",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/macetas/OrquideaLila.jpg",
+            "assets/images/amigurumis/entregado/macetas/OrquideaLila2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 83,
+        "type": "amigurumis",
+        "name": "Maceta Orquideas Rosa",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/macetas/OrquideaRosa.jpg",
+            "assets/images/amigurumis/entregado/macetas/OrquideaRosa2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 84,
+        "type": "amigurumis",
+        "name": "Maceta Tulipanes",
+        "category": "Macetas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/macetas/tulipanes.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 85,
+        "type": "amigurumis",
+        "name": "Nacimiento ",
+        "category": "Misterios",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/misterios/1.jpg",
+            "assets/images/amigurumis/entregado/misterios/2.jpg"
+            ,"assets/images/amigurumis/entregado/misterios/3.jpg"
+        ],
+        "description": [
+
+        ]
     }
+    
 ]
