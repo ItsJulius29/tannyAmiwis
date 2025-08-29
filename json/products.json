@@ -2,14 +2,872 @@
     {
         "id": 1,
         "type": "amigurumis",
+        "name": "Bambi Navidedña",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Bambi1.jpg",
+            "assets/images/amigurumis/entregado/animales/Bambi2.jpg",
+            "assets/images/amigurumis/entregado/animales/Bambi3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico antialérgica",
+            "Ojitos de seguridad ",
+            " Costo: S/. 180 "
+        ]
+    },
+    {
+        "id": 2,
+        "type": "amigurumis",
+        "name": "Burro",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Burro.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 18cm ",
+            "Tejida en hilo acrílico antialérgico.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            " Costo: S/. 150 "
+        ]
+    },
+    {
+        "id": 3,
+        "type": "amigurumis",
+        "name": "Coneja Madre e Hija",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/ConAlar1.jpg",
+            "assets/images/amigurumis/entregado/animales/ConAlar2.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 18cm coneja mamá y de 12cm conejita hija.",
+            "Tejida en hilo de 100% algodón.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 180 "
+        ]
+    },
+    {
+        "id": 4,
+        "type": "amigurumis",
+        "name": "Coneja Blue",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/ConejaBlue.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 5,
+        "type": "amigurumis",
         "name": "Coneja Girasol",
         "category": "Animales",
         "price": 15,
         "difficulty": 1,
         "images": [
-            "assets/images/amigurumis/pago/animales/Coneja Girasol  1.jpg",
-            "assets/images/amigurumis/pago/animales/Coneja Girasol 2.jpg"
+            "assets/images/amigurumis/entregado/animales/ConejaGirasol1.jpg",
+            "assets/images/amigurumis/entregado/animales/ConejaGirasol2.jpg",
+            "assets/images/amigurumis/entregado/animales/ConejaGirasol3.jpg"
         ],
-        "description": "Un perrito tejido a mano con hilo suave, ideal para niños."
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: Vestido, diadema y girasol.",
+            " Costo: S/. 180"
+        ]
+    },
+    {
+        "id": 6,
+        "type": "amigurumis",
+        "name": "Coneja Lyla",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/ConejaLyla1.jpg",
+            "assets/images/amigurumis/entregado/animales/ConejaLyla2.jpg",
+            "assets/images/amigurumis/entregado/animales/ConejaLyla3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20cm de altura.",
+            "Tejida en hilo acrílico antialérgica. ",
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/.180  "
+        ]
+    },
+    {
+        "id": 7,
+        "type": "amigurumis",
+        "name": "Conejos Bebé",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Conejosbb.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 16 cm. ",
+            "Tejida en hilo acrílico antialérgica,",
+            "Relleno hipoalergénico ",
+            "Ojitos de seguridad ",
+            "Toda la pieza es cosida.",
+            "Incluye: OVEROL",
+            "Costo: S/. 250 "
+        ]
+    },
+    {
+        "id": 8,
+        "type": "amigurumis",
+        "name": "Dumbo",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Dumbo.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: Chalina y gorrito",
+            "Costo: S/. 180 "
+        ]
+    },
+    {
+        "id": 9,
+        "type": "amigurumis",
+        "name": "Familia de gatitos",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/FamiliaGatos1.jpg",
+            "assets/images/amigurumis/entregado/animales/FamiliaGatos2.jpg",
+            "assets/images/amigurumis/entregado/animales/FamiliaGatos3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 13cm de altura.",
+            "Tejida en hilo acrílico antialérgica. ",
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo : S/.190  por la familia de 3 gatitos"
+        ]
+    },
+    {
+        "id": 10,
+        "type": "amigurumis",
+        "name": "Gato bicolor",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Gato1.jpg",
+            "assets/images/amigurumis/entregado/animales/Gato2.jpg",
+            "assets/images/amigurumis/entregado/animales/Gato3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 15 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad escarchados",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 95 "
+        ]
+    },
+    {
+        "id": 11,
+        "type": "amigurumis",
+        "name": "Gato dormilon",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/GatoDormilon.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20cm ",
+            "Tejida en hilo ACRÍLICO CHENILLE.",
+            "Ojitos bordados. ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 150 "
+        ]
+    },
+    {
+        "id": 12,
+        "type": "amigurumis",
+        "name": "Gato risueño patas alargadas",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/GatoRis1.jpg",
+            "assets/images/amigurumis/entregado/animales/GatoRis2.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 15cm ",
+            "Tejida en hilo acrílico.",
+            "Ojitos bordados ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            " Costo: S/. 95 "
+        ]
+    },
+    {
+        "id": 13,
+        "type": "amigurumis",
+        "name": "Hippo Violet",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Hippo1.jpg",
+            "assets/images/amigurumis/entregado/animales/Hippo2.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 24cm sentada y 14 cm de altura.",
+            "Tejida en hilo de100%  algodón mercerizado. ",
+            "Ojitos de seguridad ",
+            "Incluye: Vestido y Diadema",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 180 "
+        ]
+    },
+    {
+        "id": 14,
+        "type": "amigurumis",
+        "name": "Jirafa Bebé",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Jirafabb.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 23cm ",
+            "Tejida en hilo de100% algodón mercerizado. ",
+            "Ojitos bordados ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 120 "
+        ]
+    },
+    {
+        "id": 15,
+        "type": "amigurumis",
+        "name": "Llamitas Personalizadas",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Llamita1.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita2.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita3.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita4.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita5.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita6.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamita7.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 23cm parada en 4 patas ",
+            "Tejida en hilo acrílico antialérgico. ",
+            "Ojitos bordados ",
+            "Incluye: Hasta 3 accesorios",
+            " Costo: S/. 170 "
+        ]
+    },
+    {
+        "id": 16,
+        "type": "amigurumis",
+        "name": "Mini Llamitas ",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Llamitas1.jpg",
+            "assets/images/amigurumis/entregado/animales/Llamitas2.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 15 cm paradas en 4 patas.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: Accesorios ",
+            " Costo: S/. 120 cada una."
+        ]
+    },
+    {
+        "id": 17,
+        "type": "amigurumis",
+        "name": "Osita Rosita",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Osa.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 18 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: vestido y rosita",
+            "Costo: S/. 140"
+        ]
+    },
+    {
+        "id": 18,
+        "type": "amigurumis",
+        "name": "Osito Teddy",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Oso.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 18 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 120"
+        ]
+    },
+    {
+        "id": 19,
+        "type": "amigurumis",
+        "name": "Pack Osito Bebé",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Osos.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 25 cm el oso.",
+            "Tejida en hilo acrílico antialérgica",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: Sonajero, y Sujetador de Chupón Personalizado con nombre. ",
+            "Costo: S/. 280"
+        ]
+    },
+    {
+        "id": 20,
+        "type": "amigurumis",
+        "name": "Perrito Personalizado",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Perro.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 35 cm parado de 4 patas.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad escarchados",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 220 "
+        ]
+    },
+    {
+        "id": 21,
+        "type": "amigurumis",
+        "name": "Parejita Mini Pinguinos",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/animales/Pinguinos1.jpg",
+            "assets/images/amigurumis/entregado/animales/Pinguinos2.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 8 cm.",
+            "Tejida en hilo 100% algodón.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye cúpula de acrílico.",
+            "Costo: S/. 80"
+        ]
+    },
+    {
+        "id": 21,
+        "type": "amigurumis",
+        "name": "Vaquita",
+        "category": "Animales",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Vaquita.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de     14 cm.",
+            "Tejida en hilo acrílico antialérgica",
+            "Ojitos de seguridad kawai",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Costo: S/. 85 "
+        ]
+    },
+    {
+        "id": 22,
+        "type": "amigurumis",
+        "name": "Conejitas",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/apego/Conejitas.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 23,
+        "type": "amigurumis",
+        "name": "Manta de Coneja",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/apego/MantaConeja.jpg",
+            "assets/images/amigurumis/entregado/apego/MantaConeja2.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 24,
+        "type": "amigurumis",
+        "name": "Manta de Estrellas de Mar",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/apego/MantaEstrellasMar.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 25,
+        "type": "amigurumis",
+        "name": "Manta Osito",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/apego/Osito.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 26,
+        "type": "amigurumis",
+        "name": "Manta Personalizada",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/apego/Personalizado.jpg"
+        ],
+        "description": []
+    },
+    {
+        "id": 27,
+        "type": "amigurumis",
+        "name": "Rapunzel",
+        "category": "Apego",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/apego/Rapunzel.jpeg"
+        ],
+        "description": []
+    },
+    {
+        "id": 28,
+        "type": "amigurumis",
+        "name": "KarolG Mañana Será Bonito",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/pago/artistas/KarolgMSB.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: prendas de la imagen y base de soporte de maderita.",
+            "Costo: S/. 160"
+        ]
+    },
+    {
+        "id": 29,
+        "type": "amigurumis",
+        "name": "KarolG Version Fornite",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/KarolgFornite1.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite2.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite3.jpg",
+            "assets/images/amigurumis/pago/artistas/KarolgFornite4.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 16 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: prendas de la imagen y base de soporte de maderita.",
+            " Costo: S/. 15"
+        ]
+    },
+    {
+        "id": 30,
+        "type": "amigurumis",
+        "name": "Rosario Tijeras",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras1.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras2.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras3.jpg",
+            "assets/images/amigurumis/pago/artistas/RosarioTijeras4.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 16 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: Denario y base de soporte de maderita.",
+            " Costo: S/. 150"
+        ]
+    },
+    {
+        "id": 31,
+        "type": "amigurumis",
+        "name": "Selena Quintanilla",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/Selena.jpg",
+            "assets/images/amigurumis/pago/artistas/Selena2.jpg",
+            "assets/images/amigurumis/pago/artistas/Selena3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico",
+            "Toda la pieza es cosida.",
+            "Incluye: base de soporte de maderita.",
+            " Costo: S/. 180"
+        ]
+    },
+    {
+        "id": 32,
+        "type": "amigurumis",
+        "name": "Shakira",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/pago/artistas/Shakira.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira2.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira3.jpg",
+            "assets/images/amigurumis/pago/artistas/Shakira4.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 16 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: microfono, lobita y base de soporte de maderita.",
+            "Costo: S/. 170"
+        ]
+    },
+    {
+        "id": 33,
+        "type": "amigurumis",
+        "name": "Shahrukh Khan ",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/artistas/Khan.jpg",
+            "assets/images/amigurumis/entregado/artistas/Khan2.jpg",
+            "assets/images/amigurumis/entregado/artistas/Khan3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico y hilo de 100%algodón.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: lentes y base de soporte de madera.",
+            "Costo: S/. 180"
+        ]
+    },
+    {
+        "id": 34,
+        "type": "amigurumis",
+        "name": "Laura Paussini",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/artistas/LauraPau1.jpg",
+            "assets/images/amigurumis/entregado/artistas/LauraPau2.jpg",
+            "assets/images/amigurumis/entregado/artistas/LauraPau3.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico y hilo de 100%algodón.",
+            "Ojitos de seguridad ",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: BANDERA Peruana y  soporte de maderita.",
+            "Costo: S/. 200"
+        ]
+    },
+    {
+        "id": 35,
+        "type": "amigurumis",
+        "name": "Young Miko",
+        "category": "Artistas",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/artistas/YoungMiko.jpg"
+        ],
+        "description": [
+            "Queda de una medida aproximada de 16 cm.",
+            "Tejida en hilo de 100% algodón mercerizado.",
+            "Ojitos de seguridad y pestañas",
+            "Relleno hipoalergénico ",
+            "Toda la pieza es cosida.",
+            "Incluye: prendas y gorrito, microfono y base de soporte de maderita.",
+            "Costo: S/. 180"
+        ]
+    },
+    {
+        "id": 36,
+        "type": "amigurumis",
+        "name": "Atrapasueños arcoirirs",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/Arcoiris.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 37,
+        "type": "amigurumis",
+        "name": "Cortinero Rosa Blanca",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/decoracion/CortineroRosaBlanca.jpg",
+            "assets/images/amigurumis/entregado/decoracion/CortineroRosaBlanca2.jpg",
+            "assets/images/amigurumis/entregado/decoracion/CortineroRosaBlanca3.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 38,
+        "type": "amigurumis",
+        "name": "Cortinero Rosa Roja",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/CortineroRosaRoja.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 39,
+        "type": "amigurumis",
+        "name": "Mandala",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/Mandala.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 40,
+        "type": "amigurumis",
+        "name": "Cortinero Monito",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/decoracion/Monito1.jpg",
+            "assets/images/amigurumis/entregado/decoracion/Monito2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 41,
+        "type": "amigurumis",
+        "name": "Osito Lila",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/Oso.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 42,
+        "type": "amigurumis",
+        "name": "Personalizado",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/Personalizado.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 43,
+        "type": "amigurumis",
+        "name": "Posa vaso Navidad",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/PosavasoNavidad.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 44,
+        "type": "amigurumis",
+        "name": "Tapete Azul",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/TapeteAzul.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 45,
+        "type": "amigurumis",
+        "name": "Tapetes Cuadrados",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/TapetesCuadrados.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 46,
+        "type": "amigurumis",
+        "name": "Tapetes Redondos",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "images": [
+            "assets/images/amigurumis/entregado/decoracion/TapetesRedondos.jpg",
+            "assets/images/amigurumis/entregado/decoracion/TapetesRedondos2.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 47,
+        "type": "amigurumis",
+        "name": "Tulipanes",
+        "category": "Decoracion",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/decoracion/Tulipanes.jpg"
+        ],
+        "description": [
+
+        ]
+    },
+    {
+        "id": 48,
+        "type": "amigurumis",
+        "name": "Ramo de Angela",
+        "category": "Flores",
+        "price": 15,
+        "difficulty": 1,
+        "image": [
+            "assets/images/amigurumis/entregado/flores/AngelaRamo.jpg"
+        ],
+        "description": [
+
+        ]
     }
 ]

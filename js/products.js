@@ -27,9 +27,11 @@ const BANNERS = {
   free: "assets/images/amigurumis/18.jpg"
 };
 
-// Cache JSON en memoria + sessionStorage
+// ===== Cache JSON con versionado =====
+const DATA_VERSION = 'v2';                    // súbelo cuando cambies los JSON
 const JSON_CACHE = {};
-const SESSION_KEY = src => `prod_json_${src}`;
+const SESSION_KEY = (src) => `prod_json_${DATA_VERSION}_${src}`;
+
 
 // Pixel transparente para placeholder
 const BLANK_IMG = 'data:image/gif;base64,R0lGLAAQABAAAAACwAAAAAAQABAAACAkQBADs=';
@@ -54,7 +56,16 @@ const imgObserver = new IntersectionObserver((entries, obs) => {
 function loadProductsFromJSON(source) {
   const key = SESSION_KEY(source);
 
-  // 1) memoria
+  // Limpia claves antiguas (sin versión) una sola vez
+  try {
+    Object.keys(sessionStorage).forEach(k => {
+      if (/^prod_json_(products\.json|pay\.json|free\.json)$/.test(k)) {
+        sessionStorage.removeItem(k);
+      }
+    });
+  } catch { }
+
+  // 1) Memoria
   if (JSON_CACHE[source]) {
     allProducts = JSON_CACHE[source];
     currentPage = 1;
@@ -62,7 +73,7 @@ function loadProductsFromJSON(source) {
     return;
   }
 
-  // 2) sessionStorage
+  // 2) sessionStorage (con versión)
   try {
     const cached = sessionStorage.getItem(key);
     if (cached) {
@@ -70,18 +81,20 @@ function loadProductsFromJSON(source) {
       allProducts = JSON_CACHE[source];
       currentPage = 1;
       renderFilteredProducts();
-      // refresco en idle para no bloquear
+      // Refresca desde red en idle
       (window.requestIdleCallback || setTimeout)(() => fetchAndStore(source), 0);
       return;
     }
   } catch { }
 
-  // 3) red
+  // 3) Red
   fetchAndStore(source);
 }
 
+
 function fetchAndStore(source) {
-  fetch(`json/${source}`, { cache: 'force-cache' })
+  const url = `json/${source}?v=${DATA_VERSION}`;   // bust de caché
+  fetch(url, { cache: 'no-store' })                 // NO usar force-cache
     .then(res => res.json())
     .then(data => {
       JSON_CACHE[source] = data;
@@ -92,6 +105,7 @@ function fetchAndStore(source) {
     })
     .catch(err => console.error("Error cargando JSON:", err));
 }
+
 
 
 // ===== Render con filtros + paginación
