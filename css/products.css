@@ -240,6 +240,12 @@ section.text-center+.container.mb-5 [class*=" col-"] {
     box-shadow: none;
 }
 
+.pagination .ellipsis .page-link {
+  background: transparent;
+  cursor: default;
+}
+
+
 .page-item.active .page-link {
     background: #7b41e6;
     color: #fff;
