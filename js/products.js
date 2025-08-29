@@ -178,6 +178,7 @@ function renderFilteredProducts() {
 function renderPagination(totalPages) {
   if (!paginationUl) return;
 
+  // ocultar si no hace falta
   if (totalPages <= 1) {
     if (paginationNav) paginationNav.style.display = "none";
     paginationUl.innerHTML = "";
@@ -185,25 +186,81 @@ function renderPagination(totalPages) {
   }
   if (paginationNav) paginationNav.style.display = "";
 
-  paginationUl.innerHTML = "";
-  for (let i = 1; i <= totalPages; i++) {
+  const scrollTop = () =>
+    document.querySelector("#products-container")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const addPage = (n, { label = String(n), active = false, disabled = false, isArrow = false } = {}) => {
     const li = document.createElement("li");
-    li.className = "page-item" + (i === currentPage ? " active" : "");
+    li.className = "page-item" + (active ? " active" : "") + (disabled ? " disabled" : "");
     const a = document.createElement("a");
     a.className = "page-link";
     a.href = "#";
-    a.textContent = i;
+    a.innerHTML = label; // permite iconos <i>
     a.addEventListener("click", (e) => {
       e.preventDefault();
-      if (currentPage === i) return;
-      currentPage = i;
+      if (disabled || active) return;
+      currentPage = n;
       renderFilteredProducts();
-      document.querySelector("#products-container")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollTop();
     });
     li.appendChild(a);
     paginationUl.appendChild(li);
+  };
+
+  const addEllipsis = () => {
+    const li = document.createElement("li");
+    li.className = "page-item disabled ellipsis";
+    const span = document.createElement("span");
+    span.className = "page-link";
+    span.textContent = "…";
+    li.appendChild(span);
+    paginationUl.appendChild(li);
+  };
+
+  // reset
+  paginationUl.innerHTML = "";
+
+  // Flecha anterior
+  addPage(Math.max(1, currentPage - 1), {
+    label: '<i class="bi bi-chevron-left"></i>',
+    disabled: currentPage === 1,
+    isArrow: true
+  });
+
+  // Ventana de 3 números + último
+  const WINDOW = 3;
+
+  if (totalPages <= WINDOW + 1) {
+    // pocos: muestra todos
+    for (let n = 1; n <= totalPages; n++) {
+      addPage(n, { active: n === currentPage });
+    }
+  } else {
+    // calcula el inicio de la ventana
+    let start = currentPage;
+    if (start < 1) start = 1;
+    if (start > totalPages - WINDOW) start = totalPages - WINDOW;
+
+    // páginas de la ventana (NO incluye el último)
+    const end = Math.min(start + WINDOW - 1, totalPages - 1);
+    for (let n = start; n <= end; n++) {
+      addPage(n, { active: n === currentPage });
+    }
+
+    // puntos + último si hace falta
+    if (end < totalPages - 1) addEllipsis();
+    addPage(totalPages, { active: currentPage === totalPages });
   }
+
+  // Flecha siguiente
+  addPage(Math.min(totalPages, currentPage + 1), {
+    label: '<i class="bi bi-chevron-right"></i>',
+    disabled: currentPage === totalPages,
+    isArrow: true
+  });
 }
+
 
 // ===== Tabs
 function setupTabs() {
