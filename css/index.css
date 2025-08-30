@@ -42,7 +42,7 @@ body {
 .hero-section .carousel-inner {
   padding: 6rem 2rem;
   min-height: clamp(420px, 55vh, 720px);
-  background-image: url('tannyAmiwis/assets/images/FONDO MARIPOSAS.png');
+  background-image: url('../assets/images/mariposas.png');
   border-radius: 20px;
 }
 

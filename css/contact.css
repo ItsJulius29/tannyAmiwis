@@ -15,7 +15,7 @@
     border-radius: 18px;
     padding: 30px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-    background-image: url('tannyAmiwis/assets/images/FONDO MARIPOSAS.png');
+    background-image: url('../assets/images/mariposas.png');
     /* opcional */
     background-size: 220px auto;
     background-repeat: repeat;
