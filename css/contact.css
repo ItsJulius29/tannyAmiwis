@@ -44,6 +44,92 @@
     display: block;
 }
 
+/* === Acordeón de preguntas (sin usar 'faq') === */
+.qa-accordion-section {
+    background: #fff7ff;
+}
+
+.qa-title {
+    font-family: 'Croissant One', cursive;
+    color: #6d1a94;
+    font-size: 2.5rem;
+}
+
+.qa-accordion .accordion-item {
+    border: 1px solid #ead6ff;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(75, 0, 125, .08);
+}
+
+.qa-accordion .accordion-button {
+    font-weight: 700;
+    color: #4b007d;
+    background: #f4e6ff;
+}
+
+.qa-accordion .accordion-button.collapsed {
+    background: #faf5ff;
+}
+
+.qa-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.qa-no-caret.accordion-button::after {
+    display: none;
+}
+
+/* oculta caret por defecto */
+.qa-caret {
+    transition: transform .2s ease;
+}
+
+.qa-accordion .accordion-button:not(.collapsed) .qa-caret {
+    transform: rotate(180deg);
+}
+
+/* === Recomendaciones === */
+/* Recomendaciones (cuidados) */
+.care-section {
+    background: #f7efff;
+}
+
+.care-card {
+    background: #fff;
+    border: 1px solid #ead6ff;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 16px rgba(75, 0, 125, .08);
+}
+
+.care-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.care-list li {
+    position: relative;
+    padding-left: 34px;
+    margin: .6rem 0;
+    color: #4b007d;
+    font-weight: 600;
+}
+
+.care-list li::before {
+    content: "\F33B";
+    /* bi-shield-exclamation / cambia si prefieres otro */
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    top: .1rem;
+    font-size: 1.1rem;
+    color: #a64ad7;
+}
+
 /* ==== CONTACTO ==== */
 .contact-section {
     background-color: #fff7ff;
@@ -157,6 +243,10 @@
 
     .faq-video {
         border-radius: 14px;
+    }
+
+    .qa-title{
+        font-size: 2rem;
     }
 }
 
