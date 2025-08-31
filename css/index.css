@@ -103,17 +103,17 @@ body {
 /* Fondos */
 .slide-bg-1 {
   background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
 }
 
 .slide-bg-2 {
   background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
 }
 
 .slide-bg-3 {
   background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/amigurumis/18.jpg');
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
 }
 
 /* ===== HISTORY ===== */
@@ -302,6 +302,21 @@ footer a:hover {
   }
 }
 
+/* Extra pequeño: teléfonos muy angostos */
+@media (max-width: 575.98px) {
+  .carousel-item {
+    min-height: 52vh;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(1.1rem, 7.5vw, 1.6rem);
+  }
+
+  .hero-section .btn {
+    font-size: .9rem;
+  }
+}
+
 @media (min-width:992px) {
   footer .row {
     align-items: center;
@@ -310,6 +325,59 @@ footer a:hover {
 
 /* ===== NAV MÓVIL (empuja contenido) ===== */
 @media (max-width:991.98px) {
+
+  /* Logo más pequeño */
+  .navbar-mariposa {
+    height: 56px;
+  }
+
+  .hero-section .carousel-inner {
+    padding: 2rem 1rem;
+    border-radius: 14px;
+  }
+
+  /* Slide: sin altura fija y con mínimo razonable */
+  .carousel-item {
+    min-height: 56vh;
+    /* antes era muy alto */
+    height: auto;
+  }
+
+  /* Texto y CTA más pequeños */
+  .hero-section .hero-content {
+    padding: 1rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(1.2rem, 6.5vw, 1.8rem);
+  }
+
+  .hero-section .btn {
+    padding: .5rem 1rem;
+    font-size: .95rem;
+    border-radius: 16px;
+  }
+
+  /* Indicadores compactos */
+  .hero-section .carousel-indicators {
+    gap: 6px;
+    margin-top: .5rem;
+  }
+
+  .hero-section .carousel-indicators button {
+    width: 24vw;
+    /* ~3 puntos ocupan el ancho con pequeños gaps */
+    max-width: 90px;
+    height: 6px;
+    border-radius: 999px;
+    background: #fff;
+    opacity: 1;
+  }
+
+  .hero-section .carousel-indicators .active {
+    background: #692688;
+  }
+
   .navbar {
     height: auto;
   }
