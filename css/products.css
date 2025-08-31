@@ -324,13 +324,6 @@ section.text-center+.container.mb-5 [class*=" col-"] {
     background: #a364d8;
 }
 
-/* --- Lazy image + skeleton --- */
-.card-img-top.lazy {
-    background: linear-gradient(90deg, #eee, #f6f0ff, #eee);
-    background-size: 200% 100%;
-    animation: shimmer 1.1s linear infinite;
-}
-
 @keyframes shimmer {
     from {
         background-position: 200% 0
