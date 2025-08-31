@@ -1,11 +1,15 @@
+/* products.js — Render rápido con placeholders válidos, prefetch y render incremental */
+
+/* ===== Estado ===== */
 let allProducts = [];
 let currentType = "amigurumis";          // "amigurumis" | "pago" | "free"
 let currentCategory = "Todos";
 let currentDifficulty = "all";
 let currentPage = 1;
 let currentSource = "products.json";     // "products.json" | "pay.json" | "free.json"
+let renderToken = 0;                      // para cancelar renders antiguos
 
-// DOM
+/* ===== DOM ===== */
 const container = document.getElementById("products-container");
 const tabs = document.querySelectorAll(".category-tab");
 const banner = document.getElementById("categoryBanner");
@@ -16,56 +20,71 @@ const paginationUl = document.querySelector(".pagination");
 const paginationNav = paginationUl?.closest("nav");
 const catCurrent = document.getElementById("catCurrent");
 
-// helpers
+/* ===== Constantes ===== */
 const mm = window.matchMedia("(max-width: 991.98px)");
 const getPageSize = () => (mm.matches ? 8 : 9);
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
 
 const BANNERS = {
-  amigurumis: "assets/images/amigurumis/18.jpg",
-  pago: "assets/images/amigurumis/19.jpg",
-  free: "assets/images/amigurumis/18.jpg"
+  amigurumis: "assets/images/pruebabanner.jpg",
+  pago: "assets/images/pruebabanner.jpg",
+  free: "assets/images/pruebabanner.jpg"
 };
 
-// ===== Cache JSON con versionado =====
-const DATA_VERSION = 'v2';                    // súbelo cuando cambies los JSON
+// dimensiones lógicas para reservar espacio
+const CARD_W = 600, CARD_H = 600;          // cards cuadradas
+const BANNER_W = 1200, BANNER_H = 675;     // ~16:9
+
+// 1x1 GIF transparente válido
+const BLANK_IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+
+/* ===== Caché de JSON con versionado ===== */
+const DATA_VERSION = "v3";                 // súbelo cuando cambies los JSON
 const JSON_CACHE = {};
 const SESSION_KEY = (src) => `prod_json_${DATA_VERSION}_${src}`;
 
-
-// Pixel transparente para placeholder
-const BLANK_IMG = 'data:image/gif;base64,R0lGLAAQABAAAAACwAAAAAAQABAAACAkQBADs=';
-
-// Lazy loader de imágenes
+/* ===== Lazy loader (src/srcset/sizes) ===== */
 const imgObserver = new IntersectionObserver((entries, obs) => {
   for (const e of entries) {
     if (!e.isIntersecting) continue;
     const img = e.target;
-    const src = img.dataset.src;
-    if (src) {
-      img.src = src;
-      img.removeAttribute('data-src');
-      img.addEventListener('load', () => img.classList.remove('lazy'), { once: true });
-    }
+    if (img.dataset.src) { img.src = img.dataset.src; img.removeAttribute("data-src"); }
+    if (img.dataset.srcset) { img.srcset = img.dataset.srcset; img.removeAttribute("data-srcset"); }
+    if (img.dataset.sizes) { img.sizes = img.dataset.sizes; img.removeAttribute("data-sizes"); }
+    img.addEventListener("load", () => img.classList.remove("lazy"), { once: true });
     obs.unobserve(img);
   }
-}, { rootMargin: '300px 0px', threshold: 0.01 });
+}, { rootMargin: "600px 0px", threshold: 0.01 });
 
+/* ===== Skeletons ===== */
+function showSkeleton(n) {
+  const cards = Array.from({ length: n }, () => `
+    <div class="col product-item fade-in">
+      <div class="card h-100 position-relative">
+        <img src="${BLANK_IMG}" class="card-img-top lazy" alt="" width="${CARD_W}" height="${CARD_H}">
+        <div class="card-body text-center">
+          <p class="card-text small text-muted">&nbsp;</p>
+          <h5 class="card-title">&nbsp;</h5>
+          <p class="fw-bold">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  `).join("");
+  container.innerHTML = cards;
+}
 
-// ===== Carga JSON (sin autollenado de descripción)
+/* ===== Carga JSON ===== */
 function loadProductsFromJSON(source) {
   const key = SESSION_KEY(source);
 
-  // Limpia claves antiguas (sin versión) una sola vez
+  // limpia claves antiguas (sin versión) una vez
   try {
     Object.keys(sessionStorage).forEach(k => {
-      if (/^prod_json_(products\.json|pay\.json|free\.json)$/.test(k)) {
-        sessionStorage.removeItem(k);
-      }
+      if (/^prod_json_(products\.json|pay\.json|free\.json)$/.test(k)) sessionStorage.removeItem(k);
     });
   } catch { }
 
-  // 1) Memoria
+  // 1) memoria
   if (JSON_CACHE[source]) {
     allProducts = JSON_CACHE[source];
     currentPage = 1;
@@ -73,7 +92,7 @@ function loadProductsFromJSON(source) {
     return;
   }
 
-  // 2) sessionStorage (con versión)
+  // 2) sessionStorage
   try {
     const cached = sessionStorage.getItem(key);
     if (cached) {
@@ -81,20 +100,20 @@ function loadProductsFromJSON(source) {
       allProducts = JSON_CACHE[source];
       currentPage = 1;
       renderFilteredProducts();
-      // Refresca desde red en idle
+      // refresca en idle
       (window.requestIdleCallback || setTimeout)(() => fetchAndStore(source), 0);
       return;
     }
   } catch { }
 
-  // 3) Red
+  // 3) red (muestra skeleton breve)
+  showSkeleton(getPageSize());
   fetchAndStore(source);
 }
 
-
 function fetchAndStore(source) {
-  const url = `json/${source}?v=${DATA_VERSION}`;   // bust de caché
-  fetch(url, { cache: 'no-store' })                 // NO usar force-cache
+  const url = `json/${source}?v=${DATA_VERSION}`;
+  fetch(url, { cache: "no-store" })
     .then(res => res.json())
     .then(data => {
       JSON_CACHE[source] = data;
@@ -103,18 +122,32 @@ function fetchAndStore(source) {
       currentPage = 1;
       renderFilteredProducts();
     })
-    .catch(err => console.error("Error cargando JSON:", err));
+    .catch(err => {
+      console.error("Error cargando JSON:", err);
+      container.innerHTML = `<div class="col-12 no-products-message">No se pudo cargar el catálogo.</div>`;
+    });
 }
 
+/* ===== Prefetch inteligente (reduce espera al cambiar de pestaña) ===== */
+function prefetchIfNeeded(src) {
+  if (JSON_CACHE[src] || sessionStorage.getItem(SESSION_KEY(src))) return;
+  fetchAndStore(src); // reutiliza el mismo flujo y guarda en sessionStorage
+}
+function warmPrefetchOthers() {
+  if (currentSource !== "pay.json") prefetchIfNeeded("pay.json");
+  if (currentSource !== "free.json") prefetchIfNeeded("free.json");
+}
+tabs.forEach(t => {
+  const src = t.dataset.source;
+  t.addEventListener("mouseenter", () => prefetchIfNeeded(src));
+});
 
-
-// ===== Render con filtros + paginación
+/* ===== Render + filtros + paginación ===== */
 function renderFilteredProducts() {
-  container.innerHTML = "";
+  const myToken = ++renderToken;
 
   const mustMatchType = (currentSource === "products.json" || currentSource === "pay.json");
-
-  const filtered = allProducts.filter((p) => {
+  const filtered = allProducts.filter(p => {
     const matchType = mustMatchType ? (p.type === currentType) : true;
     const matchCategory = currentCategory === "Todos" || p.category === currentCategory;
     const matchDifficulty = currentDifficulty === "all" || p.difficulty === Number(currentDifficulty);
@@ -138,47 +171,51 @@ function renderFilteredProducts() {
   const start = (currentPage - 1) * pageSize;
   const slice = filtered.slice(start, start + pageSize);
 
-  slice.forEach((product, i) => {
-    const cover = Array.isArray(product.images) && product.images.length ? product.images[0] : product.image;
+  // 1) pinta HTML en bloque (rápido) — las 2 primeras imágenes en eager
+  let html = "";
+  for (let i = 0; i < slice.length; i++) {
+    const p = slice[i];
+    const cover = Array.isArray(p.images) && p.images.length ? p.images[0] : p.image;
+    const href = p.id != null
+      ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(p.id)}`
+      : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(p)}`;
+    const usd = firstNumber(p.price ?? p.price_usd ?? p.usd);
+    const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : "Gratis";
 
-    const href = product.id != null
-      ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
-      : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(product)}`;
+    const eager = (currentPage === 1 && i < 2); // 2 primeras por página
+    const imgAttrs = eager
+      ? `src="${cover || ""}" loading="eager" fetchpriority="high"`
+      : `src="${BLANK_IMG}" data-src="${cover || ""}" loading="lazy"`;
 
-    const usd = firstNumber(product.price ?? product.price_usd ?? product.usd);
-    const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : 'Gratis';
-
-    const priority = (currentPage === 1 && i < 3) ? 'high' : 'low'; // prioriza arriba del fold
-
-    const col = document.createElement("div");
-    col.className = "col product-item fade-in";
-    col.innerHTML = `
-      <div class="card h-100 position-relative">
-        <img src="${BLANK_IMG}" data-src="${cover || ''}"
-             class="card-img-top lazy"
-             alt="${product.name || ''}"
-             loading="lazy" decoding="async" fetchpriority="${priority}">
-        <div class="card-body text-center">
-          <p class="card-text small text-muted">${product.category ?? ""}</p>
-          <h5 class="card-title">${product.name}</h5>
-          <p class="fw-bold">${priceHtml}</p>
+    html += `
+      <div class="col product-item fade-in">
+        <div class="card h-100 position-relative">
+          <img ${imgAttrs}
+               class="card-img-top ${eager ? "" : "lazy"}"
+               alt="${p.name || ""}"
+               decoding="async" width="${CARD_W}" height="${CARD_H}">
+          <div class="card-body text-center">
+            <p class="card-text small text-muted">${p.category ?? ""}</p>
+            <h5 class="card-title">${p.name || ""}</h5>
+            <p class="fw-bold">${priceHtml}</p>
+          </div>
+          <a class="stretched-link" href="${href}" aria-label="Ver ${p.name}"></a>
         </div>
-        <a class="stretched-link" href="${href}" aria-label="Ver ${product.name}"></a>
       </div>`;
-    container.appendChild(col);
+  }
+  container.innerHTML = html;
 
-    const img = col.querySelector('img');
-    if (img) imgObserver.observe(img);
-  });
+  // 2) activa lazy para el resto (si nadie canceló este render)
+  if (myToken === renderToken) {
+    container.querySelectorAll("img[data-src]").forEach(img => imgObserver.observe(img));
+  }
 
   renderPagination(totalPages);
 }
 
-
 function renderPagination(totalPages) {
   if (!paginationUl) return;
 
-  // ocultar si no hace falta
   if (totalPages <= 1) {
     if (paginationNav) paginationNav.style.display = "none";
     paginationUl.innerHTML = "";
@@ -190,13 +227,13 @@ function renderPagination(totalPages) {
     document.querySelector("#products-container")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  const addPage = (n, { label = String(n), active = false, disabled = false, isArrow = false } = {}) => {
+  const addPage = (n, { label = String(n), active = false, disabled = false } = {}) => {
     const li = document.createElement("li");
     li.className = "page-item" + (active ? " active" : "") + (disabled ? " disabled" : "");
     const a = document.createElement("a");
     a.className = "page-link";
     a.href = "#";
-    a.innerHTML = label; // permite iconos <i>
+    a.innerHTML = label;
     a.addEventListener("click", (e) => {
       e.preventDefault();
       if (disabled || active) return;
@@ -218,51 +255,50 @@ function renderPagination(totalPages) {
     paginationUl.appendChild(li);
   };
 
-  // reset
   paginationUl.innerHTML = "";
 
-  // Flecha anterior
   addPage(Math.max(1, currentPage - 1), {
     label: '<i class="bi bi-chevron-left"></i>',
-    disabled: currentPage === 1,
-    isArrow: true
+    disabled: currentPage === 1
   });
 
-  // Ventana de 3 números + último
   const WINDOW = 3;
 
   if (totalPages <= WINDOW + 1) {
-    // pocos: muestra todos
-    for (let n = 1; n <= totalPages; n++) {
-      addPage(n, { active: n === currentPage });
-    }
+    for (let n = 1; n <= totalPages; n++) addPage(n, { active: n === currentPage });
   } else {
-    // calcula el inicio de la ventana
     let start = currentPage;
     if (start < 1) start = 1;
     if (start > totalPages - WINDOW) start = totalPages - WINDOW;
 
-    // páginas de la ventana (NO incluye el último)
     const end = Math.min(start + WINDOW - 1, totalPages - 1);
-    for (let n = start; n <= end; n++) {
-      addPage(n, { active: n === currentPage });
-    }
+    for (let n = start; n <= end; n++) addPage(n, { active: n === currentPage });
 
-    // puntos + último si hace falta
     if (end < totalPages - 1) addEllipsis();
     addPage(totalPages, { active: currentPage === totalPages });
   }
 
-  // Flecha siguiente
   addPage(Math.min(totalPages, currentPage + 1), {
     label: '<i class="bi bi-chevron-right"></i>',
-    disabled: currentPage === totalPages,
-    isArrow: true
+    disabled: currentPage === totalPages
   });
 }
 
+/* ===== Tabs ===== */
+function updateBannerForType() {
+  const src = BANNERS[currentType] || BANNERS.amigurumis;
+  if (!banner) return;
+  banner.src = src;
+  banner.setAttribute("width", BANNER_W);
+  banner.setAttribute("height", BANNER_H);
+  banner.decoding = "async";
+  banner.loading = "eager";
+  banner.alt =
+    currentType === "pago" ? "Patrones de pago" :
+      currentType === "free" ? "Patrones gratuitos" :
+        "Productos a pedido";
+}
 
-// ===== Tabs
 function setupTabs() {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -272,10 +308,10 @@ function setupTabs() {
       currentType = tab.dataset.tab;
       currentSource = tab.dataset.source;
 
-      banner.src = BANNERS[currentType] || BANNERS.amigurumis;
+      updateBannerForType();
 
       currentCategory = "Todos";
-      catCurrent && (catCurrent.textContent = "(Todos)");
+      if (catCurrent) catCurrent.textContent = "(Todos)";
       categoryButtons.forEach((b) => b.classList.remove("active-category"));
       document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
 
@@ -285,14 +321,18 @@ function setupTabs() {
       difficultySlider.disabled = !usingDifficulty || allDifficultyCheckbox.checked;
 
       currentDifficulty = "all";
-
       currentPage = 1;
+
+      // skeleton muy corto para feedback instantáneo
+      showSkeleton(getPageSize());
       loadProductsFromJSON(currentSource);
+      // y calienta las otras
+      warmPrefetchOthers();
     });
   });
 }
 
-// ===== Categoría
+/* ===== Categoría ===== */
 function setupCategoryFilters() {
   categoryButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -313,7 +353,7 @@ function setupCategoryFilters() {
   });
 }
 
-// ===== Dificultad
+/* ===== Dificultad ===== */
 function setupDifficultyFilter() {
   allDifficultyCheckbox.addEventListener("change", () => {
     if (allDifficultyCheckbox.checked) {
@@ -336,18 +376,20 @@ function setupDifficultyFilter() {
   });
 }
 
-// ===== Viewport change
+/* ===== Viewport ===== */
 mm.addEventListener("change", () => {
   currentPage = 1;
   renderFilteredProducts();
 });
 
-// ===== Init
+/* ===== Init ===== */
 document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupCategoryFilters();
   setupDifficultyFilter();
   document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
+  updateBannerForType();
   loadProductsFromJSON("products.json");
-  catCurrent && (catCurrent.textContent = "(Todos)");
+  warmPrefetchOthers();
+  if (catCurrent) catCurrent.textContent = "(Todos)";
 });

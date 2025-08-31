@@ -18,6 +18,9 @@ h6 {
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 20px;
+    aspect-ratio: 16 / 9;
+    background: #f6f6f6;
+
 }
 
 .category-tabs {
@@ -148,8 +151,11 @@ h6 {
 }
 
 .card-img-top {
-    height: 300px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    background: #f6f6f6;
 }
 
 .card-title {
@@ -177,8 +183,9 @@ h6 {
 
 .product-item {
     transition: opacity .3s, transform .3s;
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
 }
-
 .product-item.fade-in {
     opacity: 1;
     transform: scale(1);
@@ -241,8 +248,8 @@ section.text-center+.container.mb-5 [class*=" col-"] {
 }
 
 .pagination .ellipsis .page-link {
-  background: transparent;
-  cursor: default;
+    background: transparent;
+    cursor: default;
 }
 
 
