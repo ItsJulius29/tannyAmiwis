@@ -186,6 +186,7 @@ h6 {
     content-visibility: visible;
     contain-intrinsic-size: auto;
 }
+
 .product-item.fade-in {
     opacity: 1;
     transform: scale(1);
@@ -196,6 +197,14 @@ h6 {
     transform: scale(.98);
     pointer-events: none;
 }
+
+/* Evita trabajo de layout/pintura fuera de pantalla (mejora scroll y cambio de pestañas) */
+#products-container .card {
+    content-visibility: auto;
+    contain-intrinsic-size: 600px 760px;
+    /* tamaño aproximado reservado */
+}
+
 
 #products-container .no-products-message {
     flex: 0 0 100% !important;

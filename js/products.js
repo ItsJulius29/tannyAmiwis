@@ -1,15 +1,12 @@
-/* products.js — Render rápido con placeholders válidos, prefetch y render incremental */
-
-/* ===== Estado ===== */
+// ===== Estado =====
 let allProducts = [];
 let currentType = "amigurumis";          // "amigurumis" | "pago" | "free"
 let currentCategory = "Todos";
 let currentDifficulty = "all";
 let currentPage = 1;
 let currentSource = "products.json";     // "products.json" | "pay.json" | "free.json"
-let renderToken = 0;                      // para cancelar renders antiguos
 
-/* ===== DOM ===== */
+// ===== DOM =====
 const container = document.getElementById("products-container");
 const tabs = document.querySelectorAll(".category-tab");
 const banner = document.getElementById("categoryBanner");
@@ -20,7 +17,17 @@ const paginationUl = document.querySelector(".pagination");
 const paginationNav = paginationUl?.closest("nav");
 const catCurrent = document.getElementById("catCurrent");
 
-/* ===== Constantes ===== */
+// nodos del bloque de dificultad (para ocultar/mostrar sin cambiar HTML)
+// --- nodos del bloque de dificultad para ocultar/mostrar ---
+const diffHr = document.querySelector(".sidebar .bg-light hr");
+const diffTitle = document.querySelector(".sidebar .bg-light h6.fw-bold");
+const diffCheckWrap = document.querySelector(".sidebar .bg-light .form-check");
+const diffRangeInput = document.getElementById("difficultyRange");
+// ← NUEVO: tomar la fila de etiquetas como el siguiente hermano del input
+const getDiffLabels = () => document.getElementById("difficultyRange")?.nextElementSibling;
+
+
+// ===== Constantes =====
 const mm = window.matchMedia("(max-width: 991.98px)");
 const getPageSize = () => (mm.matches ? 8 : 9);
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
@@ -31,19 +38,19 @@ const BANNERS = {
   free: "assets/images/pruebabanner.jpg"
 };
 
-// dimensiones lógicas para reservar espacio
-const CARD_W = 600, CARD_H = 600;          // cards cuadradas
-const BANNER_W = 1200, BANNER_H = 675;     // ~16:9
+// Dimensiones para reservar espacio
+const CARD_W = 600, CARD_H = 600;
+const BANNER_W = 1200, BANNER_H = 675;
 
-// 1x1 GIF transparente válido
-const BLANK_IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
-
-/* ===== Caché de JSON con versionado ===== */
-const DATA_VERSION = "v3";                 // súbelo cuando cambies los JSON
+// ===== Cache JSON con versionado =====
+const DATA_VERSION = "v2";                 // súbelo cuando cambies los JSON
 const JSON_CACHE = {};
 const SESSION_KEY = (src) => `prod_json_${DATA_VERSION}_${src}`;
 
-/* ===== Lazy loader (src/srcset/sizes) ===== */
+// 1×1 transparente válido
+const BLANK_IMG = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+
+// ===== Lazy loader =====
 const imgObserver = new IntersectionObserver((entries, obs) => {
   for (const e of entries) {
     if (!e.isIntersecting) continue;
@@ -54,37 +61,44 @@ const imgObserver = new IntersectionObserver((entries, obs) => {
     img.addEventListener("load", () => img.classList.remove("lazy"), { once: true });
     obs.unobserve(img);
   }
-}, { rootMargin: "600px 0px", threshold: 0.01 });
+}, { rootMargin: "300px 0px", threshold: 0.01 });
 
-/* ===== Skeletons ===== */
-function showSkeleton(n) {
-  const cards = Array.from({ length: n }, () => `
-    <div class="col product-item fade-in">
-      <div class="card h-100 position-relative">
-        <img src="${BLANK_IMG}" class="card-img-top lazy" alt="" width="${CARD_W}" height="${CARD_H}">
-        <div class="card-body text-center">
-          <p class="card-text small text-muted">&nbsp;</p>
-          <h5 class="card-title">&nbsp;</h5>
-          <p class="fw-bold">&nbsp;</p>
-        </div>
-      </div>
-    </div>
-  `).join("");
-  container.innerHTML = cards;
+// ===== Mostrar/ocultar UI de dificultad según pestaña =====
+function applyDifficultyUI() {
+  const show = (currentSource !== "products.json"); // solo en pay/free
+
+  const diffLabels = getDiffLabels(); // obtenerla cada vez (por si cambia el DOM)
+
+  // Ocultar/mostrar el bloque de dificultad
+  [diffHr, diffTitle, diffCheckWrap, diffRangeInput, diffLabels]
+    .forEach(el => el && el.classList.toggle("d-none", !show));
+
+  // Estados lógicos
+  if (!allDifficultyCheckbox || !difficultySlider) return;
+
+  allDifficultyCheckbox.disabled = !show;
+
+  if (!show) {
+    allDifficultyCheckbox.checked = true;   // forzar "todas"
+    currentDifficulty = "all";
+  }
+  difficultySlider.disabled = !show || allDifficultyCheckbox.checked;
 }
 
-/* ===== Carga JSON ===== */
+
+
+// ===== Carga JSON =====
 function loadProductsFromJSON(source) {
   const key = SESSION_KEY(source);
 
-  // limpia claves antiguas (sin versión) una vez
+  // Limpia claves antiguas (sin versión) una vez
   try {
     Object.keys(sessionStorage).forEach(k => {
       if (/^prod_json_(products\.json|pay\.json|free\.json)$/.test(k)) sessionStorage.removeItem(k);
     });
   } catch { }
 
-  // 1) memoria
+  // 1) Memoria
   if (JSON_CACHE[source]) {
     allProducts = JSON_CACHE[source];
     currentPage = 1;
@@ -100,53 +114,51 @@ function loadProductsFromJSON(source) {
       allProducts = JSON_CACHE[source];
       currentPage = 1;
       renderFilteredProducts();
-      // refresca en idle
-      (window.requestIdleCallback || setTimeout)(() => fetchAndStore(source), 0);
+      idle(() => fetchAndStore(source, true));
       return;
     }
   } catch { }
 
-  // 3) red (muestra skeleton breve)
-  showSkeleton(getPageSize());
-  fetchAndStore(source);
+  // 3) Red
+  fetchAndStore(source, false);
 }
 
-function fetchAndStore(source) {
+// fetch con opción "silent" (no re-render)
+function fetchAndStore(source, silent = false) {
   const url = `json/${source}?v=${DATA_VERSION}`;
   fetch(url, { cache: "no-store" })
     .then(res => res.json())
     .then(data => {
       JSON_CACHE[source] = data;
       try { sessionStorage.setItem(SESSION_KEY(source), JSON.stringify(data)); } catch { }
-      allProducts = data;
-      currentPage = 1;
-      renderFilteredProducts();
+      if (!silent) {
+        allProducts = data;
+        currentPage = 1;
+        renderFilteredProducts();
+      }
     })
-    .catch(err => {
-      console.error("Error cargando JSON:", err);
-      container.innerHTML = `<div class="col-12 no-products-message">No se pudo cargar el catálogo.</div>`;
-    });
+    .catch(err => console.error("Error cargando JSON:", err));
 }
 
-/* ===== Prefetch inteligente (reduce espera al cambiar de pestaña) ===== */
-function prefetchIfNeeded(src) {
-  if (JSON_CACHE[src] || sessionStorage.getItem(SESSION_KEY(src))) return;
-  fetchAndStore(src); // reutiliza el mismo flujo y guarda en sessionStorage
+// Prefetch en idle de las otras pestañas
+function prefetchOthers(current) {
+  const others = ["products.json", "pay.json", "free.json"].filter(s => s !== current);
+  idle(() => others.forEach(s => {
+    if (!JSON_CACHE[s] && !sessionStorage.getItem(SESSION_KEY(s))) fetchAndStore(s, true);
+  }));
 }
-function warmPrefetchOthers() {
-  if (currentSource !== "pay.json") prefetchIfNeeded("pay.json");
-  if (currentSource !== "free.json") prefetchIfNeeded("free.json");
-}
-tabs.forEach(t => {
-  const src = t.dataset.source;
-  t.addEventListener("mouseenter", () => prefetchIfNeeded(src));
-});
 
-/* ===== Render + filtros + paginación ===== */
+// requestIdleCallback fallback
+function idle(fn) {
+  (window.requestIdleCallback || ((cb) => setTimeout(cb, 0)))(fn);
+}
+
+// ===== Render + filtros + paginación =====
 function renderFilteredProducts() {
-  const myToken = ++renderToken;
+  container.innerHTML = "";
 
   const mustMatchType = (currentSource === "products.json" || currentSource === "pay.json");
+
   const filtered = allProducts.filter(p => {
     const matchType = mustMatchType ? (p.type === currentType) : true;
     const matchCategory = currentCategory === "Todos" || p.category === currentCategory;
@@ -165,50 +177,41 @@ function renderFilteredProducts() {
 
   const pageSize = getPageSize();
   const totalPages = Math.ceil(filtered.length / pageSize) || 1;
-  if (currentPage > totalPages) currentPage = totalPages;
-  if (currentPage < 1) currentPage = 1;
+  currentPage = Math.min(Math.max(currentPage, 1), totalPages);
 
   const start = (currentPage - 1) * pageSize;
   const slice = filtered.slice(start, start + pageSize);
 
-  // 1) pinta HTML en bloque (rápido) — las 2 primeras imágenes en eager
-  let html = "";
-  for (let i = 0; i < slice.length; i++) {
-    const p = slice[i];
-    const cover = Array.isArray(p.images) && p.images.length ? p.images[0] : p.image;
-    const href = p.id != null
-      ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(p.id)}`
-      : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(p)}`;
-    const usd = firstNumber(p.price ?? p.price_usd ?? p.usd);
+  // Render rápido (HTML en bloque)
+  const html = slice.map((product, i) => {
+    const cover = Array.isArray(product.images) && product.images.length ? product.images[0] : product.image;
+    const href = product.id != null
+      ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
+      : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(product)}`;
+    const usd = firstNumber(product.price ?? product.price_usd ?? product.usd);
     const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : "Gratis";
+    const priority = (currentPage === 1 && i < 3) ? "high" : "low";
 
-    const eager = (currentPage === 1 && i < 2); // 2 primeras por página
-    const imgAttrs = eager
-      ? `src="${cover || ""}" loading="eager" fetchpriority="high"`
-      : `src="${BLANK_IMG}" data-src="${cover || ""}" loading="lazy"`;
-
-    html += `
+    return `
       <div class="col product-item fade-in">
         <div class="card h-100 position-relative">
-          <img ${imgAttrs}
-               class="card-img-top ${eager ? "" : "lazy"}"
-               alt="${p.name || ""}"
-               decoding="async" width="${CARD_W}" height="${CARD_H}">
+          <img src="${BLANK_IMG}" data-src="${cover || ""}"
+               class="card-img-top lazy"
+               alt="${product.name || ""}"
+               loading="lazy" decoding="async" fetchpriority="${priority}"
+               width="${CARD_W}" height="${CARD_H}">
           <div class="card-body text-center">
-            <p class="card-text small text-muted">${p.category ?? ""}</p>
-            <h5 class="card-title">${p.name || ""}</h5>
+            <p class="card-text small text-muted">${product.category ?? ""}</p>
+            <h5 class="card-title">${product.name}</h5>
             <p class="fw-bold">${priceHtml}</p>
           </div>
-          <a class="stretched-link" href="${href}" aria-label="Ver ${p.name}"></a>
+          <a class="stretched-link" href="${href}" aria-label="Ver ${product.name}"></a>
         </div>
       </div>`;
-  }
-  container.innerHTML = html;
+  }).join("");
 
-  // 2) activa lazy para el resto (si nadie canceló este render)
-  if (myToken === renderToken) {
-    container.querySelectorAll("img[data-src]").forEach(img => imgObserver.observe(img));
-  }
+  container.innerHTML = html;
+  container.querySelectorAll("img.lazy").forEach(img => imgObserver.observe(img));
 
   renderPagination(totalPages);
 }
@@ -263,7 +266,6 @@ function renderPagination(totalPages) {
   });
 
   const WINDOW = 3;
-
   if (totalPages <= WINDOW + 1) {
     for (let n = 1; n <= totalPages; n++) addPage(n, { active: n === currentPage });
   } else {
@@ -284,7 +286,7 @@ function renderPagination(totalPages) {
   });
 }
 
-/* ===== Tabs ===== */
+// ===== Tabs =====
 function updateBannerForType() {
   const src = BANNERS[currentType] || BANNERS.amigurumis;
   if (!banner) return;
@@ -315,24 +317,19 @@ function setupTabs() {
       categoryButtons.forEach((b) => b.classList.remove("active-category"));
       document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
 
-      const usingDifficulty = (currentSource !== "free.json");
-      allDifficultyCheckbox.disabled = !usingDifficulty;
-      allDifficultyCheckbox.checked = usingDifficulty;
-      difficultySlider.disabled = !usingDifficulty || allDifficultyCheckbox.checked;
+      // mostrar/ocultar dificultad según pestaña
+      applyDifficultyUI();
 
       currentDifficulty = "all";
       currentPage = 1;
 
-      // skeleton muy corto para feedback instantáneo
-      showSkeleton(getPageSize());
       loadProductsFromJSON(currentSource);
-      // y calienta las otras
-      warmPrefetchOthers();
+      prefetchOthers(currentSource); // calienta otras pestañas
     });
   });
 }
 
-/* ===== Categoría ===== */
+// ===== Categoría =====
 function setupCategoryFilters() {
   categoryButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -353,8 +350,10 @@ function setupCategoryFilters() {
   });
 }
 
-/* ===== Dificultad ===== */
+// ===== Dificultad =====
 function setupDifficultyFilter() {
+  if (!allDifficultyCheckbox || !difficultySlider) return;
+
   allDifficultyCheckbox.addEventListener("change", () => {
     if (allDifficultyCheckbox.checked) {
       difficultySlider.disabled = true;
@@ -376,20 +375,24 @@ function setupDifficultyFilter() {
   });
 }
 
-/* ===== Viewport ===== */
+// ===== Viewport change =====
 mm.addEventListener("change", () => {
   currentPage = 1;
   renderFilteredProducts();
 });
 
-/* ===== Init ===== */
+// ===== Init =====
 document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupCategoryFilters();
   setupDifficultyFilter();
   document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
   updateBannerForType();
+
+  // estado inicial: products.json => ocultar dificultad
+  applyDifficultyUI();
+
   loadProductsFromJSON("products.json");
-  warmPrefetchOthers();
+  prefetchOthers("products.json");
   if (catCurrent) catCurrent.textContent = "(Todos)";
 });
