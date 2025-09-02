@@ -116,8 +116,51 @@ body {
 }
 
 @media (max-width:991.98px) {
+
+  /* Oculta cualquier texto/botón del slide */
+  .hero-section .hero-content {
+    display: none !important;
+  }
+
+  /* Contenedor más compacto */
+  .hero-section .carousel-inner {
+    padding: 8px;
+    min-height: auto;
+    border-radius: 12px;
+  }
+
+  /* Cada slide mantiene proporción y muestra la imagen completa */
+  .carousel-item {
+    height: auto;
+    /* sin altura fija */
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    /* alto según el ancho (soportado por móviles modernos) */
+    background-size: contain;
+    /* NO recorta: muestra todo el arte */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+  }
+
+  /* Indicadores más discretos */
+  .hero-section .carousel-indicators {
+    margin-top: 8px;
+    gap: 6px;
+  }
+
   .hero-section .carousel-indicators button {
-    width: 30%;
+    width: 24vw;
+    /* 3 “pill” ocupan casi todo el ancho */
+    max-width: 90px;
+    height: 6px;
+    border-radius: 999px;
+    background: #fff;
+    opacity: 1;
+  }
+
+  .hero-section .carousel-indicators .active {
+    background: #692688;
   }
 }
 
