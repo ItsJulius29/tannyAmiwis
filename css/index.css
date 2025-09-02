@@ -379,18 +379,6 @@ footer a:hover {
     height: 56px;
   }
 
-  .hero-section .carousel-inner {
-    padding: 2rem 1rem;
-    border-radius: 14px;
-  }
-
-  /* Slide: sin altura fija y con mínimo razonable */
-  .carousel-item {
-    min-height: 56vh;
-    /* antes era muy alto */
-    height: auto;
-  }
-
   /* Texto y CTA más pequeños */
   .hero-section .hero-content {
     padding: 1rem 0;
@@ -406,17 +394,40 @@ footer a:hover {
     border-radius: 16px;
   }
 
-  /* Indicadores compactos */
+  .hero-section .hero-content {
+    display: none !important;
+  }
+
+  .hero-section .carousel-inner {
+    padding: 8px 8px 60px;
+    /* reserva para indicadores */
+    min-height: auto;
+    border-radius: 12px;
+    background-size: cover;
+    /* sigue cubriendo al 100% */
+    background-position: center;
+  }
+
+  .carousel-item {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16/9;
+    /* la imagen del slide se ve completa */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+  }
+
   .hero-section .carousel-indicators {
     gap: 6px;
-    margin-top: .5rem;
+    padding: 0 16px;
   }
 
   .hero-section .carousel-indicators button {
-    width: 24vw;
-    /* ~3 puntos ocupan el ancho con pequeños gaps */
-    max-width: 90px;
-    height: 6px;
+    width: 30vw;
+    max-width: 100px;
+    height: 0.5px;
     border-radius: 999px;
     background: #fff;
     opacity: 1;
