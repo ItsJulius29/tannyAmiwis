@@ -46,8 +46,29 @@ body {
   border-radius: 20px;
 }
 
+/* Fondos (sin velo) */
+.slide-bg-1 {
+  background-image: url('../assets/images/promos/1.png');
+}
+
+.slide-bg-2 {
+  background-image: url('../assets/images/promos/2.png');
+}
+
+.slide-bg-3 {
+  background-image: url('../assets/images/promos/3.png');
+}
+
+/* asegúrate de tener esto */
+.slide-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .carousel-item {
   display: none;
+  position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -98,22 +119,6 @@ body {
   .hero-section .carousel-indicators button {
     width: 30%;
   }
-}
-
-/* Fondos */
-.slide-bg-1 {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
-}
-
-.slide-bg-2 {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
-}
-
-.slide-bg-3 {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../assets/images/pruebabanner.jpg');
 }
 
 /* ===== HISTORY ===== */

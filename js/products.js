@@ -17,15 +17,12 @@ const paginationUl = document.querySelector(".pagination");
 const paginationNav = paginationUl?.closest("nav");
 const catCurrent = document.getElementById("catCurrent");
 
-// nodos del bloque de dificultad (para ocultar/mostrar sin cambiar HTML)
-// --- nodos del bloque de dificultad para ocultar/mostrar ---
+// --- bloque dificultad (para ocultar/mostrar en conjunto) ---
 const diffHr = document.querySelector(".sidebar .bg-light hr");
 const diffTitle = document.querySelector(".sidebar .bg-light h6.fw-bold");
 const diffCheckWrap = document.querySelector(".sidebar .bg-light .form-check");
 const diffRangeInput = document.getElementById("difficultyRange");
-// ← NUEVO: tomar la fila de etiquetas como el siguiente hermano del input
 const getDiffLabels = () => document.getElementById("difficultyRange")?.nextElementSibling;
-
 
 // ===== Constantes =====
 const mm = window.matchMedia("(max-width: 991.98px)");
@@ -43,12 +40,24 @@ const CARD_W = 600, CARD_H = 600;
 const BANNER_W = 1200, BANNER_H = 675;
 
 // ===== Cache JSON con versionado =====
-const DATA_VERSION = "v2";                 // súbelo cuando cambies los JSON
+const DATA_VERSION = "v2";
 const JSON_CACHE = {};
 const SESSION_KEY = (src) => `prod_json_${DATA_VERSION}_${src}`;
 
 // 1×1 transparente válido
 const BLANK_IMG = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+
+// ===== Auto-scroll a la lista si viene con #products-top =====
+let autoScrollPending = (location.hash === "#products-top");
+function maybeAutoScroll() {
+  if (!autoScrollPending) return;
+  autoScrollPending = false;
+  const target = document.getElementById("products-top");
+  if (!target) return;
+  requestAnimationFrame(() => {
+    setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+  });
+}
 
 // ===== Lazy loader =====
 const imgObserver = new IntersectionObserver((entries, obs) => {
@@ -66,39 +75,29 @@ const imgObserver = new IntersectionObserver((entries, obs) => {
 // ===== Mostrar/ocultar UI de dificultad según pestaña =====
 function applyDifficultyUI() {
   const show = (currentSource !== "products.json"); // solo en pay/free
-
-  const diffLabels = getDiffLabels(); // obtenerla cada vez (por si cambia el DOM)
-
-  // Ocultar/mostrar el bloque de dificultad
+  const diffLabels = getDiffLabels();
   [diffHr, diffTitle, diffCheckWrap, diffRangeInput, diffLabels]
     .forEach(el => el && el.classList.toggle("d-none", !show));
 
-  // Estados lógicos
   if (!allDifficultyCheckbox || !difficultySlider) return;
-
   allDifficultyCheckbox.disabled = !show;
-
   if (!show) {
-    allDifficultyCheckbox.checked = true;   // forzar "todas"
+    allDifficultyCheckbox.checked = true;
     currentDifficulty = "all";
   }
   difficultySlider.disabled = !show || allDifficultyCheckbox.checked;
 }
 
-
-
 // ===== Carga JSON =====
 function loadProductsFromJSON(source) {
   const key = SESSION_KEY(source);
 
-  // Limpia claves antiguas (sin versión) una vez
   try {
     Object.keys(sessionStorage).forEach(k => {
       if (/^prod_json_(products\.json|pay\.json|free\.json)$/.test(k)) sessionStorage.removeItem(k);
     });
   } catch { }
 
-  // 1) Memoria
   if (JSON_CACHE[source]) {
     allProducts = JSON_CACHE[source];
     currentPage = 1;
@@ -106,7 +105,6 @@ function loadProductsFromJSON(source) {
     return;
   }
 
-  // 2) sessionStorage
   try {
     const cached = sessionStorage.getItem(key);
     if (cached) {
@@ -119,11 +117,9 @@ function loadProductsFromJSON(source) {
     }
   } catch { }
 
-  // 3) Red
   fetchAndStore(source, false);
 }
 
-// fetch con opción "silent" (no re-render)
 function fetchAndStore(source, silent = false) {
   const url = `json/${source}?v=${DATA_VERSION}`;
   fetch(url, { cache: "no-store" })
@@ -140,18 +136,13 @@ function fetchAndStore(source, silent = false) {
     .catch(err => console.error("Error cargando JSON:", err));
 }
 
-// Prefetch en idle de las otras pestañas
 function prefetchOthers(current) {
   const others = ["products.json", "pay.json", "free.json"].filter(s => s !== current);
   idle(() => others.forEach(s => {
     if (!JSON_CACHE[s] && !sessionStorage.getItem(SESSION_KEY(s))) fetchAndStore(s, true);
   }));
 }
-
-// requestIdleCallback fallback
-function idle(fn) {
-  (window.requestIdleCallback || ((cb) => setTimeout(cb, 0)))(fn);
-}
+function idle(fn) { (window.requestIdleCallback || (cb => setTimeout(cb, 0)))(fn); }
 
 // ===== Render + filtros + paginación =====
 function renderFilteredProducts() {
@@ -172,6 +163,7 @@ function renderFilteredProducts() {
         No hay productos disponibles con los<br>filtros seleccionados.
       </div>`;
     if (paginationNav) paginationNav.style.display = "none";
+    maybeAutoScroll();
     return;
   }
 
@@ -182,7 +174,6 @@ function renderFilteredProducts() {
   const start = (currentPage - 1) * pageSize;
   const slice = filtered.slice(start, start + pageSize);
 
-  // Render rápido (HTML en bloque)
   const html = slice.map((product, i) => {
     const cover = Array.isArray(product.images) && product.images.length ? product.images[0] : product.image;
     const href = product.id != null
@@ -212,8 +203,10 @@ function renderFilteredProducts() {
 
   container.innerHTML = html;
   container.querySelectorAll("img.lazy").forEach(img => imgObserver.observe(img));
-
   renderPagination(totalPages);
+
+  // si venimos con #products-top, baja a la lista tras el primer render
+  maybeAutoScroll();
 }
 
 function renderPagination(totalPages) {
@@ -317,14 +310,13 @@ function setupTabs() {
       categoryButtons.forEach((b) => b.classList.remove("active-category"));
       document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
 
-      // mostrar/ocultar dificultad según pestaña
       applyDifficultyUI();
 
       currentDifficulty = "all";
       currentPage = 1;
 
       loadProductsFromJSON(currentSource);
-      prefetchOthers(currentSource); // calienta otras pestañas
+      prefetchOthers(currentSource);
     });
   });
 }
@@ -375,24 +367,65 @@ function setupDifficultyFilter() {
   });
 }
 
-// ===== Viewport change =====
-mm.addEventListener("change", () => {
+// ===== URL params iniciales =====
+const params = new URLSearchParams(location.search);
+const tabParam = (params.get("tab") || "").toLowerCase();   // "amigurumis" | "pago" | "free"
+const catParam = params.get("category");                    // ej: "Reversibles", "Navidad", etc.
+const TAB_TO_SRC = { amigurumis: "products.json", pago: "pay.json", free: "free.json" };
+
+function applyUrlParamsIfAny() {
+  if (!TAB_TO_SRC[tabParam]) return false;
+
+  currentType = tabParam;
+  currentSource = TAB_TO_SRC[tabParam];
+
+  // activar pestaña visualmente
+  document.querySelector(".category-tab.active-tab")?.classList.remove("active-tab");
+  document.querySelector(`.category-tab[data-tab="${currentType}"]`)?.classList.add("active-tab");
+
+  updateBannerForType();
+  applyDifficultyUI();
+
+  // categoría si vino
+  if (catParam) {
+    currentCategory = catParam;
+    categoryButtons.forEach(b => b.classList.toggle("active-category", b.dataset.category === currentCategory));
+    if (catCurrent) catCurrent.textContent = `(${currentCategory})`;
+  } else {
+    currentCategory = "Todos";
+    categoryButtons.forEach(b => b.classList.remove("active-category"));
+    document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
+    if (catCurrent) catCurrent.textContent = "(Todos)";
+  }
+
+  currentDifficulty = "all";
   currentPage = 1;
-  renderFilteredProducts();
-});
+
+  loadProductsFromJSON(currentSource);
+  prefetchOthers(currentSource);
+  return true;
+}
 
 // ===== Init =====
 document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
   setupCategoryFilters();
   setupDifficultyFilter();
-  document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
-  updateBannerForType();
 
-  // estado inicial: products.json => ocultar dificultad
-  applyDifficultyUI();
+  // Si hay parámetros en URL se aplican; si no, modo por defecto
+  const usedUrl = applyUrlParamsIfAny();
+  if (!usedUrl) {
+    document.querySelector('.category-btn[data-category="Todos"]')?.classList.add("active-category");
+    updateBannerForType();
+    applyDifficultyUI();                 // products.json => ocultar dificultad
+    loadProductsFromJSON("products.json");
+    prefetchOthers("products.json");
+    if (catCurrent) catCurrent.textContent = "(Todos)";
+  }
+});
 
-  loadProductsFromJSON("products.json");
-  prefetchOthers("products.json");
-  if (catCurrent) catCurrent.textContent = "(Todos)";
+// ===== Viewport change =====
+mm.addEventListener("change", () => {
+  currentPage = 1;
+  renderFilteredProducts();
 });
