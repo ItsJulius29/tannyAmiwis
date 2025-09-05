@@ -198,6 +198,34 @@
     transform: translateX(2px);
 }
 
+/* Callout patrones gratuitos */
+.callout-free {
+    background: #f3eaff;
+    border: 1px solid #e3d2ff;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.text-purple {
+    color: #4b007d;
+}
+
+.btn-patronix {
+    background: #6f2c91;
+    border: 0;
+    border-radius: 999px;
+    padding: .6rem 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-patronix:hover {
+    background: #8a46b4;
+    color: #fff;
+}
+
+
 /* En móviles mantiene el layout */
 @media (max-width:575.98px) {
     .back-cta {

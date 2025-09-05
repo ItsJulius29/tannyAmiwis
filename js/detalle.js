@@ -30,6 +30,10 @@ const slugify = s => String(s || '').toLowerCase()
 
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
 
+// --------- opciones ---------
+// Si quieres ocultar totalmente la descripción cuando es gratuito, cámbialo a true
+const HIDE_FREE_DESCRIPTION = false;
+
 // --- FX USD→PEN con caché 12h ---
 const FX_TTL_MS = 12 * 60 * 60 * 1000;
 async function getUsdPenRate() {
@@ -114,7 +118,6 @@ function renderDetail(p, all, fx) {
     const pill = $('#patternPill');
     if (pill) pill.hidden = !hasPattern;
 
-
     // imágenes
     const imgs = Array.isArray(p.images) && p.images.length ? p.images : [p.image].filter(Boolean);
     const main = $('#mainImg');
@@ -157,15 +160,27 @@ function renderDetail(p, all, fx) {
     const bullets = getBullets(p);
     const dl = $('#descList');
     const wrap = $('#descWrap');
-    if (!bullets || bullets.length === 0) {
+
+    // --- Sección didáctica y link externo para GRATUITOS ---
+    const isFreeSource = /free\.json$/i.test(srcParam) || t === 'gratuitos' || t === 'free';
+    if (isFreeSource) attachFreeCallout(p);
+
+    // Mostrar/ocultar descripción según opción
+    if (isFreeSource && HIDE_FREE_DESCRIPTION) {
         if (wrap) wrap.hidden = true;
     } else {
-        if (dl) dl.innerHTML = bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
-        if (wrap) wrap.hidden = false;
+        if (!bullets || bullets.length === 0) {
+            if (wrap) wrap.hidden = true;
+        } else {
+            if (dl) dl.innerHTML = bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+            if (wrap) wrap.hidden = false;
+        }
     }
 
     // relacionados
-    const related = all.filter(x => x !== p && x.type === p.type && x.category === p.category).slice(0, 4);
+    const related = all
+        .filter(x => x !== p && x.type === p.type && x.category === p.category)
+        .slice(0, 4);
     const relBox = $('#related');
     if (relBox) {
         if (!related.length) {
@@ -211,6 +226,42 @@ function priceRow(flag, text) {
     const t = document.createElement('span'); t.textContent = text;
     row.appendChild(f); row.appendChild(t);
     return row;
+}
+
+/* ---------- Bloque didáctico para gratuitos ---------- */
+function attachFreeCallout(product) {
+    const before = $('#descWrap') || $('#price') || $('.col-lg-7');
+    if (!before) return;
+
+    const url = String(product.patronix || '').trim();
+    // texto e icono por tipo de link
+    let btnIcon = 'bi-box-arrow-up-right';
+    let btnText = 'Ver patrón gratuito en Patronix';
+    if (/youtu\.?be/i.test(url)) {
+        btnIcon = 'bi-youtube';
+        btnText = 'Ver tutorial en YouTube';
+    } else if (!url) {
+        btnText = 'Patrón gratuito';
+    }
+
+    const box = document.createElement('div');
+    box.className = 'callout-free mt-3';
+    box.innerHTML = `
+    <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+      <div class="flex-grow-1">
+        <div class="fw-bold text-purple mb-1">Este patrón es <u>gratuito</u> 🎉</div>
+        <div class="small text-muted">
+          Ábrelo en una pestaña nueva y sigue las instrucciones paso a paso.
+        </div>
+      </div>
+      ${url ? `
+        <a class="btn btn-patronix d-inline-flex align-items-center gap-2"
+           href="${url}" target="_blank" rel="noopener noreferrer">
+          <i class="bi ${btnIcon}"></i><span>${btnText}</span>
+        </a>` : ``}
+    </div>
+  `;
+    before.parentNode.insertBefore(box, before);
 }
 
 // --- Zoom modal ---

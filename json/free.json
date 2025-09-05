@@ -4,49 +4,60 @@
         "type": "gratuitos",
         "name": "Angelito colgante",
         "category": "Fantasía",
-        "price": 5,
+        "price": 0,
         "difficulty": 2,
         "image": "assets/images/amigurumis/gratuito/Angelito.jpg",
-        "description": ""
+        "patronix": "https://www.patronix.app/patron/2634"
     },
     {
         "id": 2,
         "type": "gratuitos",
         "name": "Gatito risueño",
         "category": "Animales",
-        "price": 7,
+        "price": 0,
         "difficulty": 3,
         "image": "assets/images/amigurumis/gratuito/GatoRisueño.jpg",
-        "description": ""
+        "patronix": "https://www.patronix.app/patron/2602"
     },
     {
         "id": 3,
         "type": "gratuitos",
         "name": "Gato dormilon",
         "category": "Animales",
-        "price": 4,
+        "price": 0,
         "difficulty": 3,
         "image": "assets/images/amigurumis/gratuito/GatoDormilon.jpg",
-        "description": ""
+        "patronix": "https://www.patronix.app/patron/2726"
     },
     {
         "id": 4,
         "type": "gratuitos",
         "name": "Llamitas ",
         "category": "Animales",
-        "price": 5,
+        "price": 0,
         "difficulty": 2,
         "image": "assets/images/amigurumis/gratuito/Llamitas.jpg",
-        "description": ""
+        "patronix": "https://youtu.be/4y4XBqzHy74?si=Ktb_Ui2c4IvmYSJA"
     },
     {
         "id": 5,
         "type": "gratuitos",
         "name": "Maceta mini lirio",
         "category": "Animados",
-        "price": 7,
+        "price": 0,
         "difficulty": 3,
         "image": "assets/images/amigurumis/gratuito/MiniLirio.jpg",
-        "description": ""
+        "patronix": "https://youtu.be/BuMM1kLPBWs?si=xuaonsQZUjdTwr7S"
+    },
+    {
+        "id": 18,
+        "type": "gratuitos",
+        "name": "Osito Teddy",
+        "category": "Animales",
+        "price": 15,
+        "image": [
+            "assets/images/amigurumis/entregado/animales/Oso.jpg"
+        ],
+        "patronix": "https://youtu.be/AoR-iGVBRsw"
     }
 ]

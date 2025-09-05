@@ -40,11 +40,77 @@ body {
 }
 
 .hero-section .carousel-inner {
-  padding: 10rem 8rem;
-  min-height: clamp(420px, 55vh, 720px);
-  background-image: url('../assets/images/mariposas.png');
+  position: relative;
   border-radius: 20px;
+  overflow: hidden;
+  background-image: url('../assets/images/mariposas.png');
+  background-size: cover;
+  background-position: center;
+
+  /* padding fluido: laterales y un poco abajo para los indicadores */
+  padding: clamp(8px, 1.2vw, 20px) clamp(10px, 2.2vw, 40px) clamp(42px, 4.5vw, 80px);
 }
+
+
+.hero-section .hero-content {
+  padding: 3rem 1rem;
+}
+
+.hero-section h1 {
+  color: #fff;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.hero-section .btn {
+  padding: .6rem 1.5rem;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+/* Indicadores siempre sobre el fondo y con tamaño fluido */
+.hero-section .carousel-indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(10px, 1.6vw, 26px);
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(6px, 1vw, 12px);
+}
+
+/* Indicadores */
+.hero-section .carousel-indicators button {
+  height:6px;
+  width:clamp(70px,24vw,460px); /* se adapta a teléfono, tablet y desktop */
+  max-width:460px;
+  border-radius:999px;
+  background:#fff;
+  opacity:1;
+}
+
+.hero-section .carousel-indicators .active {
+  background: #692688;
+}
+
+/* Fallback para navegadores sin aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+  .carousel-item::before {
+    content: "";
+    float: left;
+    padding-top: 56.25%;
+  }
+
+  .carousel-item::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 
 /* Fondos (sin velo) */
 .slide-bg-1 {
@@ -67,52 +133,25 @@ body {
 }
 
 .carousel-item {
-  display: none;
   position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-size: cover;
-  background-position: center;
+
   background-repeat: no-repeat;
-  border-radius: 20px;
-  height: 800px;
-  min-height: clamp(380px, 50vh, 680px);
+  background-position: center;
+  background-size: contain;
+  /* no recorta */
+  border-radius: 16px;
+
+  /* altura automática con proporción estable */
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
 }
 
 .carousel-item.active {
   display: flex;
-}
-
-.hero-section .hero-content {
-  padding: 3rem 1rem;
-}
-
-.hero-section h1 {
-  color: #fff;
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
-}
-
-.hero-section .btn {
-  padding: .6rem 1.5rem;
-  font-weight: 700;
-  border-radius: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
-}
-
-/* Indicadores */
-.hero-section .carousel-indicators button {
-  width: 450px;
-  border-radius: 50px;
-  background: #fff;
-  opacity: 1;
-  margin-bottom: 30px;
-}
-
-.hero-section .carousel-indicators .active {
-  background: #692688;
 }
 
 @media (max-width:991.98px) {
@@ -498,5 +537,12 @@ footer a:hover {
 @media (min-width:992px) {
   #navbarResponsive {
     display: none !important;
+  }
+}
+
+/* Ajustes finos en pantallas muy anchas (evita que todo se “estire” demasiado) */
+@media (min-width:1400px){
+  .hero-section .carousel-inner{
+    padding:clamp(12px,1vw,24px) clamp(24px,2vw,48px) clamp(48px,3.5vw,88px);
   }
 }

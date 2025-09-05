@@ -175,7 +175,6 @@
             "Idioma español ",
             "Queda de una medida aproximada de 16 cm.",
             "Utilicé crochet 1.75mm con hilo de hilo algodón marca Noreli (marca peruana). Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
-            "Incluye: Sombrero Colombiano y videos de apoyo.",
             "Nivel de dificultad: Intermedio"
         ]
     },
@@ -268,6 +267,32 @@
     {
         "id": 14,
         "type": "pago",
+        "name": "Esferas Navideñas",
+        "category": "Navidad",
+        "price": 15,
+        "images": [
+            "assets/images/amigurumis/entregado/navidad/Todos.png",
+            "assets/images/amigurumis/entregado/navidad/Bambi.png",
+            "assets/images/amigurumis/entregado/navidad/Duendecilla.png",
+            "assets/images/amigurumis/entregado/navidad/Grinch.png",
+            "assets/images/amigurumis/entregado/navidad/Jenjibre.png",
+            "assets/images/amigurumis/entregado/navidad/Monito.png",
+            "assets/images/amigurumis/entregado/navidad/PapaNoel.png",
+            "assets/images/amigurumis/entregado/navidad/Rodolfo.png"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejer LAS 9 ESFERAS - ",
+            "Idioma español ",
+            "Queda de una medida aproximada de 6 cm y ",
+            "Utilicé crochet 1.75mm con hilo acrílico de Silvigurumi de Silvia (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Incluye: gorritos.",
+            "Nivel de dificultad: Intermedio",
+            " Costo: S/. 35 - $13"
+        ]
+    },
+    {
+        "id": 15,
+        "type": "pago",
         "name": "Psicologia",
         "category": "Profesiones",
         "price": 13,
@@ -288,7 +313,7 @@
         ]
     },
     {
-        "id": 15,
+        "id": 16,
         "type": "pago",
         "name": "Blanca nieves",
         "category": "Reversibles",
@@ -309,7 +334,7 @@
         ]
     },
     {
-        "id": 16,
+        "id": 17,
         "type": "pago",
         "name": "Mafalda",
         "category": "Reversibles",
@@ -330,7 +355,7 @@
         ]
     },
     {
-        "id": 17,
+        "id": 18,
         "type": "pago",
         "name": "Rosa de guadalupe",
         "category": "Reversibles",
@@ -346,7 +371,7 @@
         ]
     },
     {
-        "id": 18,
+        "id": 19,
         "type": "pago",
         "name": "Santa Rosa",
         "category": "Reversibles",
@@ -368,7 +393,7 @@
         ]
     },
     {
-        "id": 19,
+        "id": 20,
         "type": "pago",
         "name": "Stich",
         "category": "Reversibles",
@@ -388,7 +413,7 @@
         ]
     },
     {
-        "id": 20,
+        "id": 21,
         "type": "pago",
         "name": "Tinkerbell",
         "category": "Reversibles",
@@ -408,7 +433,7 @@
         ]
     },
     {
-        "id": 21,
+        "id": 22,
         "type": "pago",
         "name": "Virgen Maria",
         "category": "Reversibles",
@@ -428,7 +453,7 @@
         ]
     },
     {
-        "id": 22,
+        "id": 23,
         "type": "pago",
         "name": "Cupido",
         "category": "Tv",
@@ -450,7 +475,7 @@
         ]
     },
     {
-        "id": 23,
+        "id": 24,
         "type": "pago",
         "name": "Garfiled Bebé",
         "category": "Tv",
@@ -469,7 +494,7 @@
         ]
     },
     {
-        "id": 24,
+        "id": 25,
         "type": "pago",
         "name": "Gato con Botas",
         "category": "Tv",
@@ -488,7 +513,7 @@
         ]
     },
     {
-        "id": 25,
+        "id": 26,
         "type": "pago",
         "name": "Harry Potter Version 1",
         "category": "Tv",
@@ -496,7 +521,7 @@
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/Harry1.jpg",
-            "assets/images/amigurumis/pago/tv/Harry2.jpg",
+            "assets/images/amigurumis/pago/tv/Harry2.png",
             "assets/images/amigurumis/pago/tv/Harry3.jpg"
         ],
         "description": [
@@ -510,7 +535,7 @@
         ]
     },
     {
-        "id": 26,
+        "id": 27,
         "type": "pago",
         "name": "Harry Potter Version 2",
         "category": "Tv",
@@ -533,7 +558,7 @@
         ]
     },
     {
-        "id": 27,
+        "id": 28,
         "type": "pago",
         "name": "Vicky pequeña",
         "category": "Tv",
@@ -545,14 +570,14 @@
         ],
         "description": [
             "El costo es solo por el archivo formato PDF para tejerla. ",
-            "Idioma español",
+            "Idioma español e inglés",
             "Queda de una medida aproximada de 20CM",
             "Utilicé crochet 2.0 mm con hilo de algodón Noreli (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
             "Nivel de dificultad: Intermedio"
         ]
     },
     {
-        "id": 28,
+        "id": 29,
         "type": "pago",
         "name": "Virgen de guadalupe Versión 1",
         "category": "Virgenes",
@@ -562,27 +587,7 @@
             "assets/images/amigurumis/pago/virgenes/guada1.jpg",
             "assets/images/amigurumis/pago/virgenes/guada2.jpg",
             "assets/images/amigurumis/pago/virgenes/guada3.jpg",
-            "assets/images/amigurumis/pago/virgenes/guada4.jpg",
-            "assets/images/amigurumis/pago/virgenes/guada5.jpg"
-        ],
-        "description": [
-            "El costo es solo por el archivo formato PDF para tejerlo. ",
-            "Idioma español",
-            "Queda de una medida aproximada de 23cm ",
-            "Utilicé crochet 2.0 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
-            "Nivel de dificultad: Intermedia"
-        ]
-    },
-    {
-        "id": 29,
-        "type": "pago",
-        "name": "Virgen de guadalupe Versión 2",
-        "category": "Virgenes",
-        "price": 13,
-        "difficulty": 2,
-        "images": [
-            "assets/images/amigurumis/pago/virgenes/lupe1.jpg",
-            "assets/images/amigurumis/pago/virgenes/lupe2.jpg"
+            "assets/images/amigurumis/pago/virgenes/guada4.jpg"
         ],
         "description": [
             "El costo es solo por el archivo formato PDF para tejerlo. ",
@@ -594,6 +599,26 @@
     },
     {
         "id": 30,
+        "type": "pago",
+        "name": "Virgen de guadalupe Versión 2",
+        "category": "Virgenes",
+        "price": 13,
+        "difficulty": 2,
+        "images": [
+            "assets/images/amigurumis/pago/virgenes/lupe1.jpg",
+            "assets/images/amigurumis/pago/virgenes/lupe2.jpg",
+            "assets/images/amigurumis/pago/virgenes/guada5.jpg"
+        ],
+        "description": [
+            "El costo es solo por el archivo formato PDF para tejerlo. ",
+            "Idioma español",
+            "Queda de una medida aproximada de 23cm ",
+            "Utilicé crochet 2.0 mm con hilo de ALGODÓN (marca peruana) .Recuerda que esto puede variar dependiendo de la tensión con la que tejas y el material que utilices. ",
+            "Nivel de dificultad: Intermedia"
+        ]
+    },
+    {
+        "id": 31,
         "type": "pago",
         "name": "Virgen del Carmen",
         "category": "Virgenes",
