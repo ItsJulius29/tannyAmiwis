@@ -714,7 +714,7 @@
         "type": "amigurumis",
         "name": "Posa Vaso Navideños",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 60,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/PosavasoNavidad.jpg"
         ],
@@ -725,7 +725,7 @@
         "type": "amigurumis",
         "name": "Tapete Individual",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 50,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/TapeteAzul.jpg"
         ],
@@ -736,7 +736,7 @@
         "type": "amigurumis",
         "name": "Tapetes Cuadrados",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 60,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/TapetesCuadrados.jpg"
         ],
@@ -747,7 +747,7 @@
         "type": "amigurumis",
         "name": "Tapetes Redondos",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 50,
         "images": [
             "assets/images/amigurumis/entregado/decoracion/TapetesRedondos.jpg",
             "assets/images/amigurumis/entregado/decoracion/TapetesRedondos2.jpg"
@@ -759,7 +759,7 @@
         "type": "amigurumis",
         "name": "Tapetes De Tulipanes",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 50,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/Tulipanes.jpg"
         ],
@@ -770,7 +770,7 @@
         "type": "amigurumis",
         "name": "Ramo De Angela",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/flores/AngelaRamo.jpg"
         ],
@@ -781,9 +781,10 @@
         "type": "amigurumis",
         "name": "Bouquet De Novia",
         "category": "Flores",
-        "price_pen": 15,
-        "image": [
-            "assets/images/amigurumis/entregado/flores/BouquetNovia.jpg"
+        "price_pen": 180,
+        "images": [
+            "assets/images/amigurumis/entregado/flores/BouquetNovia.jpg",
+            "assets/images/amigurumis/entregado/flores/RamoNovia.jpg"
         ],
         "description": []
     },
@@ -792,7 +793,7 @@
         "type": "amigurumis",
         "name": "Girasoles",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 60,
         "image": [
             "assets/images/amigurumis/entregado/flores/Girasoles.jpg"
         ],
@@ -803,7 +804,7 @@
         "type": "amigurumis",
         "name": "Ramo De Rosa Lila",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 90,
         "image": [
             "assets/images/amigurumis/entregado/flores/LilaRosa.jpg"
         ],
@@ -814,7 +815,7 @@
         "type": "amigurumis",
         "name": "Ramo De Lirio Rojo",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 70,
         "image": [
             "assets/images/amigurumis/entregado/flores/LirioRojo.jpg"
         ],
@@ -825,7 +826,7 @@
         "type": "amigurumis",
         "name": "Ramo De Lirios",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/flores/Lirios.jpg"
         ],
@@ -836,7 +837,7 @@
         "type": "amigurumis",
         "name": "Ramo De Tulipanes",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/entregado/flores/LiriosTulipanes.jpg",
             "assets/images/amigurumis/entregado/flores/LiriosTulipanes2.jpg",
@@ -849,7 +850,7 @@
         "type": "amigurumis",
         "name": "Ramo Amarillo",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 80,
         "image": [
             "assets/images/amigurumis/entregado/flores/Ramo1.jpg"
         ],
@@ -860,7 +861,7 @@
         "type": "amigurumis",
         "name": "Ramo Blanco",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/flores/Ramo2.jpg"
         ],
@@ -871,7 +872,7 @@
         "type": "amigurumis",
         "name": "Ramo Abejita",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoAbejita.jpg"
         ],
@@ -882,7 +883,7 @@
         "type": "amigurumis",
         "name": "Ramo Kitty",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 90,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoKitty.jpg"
         ],
@@ -893,7 +894,7 @@
         "type": "amigurumis",
         "name": "Ramo Lila",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 80,
         "images": [
             "assets/images/amigurumis/entregado/flores/RamoLila.jpg",
             "assets/images/amigurumis/entregado/flores/RamoLila2.jpg",
@@ -906,7 +907,7 @@
         "type": "amigurumis",
         "name": "Ramo Messi",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/flores/RamoMessi.jpg",
             "assets/images/amigurumis/entregado/flores/RamoMessi2.jpg"
@@ -918,7 +919,7 @@
         "type": "amigurumis",
         "name": "Ramo Minnie y Mickey",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoMinnieMickey.jpg"
         ],
@@ -927,31 +928,20 @@
     {
         "id": 63,
         "type": "amigurumis",
-        "name": "Ramo Novia",
-        "category": "Flores",
-        "price_pen": 15,
-        "image": [
-            "assets/images/amigurumis/entregado/flores/RamoNovia.jpg"
-        ],
-        "description": []
-    },
-    {
-        "id": 64,
-        "type": "amigurumis",
         "name": "Ramo Pinguinos",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 90,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoPinguinos.jpg"
         ],
         "description": []
     },
     {
-        "id": 65,
+        "id": 64,
         "type": "amigurumis",
         "name": "Ramo Rosas",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 70,
         "images": [
             "assets/images/amigurumis/entregado/flores/RamoRosas.jpg",
             "assets/images/amigurumis/entregado/flores/RamoRosas2.jpg"
@@ -959,11 +949,11 @@
         "description": []
     },
     {
-        "id": 66,
+        "id": 65,
         "type": "amigurumis",
         "name": "Ramo Snoopy",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/flores/RamoSnoopy.jpg",
             "assets/images/amigurumis/entregado/flores/RamoSnoopy2.jpg",
@@ -972,11 +962,11 @@
         "description": []
     },
     {
-        "id": 67,
+        "id": 66,
         "type": "amigurumis",
         "name": "Ramo Spider Gwen",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 80,
         "images": [
             "assets/images/amigurumis/entregado/flores/RamoSpiderwen.jpg",
             "assets/images/amigurumis/entregado/flores/RamoSpiderwen2.jpg"
@@ -984,121 +974,121 @@
         "description": []
     },
     {
-        "id": 68,
+        "id": 67,
         "type": "amigurumis",
         "name": "Ramo Stitch",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoStich.jpg"
         ],
         "description": []
     },
     {
-        "id": 69,
+        "id": 68,
         "type": "amigurumis",
         "name": "Ramo Tulipanes",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 45,
         "image": [
             "assets/images/amigurumis/entregado/flores/RamoTulipanes.jpg"
         ],
         "description": []
     },
     {
-        "id": 70,
+        "id": 69,
         "type": "amigurumis",
         "name": "Ramo Reversible Girasol",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 85,
         "image": [
             "assets/images/amigurumis/entregado/flores/ReverGirasol.jpg"
         ],
         "description": []
     },
     {
-        "id": 71,
+        "id": 70,
         "type": "amigurumis",
         "name": "Rosa Celeste",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 45,
         "image": [
             "assets/images/amigurumis/entregado/flores/RosaCeleste.jpg"
         ],
         "description": []
     },
     {
-        "id": 72,
+        "id": 71,
         "type": "amigurumis",
         "name": "Rosa Gigante",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 90,
         "image": [
             "assets/images/amigurumis/entregado/flores/RosaGigante.jpg"
         ],
         "description": []
     },
     {
-        "id": 73,
+        "id": 72,
         "type": "amigurumis",
         "name": "Rosa Pasteles",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/flores/RosaPasteles.jpg"
         ],
         "description": []
     },
     {
-        "id": 74,
+        "id": 73,
         "type": "amigurumis",
         "name": "Rosa Rosadas",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 60,
         "image": [
             "assets/images/amigurumis/entregado/flores/RosaRosadas.jpg"
         ],
         "description": []
     },
     {
-        "id": 75,
+        "id": 74,
         "type": "amigurumis",
         "name": "Tulipanes",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 25,
         "image": [
             "assets/images/amigurumis/entregado/flores/Tulipanes.jpg"
         ],
         "description": []
     },
     {
-        "id": 76,
+        "id": 75,
         "type": "amigurumis",
         "name": "Tulipanes Azules",
         "category": "Flores",
-        "price_pen": 15,
+        "price_pen": 140,
         "image": [
             "assets/images/amigurumis/entregado/flores/TulipanesAzules.jpg"
         ],
         "description": []
     },
     {
-        "id": 77,
+        "id": 76,
         "type": "amigurumis",
         "name": "Rosa Hincha de Universitario",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/flores/Universitario.jpg"
         ],
         "description": []
     },
     {
-        "id": 78,
+        "id": 77,
         "type": "amigurumis",
         "name": "Maceta Mini Orquideas",
         "category": "Macetas",
-        "price_pen": 15,
+        "price_pen": 70,
         "images": [
             "assets/images/amigurumis/entregado/macetas/colores.jpg",
             "assets/images/amigurumis/entregado/macetas/blanco.jpg",
@@ -1108,11 +1098,11 @@
         "description": []
     },
     {
-        "id": 82,
+        "id": 78,
         "type": "amigurumis",
         "name": "Maceta Girasol",
         "category": "Macetas",
-        "price_pen": 15,
+        "price_pen": 70,
         "images": [
             "assets/images/amigurumis/entregado/macetas/Girasol1.jpg",
             "assets/images/amigurumis/entregado/macetas/Girasol2.jpg",
@@ -1121,22 +1111,22 @@
         "description": []
     },
     {
-        "id": 83,
+        "id": 79,
         "type": "amigurumis",
         "name": "Maceta Tulipan de Corazón",
         "category": "Macetas",
-        "price_pen": 15,
+        "price_pen": 70,
         "image": [
             "assets/images/amigurumis/entregado/macetas/Lila.jpg"
         ],
         "description": []
     },
     {
-        "id": 84,
+        "id": 80,
         "type": "amigurumis",
         "name": "Maceta De Orquideas Tallo Alto",
         "category": "Macetas",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/macetas/OrquideaLila.jpg",
             "assets/images/amigurumis/entregado/macetas/OrquideaLila2.jpg",
@@ -1146,22 +1136,22 @@
         "description": []
     },
     {
-        "id": 86,
+        "id": 81,
         "type": "amigurumis",
         "name": "Maceta Tulipanes",
         "category": "Macetas",
-        "price_pen": 15,
+        "price_pen": 100,
         "image": [
             "assets/images/amigurumis/entregado/macetas/tulipanes.jpg"
         ],
         "description": []
     },
     {
-        "id": 87,
+        "id": 82,
         "type": "amigurumis",
         "name": "Nacimiento",
         "category": "Misterios",
-        "price_pen": 15,
+        "price_pen": 200,
         "images": [
             "assets/images/amigurumis/entregado/misterios/1.jpg",
             "assets/images/amigurumis/entregado/misterios/2.jpg",
@@ -1170,7 +1160,7 @@
         "description": []
     },
     {
-        "id": 88,
+        "id": 83,
         "type": "amigurumis",
         "name": "Cupido Valentino",
         "category": "Munecas",
@@ -1190,11 +1180,11 @@
         ]
     },
     {
-        "id": 89,
+        "id": 84,
         "type": "amigurumis",
         "name": "Dulce Grande",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 250,
         "images": [
             "assets/images/amigurumis/entregado/munecas/DulceGrande.jpg",
             "assets/images/amigurumis/entregado/munecas/DulceGrande2.jpg",
@@ -1205,66 +1195,66 @@
         "description": []
     },
     {
-        "id": 90,
+        "id": 85,
         "type": "amigurumis",
         "name": "Elsa",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/munecas/Elsa.jpg"
         ],
         "description": []
     },
     {
-        "id": 91,
+        "id": 86,
         "type": "amigurumis",
         "name": "Elsa y Frozen",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 360,
         "image": [
             "assets/images/amigurumis/entregado/munecas/ElsaFrozen.jpg"
         ],
         "description": []
     },
     {
-        "id": 92,
+        "id": 87,
         "type": "amigurumis",
         "name": "Frozen",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/munecas/Frozen.jpg"
         ],
         "description": []
     },
     {
-        "id": 93,
+        "id": 88,
         "type": "amigurumis",
         "name": "Mari Grande",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 250,
         "image": [
             "assets/images/amigurumis/entregado/munecas/MariGrande.jpg"
         ],
         "description": []
     },
     {
-        "id": 94,
+        "id": 89,
         "type": "amigurumis",
         "name": "Muñeca Morena Rulosa",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/munecas/Morena.jpg"
         ],
         "description": []
     },
     {
-        "id": 95,
+        "id": 90,
         "type": "amigurumis",
         "name": "Muñeca Morena Lacia",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/munecas/Morra.jpg",
             "assets/images/amigurumis/entregado/munecas/Morra2.jpg"
@@ -1272,11 +1262,11 @@
         "description": []
     },
     {
-        "id": 96,
+        "id": 91,
         "type": "amigurumis",
         "name": "Muñeca Crespa",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 160,
         "images": [
             "assets/images/amigurumis/entregado/munecas/Persona.jpg",
             "assets/images/amigurumis/entregado/munecas/Persona2.jpg",
@@ -1285,29 +1275,29 @@
         "description": []
     },
     {
-        "id": 97,
+        "id": 92,
         "type": "amigurumis",
         "name": "Muñeca Rulosa",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/munecas/Rulosa.jpg"
         ],
         "description": []
     },
     {
-        "id": 98,
+        "id": 93,
         "type": "amigurumis",
         "name": "Muñeca Estudiante",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 160,
         "image": [
             "assets/images/amigurumis/entregado/munecas/Senorita.jpg"
         ],
         "description": []
     },
     {
-        "id": 99,
+        "id": 94,
         "type": "amigurumis",
         "name": "Arbol Navideño",
         "category": "Navidad",
@@ -1326,7 +1316,7 @@
         ]
     },
     {
-        "id": 100,
+        "id": 95,
         "type": "amigurumis",
         "name": "Esferas Navideñas",
         "category": "Navidad",
@@ -1349,7 +1339,7 @@
         ]
     },
     {
-        "id": 101,
+        "id": 96,
         "type": "amigurumis",
         "name": "Duende Nícolas",
         "category": "Navidad",
@@ -1370,7 +1360,7 @@
         ]
     },
     {
-        "id": 102,
+        "id": 97,
         "type": "amigurumis",
         "name": "Nacimiento",
         "category": "Navidad",
@@ -1391,7 +1381,7 @@
         ]
     },
     {
-        "id": 103,
+        "id": 98,
         "type": "amigurumis",
         "name": "Luffy",
         "category": "Personalizados",
@@ -1410,7 +1400,7 @@
         ]
     },
     {
-        "id": 104,
+        "id": 99,
         "type": "amigurumis",
         "name": "Marinera",
         "category": "Personalizados",
@@ -1430,7 +1420,7 @@
         ]
     },
     {
-        "id": 105,
+        "id": 100,
         "type": "amigurumis",
         "name": "Messi",
         "category": "Personalizados",
@@ -1449,7 +1439,7 @@
         ]
     },
     {
-        "id": 106,
+        "id": 101,
         "type": "amigurumis",
         "name": "Pareja de Marinera",
         "category": "Personalizados",
@@ -1468,7 +1458,7 @@
         ]
     },
     {
-        "id": 107,
+        "id": 102,
         "type": "amigurumis",
         "name": "Funko Personalizado",
         "category": "Personalizados",
@@ -1487,11 +1477,11 @@
         ]
     },
     {
-        "id": 108,
+        "id": 103,
         "type": "amigurumis",
         "name": "Personalizado con mascotas",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 300,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/Personalizado1.jpg",
             "assets/images/amigurumis/entregado/personalizados/Personalizado2.jpg",
@@ -1500,7 +1490,7 @@
         "description": []
     },
     {
-        "id": 109,
+        "id": 104,
         "type": "amigurumis",
         "name": "Administrador",
         "category": "Profesiones",
@@ -1520,7 +1510,7 @@
         ]
     },
     {
-        "id": 110,
+        "id": 105,
         "type": "amigurumis",
         "name": "Arquitecto",
         "category": "Profesiones",
@@ -1538,7 +1528,7 @@
         ]
     },
     {
-        "id": 111,
+        "id": 106,
         "type": "amigurumis",
         "name": "Chef",
         "category": "Profesiones",
@@ -1556,7 +1546,7 @@
         ]
     },
     {
-        "id": 112,
+        "id": 107,
         "type": "amigurumis",
         "name": "Corredor de autos Formula 1 Fernando Alonso",
         "category": "Profesiones",
@@ -1575,7 +1565,7 @@
         ]
     },
     {
-        "id": 113,
+        "id": 108,
         "type": "amigurumis",
         "name": "Ingeniero",
         "category": "Profesiones",
@@ -1596,7 +1586,7 @@
         ]
     },
     {
-        "id": 114,
+        "id": 109,
         "type": "amigurumis",
         "name": "Maestra",
         "category": "Profesiones",
@@ -1616,11 +1606,11 @@
         ]
     },
     {
-        "id": 115,
+        "id": 110,
         "type": "amigurumis",
         "name": "Maestra Personalizada",
         "category": "Profesiones",
-        "price_pen": 180,
+        "price_pen": 250,
         "image": [
             "assets/images/amigurumis/entregado/profesiones/MaestraGrande.jpg"
         ],
@@ -1634,7 +1624,7 @@
         ]
     },
     {
-        "id": 116,
+        "id": 111,
         "type": "amigurumis",
         "name": "Psicologa",
         "category": "Profesiones",
@@ -1654,7 +1644,7 @@
         ]
     },
     {
-        "id": 117,
+        "id": 112,
         "type": "amigurumis",
         "name": "Blanca Nieves",
         "category": "Reversibles",
@@ -1674,7 +1664,7 @@
         ]
     },
     {
-        "id": 118,
+        "id": 113,
         "type": "amigurumis",
         "name": "Guadalupe",
         "category": "Reversibles",
@@ -1691,7 +1681,7 @@
         ]
     },
     {
-        "id": 119,
+        "id": 114,
         "type": "amigurumis",
         "name": "Mafalda",
         "category": "Reversibles",
@@ -1710,7 +1700,7 @@
         ]
     },
     {
-        "id": 120,
+        "id": 115,
         "type": "amigurumis",
         "name": "Santa Rosa",
         "category": "Reversibles",
@@ -1731,7 +1721,7 @@
         ]
     },
     {
-        "id": 121,
+        "id": 116,
         "type": "amigurumis",
         "name": "Stitch",
         "category": "Reversibles",
@@ -1748,7 +1738,7 @@
         ]
     },
     {
-        "id": 122,
+        "id": 117,
         "type": "amigurumis",
         "name": "Stitch y Angela",
         "category": "Reversibles",
@@ -1765,7 +1755,7 @@
         ]
     },
     {
-        "id": 123,
+        "id": 118,
         "type": "amigurumis",
         "name": "Tinkerbell",
         "category": "Reversibles",
@@ -1784,7 +1774,7 @@
         ]
     },
     {
-        "id": 124,
+        "id": 119,
         "type": "amigurumis",
         "name": "Virgen Maria",
         "category": "Reversibles",
@@ -1803,7 +1793,7 @@
         ]
     },
     {
-        "id": 125,
+        "id": 120,
         "type": "amigurumis",
         "name": "Mario Bros y Bowser",
         "category": "Tv",
@@ -1828,7 +1818,7 @@
         ]
     },
     {
-        "id": 126,
+        "id": 121,
         "type": "amigurumis",
         "name": "Mario Bros ,Hongo y Donkey ",
         "category": "Tv",
@@ -1851,7 +1841,7 @@
         ]
     },
     {
-        "id": 127,
+        "id": 122,
         "type": "amigurumis",
         "name": "Flash",
         "category": "Tv",
@@ -1869,7 +1859,7 @@
         ]
     },
     {
-        "id": 128,
+        "id": 123,
         "type": "amigurumis",
         "name": "Garfield Bebé",
         "category": "Tv",
@@ -1888,7 +1878,7 @@
         ]
     },
     {
-        "id": 129,
+        "id": 124,
         "type": "amigurumis",
         "name": "Gato con Botas y Kitty patitas suaves ",
         "category": "Tv",
@@ -1910,7 +1900,7 @@
         ]
     },
     {
-        "id": 130,
+        "id": 125,
         "type": "amigurumis",
         "name": "Harry Potter",
         "category": "Tv",
@@ -1935,7 +1925,7 @@
         ]
     },
     {
-        "id": 131,
+        "id": 126,
         "type": "amigurumis",
         "name": "Lilo y Stitch",
         "category": "Tv",
@@ -1954,7 +1944,7 @@
         ]
     },
     {
-        "id": 132,
+        "id": 127,
         "type": "amigurumis",
         "name": "Mafalda",
         "category": "Tv",
@@ -1975,7 +1965,7 @@
         ]
     },
     {
-        "id": 133,
+        "id": 128,
         "type": "amigurumis",
         "name": "Mr. Peabody",
         "category": "Tv",
@@ -1993,7 +1983,7 @@
         ]
     },
     {
-        "id": 134,
+        "id": 129,
         "type": "amigurumis",
         "name": "Simba",
         "category": "Tv",
@@ -2011,19 +2001,19 @@
         ]
     },
     {
-        "id": 135,
+        "id": 130,
         "type": "amigurumis",
         "name": "Virgen De Guadalupe",
         "category": "Virgenes",
         "price_pen": 250,
         "images": [
-            "assets/images/amigurumis/entregado/virgenes/guada1.jpg",
+            "assets/images/amigurumis/entregado/virgenes/lupe2.jpg",
             "assets/images/amigurumis/entregado/virgenes/guada2.jpg",
             "assets/images/amigurumis/entregado/virgenes/guada3.jpg",
             "assets/images/amigurumis/entregado/virgenes/guada4.jpg",
             "assets/images/amigurumis/entregado/virgenes/guada5.jpg",
             "assets/images/amigurumis/entregado/virgenes/lupe1.jpg",
-            "assets/images/amigurumis/entregado/virgenes/lupe2.jpg"
+            "assets/images/amigurumis/entregado/virgenes/guada1.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
@@ -2035,7 +2025,7 @@
         ]
     },
     {
-        "id": 136,
+        "id": 131,
         "type": "amigurumis",
         "name": "Virgen Del Carmen",
         "category": "Virgenes",
