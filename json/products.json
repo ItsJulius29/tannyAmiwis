@@ -408,7 +408,7 @@
         "type": "amigurumis",
         "name": "Conejitas",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/apego/Conejitas.jpg"
         ],
@@ -419,7 +419,7 @@
         "type": "amigurumis",
         "name": "Manta de Coneja",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/apego/MantaConeja.jpg",
             "assets/images/amigurumis/entregado/apego/MantaConeja2.jpg"
@@ -431,7 +431,7 @@
         "type": "amigurumis",
         "name": "Manta de Estrellas de Mar",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/apego/MantaEstrellasMar.jpg"
         ],
@@ -442,7 +442,7 @@
         "type": "amigurumis",
         "name": "Manta Osito",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/apego/Osito.jpg"
         ],
@@ -453,7 +453,7 @@
         "type": "amigurumis",
         "name": "Pack Cocomelon",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 350,
         "image": [
             "assets/images/amigurumis/entregado/apego/Personalizado.jpg"
         ],
@@ -464,7 +464,7 @@
         "type": "amigurumis",
         "name": "Pack Rapunzel",
         "category": "Apego",
-        "price_pen": 15,
+        "price_pen": 300,
         "image": [
             "assets/images/amigurumis/entregado/apego/Rapunzel.jpeg"
         ],
@@ -578,9 +578,9 @@
         "category": "Artistas",
         "price_pen": 180,
         "images": [
-            "assets/images/amigurumis/entregado/artistas/Khan.jpg",
+            "assets/images/amigurumis/entregado/artistas/Khan3.jpg",
             "assets/images/amigurumis/entregado/artistas/Khan2.jpg",
-            "assets/images/amigurumis/entregado/artistas/Khan3.jpg"
+            "assets/images/amigurumis/entregado/artistas/Khan.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
@@ -598,8 +598,8 @@
         "category": "Artistas",
         "price_pen": 200,
         "images": [
-            "assets/images/amigurumis/entregado/artistas/LauraPau1.jpg",
             "assets/images/amigurumis/entregado/artistas/LauraPau2.jpg",
+            "assets/images/amigurumis/entregado/artistas/LauraPau1.jpg",
             "assets/images/amigurumis/entregado/artistas/LauraPau3.jpg"
         ],
         "description": [
@@ -634,7 +634,7 @@
         "type": "amigurumis",
         "name": "Atrapasueños Arcoiris",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 85,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/Arcoiris.jpg"
         ],
@@ -645,7 +645,7 @@
         "type": "amigurumis",
         "name": " Par De Cortineros Rosa Blanca",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 200,
         "images": [
             "assets/images/amigurumis/entregado/decoracion/CortineroRosaBlanca.jpg",
             "assets/images/amigurumis/entregado/decoracion/CortineroRosaBlanca2.jpg",
@@ -658,7 +658,7 @@
         "type": "amigurumis",
         "name": "Cortinero Rosa Roja",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 200,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/CortineroRosaRoja.jpg"
         ],
@@ -669,7 +669,7 @@
         "type": "amigurumis",
         "name": "Cojín De Mándala",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 100,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/Mandala.jpg"
         ],
@@ -680,7 +680,7 @@
         "type": "amigurumis",
         "name": "Cortinero Monito",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/decoracion/Monito1.jpg",
             "assets/images/amigurumis/entregado/decoracion/Monito2.jpg"
@@ -692,7 +692,7 @@
         "type": "amigurumis",
         "name": "Cojín De Osita Lila",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 100,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/Oso.jpg"
         ],
@@ -703,7 +703,7 @@
         "type": "amigurumis",
         "name": "Atrapasueños Personalizado",
         "category": "Decoracion",
-        "price_pen": 15,
+        "price_pen": 100,
         "image": [
             "assets/images/amigurumis/entregado/decoracion/Personalizado.jpg"
         ],
@@ -1506,8 +1506,8 @@
         "category": "Profesiones",
         "price_pen": 180,
         "images": [
-            "assets/images/amigurumis/entregado/profesiones/Administrador1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Administrador2.jpg",
+            "assets/images/amigurumis/entregado/profesiones/Administrador1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Administrador3.jpg"
         ],
         "description": [
@@ -1716,11 +1716,11 @@
         "category": "Reversibles",
         "price_pen": 120,
         "images": [
-            "assets/images/amigurumis/pago/rosasrev/SantaRosa1.jpg",
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa5.jpg",
             "assets/images/amigurumis/pago/rosasrev/SantaRosa2.jpg",
             "assets/images/amigurumis/pago/rosasrev/SantaRosa3.jpg",
             "assets/images/amigurumis/pago/rosasrev/SantaRosa4.jpg",
-            "assets/images/amigurumis/pago/rosasrev/SantaRosa5.jpg"
+            "assets/images/amigurumis/pago/rosasrev/SantaRosa1.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
@@ -1809,9 +1809,9 @@
         "category": "Tv",
         "price_pen": 350,
         "images": [
-            "assets/images/amigurumis/entregado/tv/MarioBowser.jpg",
-            "assets/images/amigurumis/entregado/tv/MarioBowser2.jpg",
             "assets/images/amigurumis/entregado/tv/MarioBowser3.jpg",
+            "assets/images/amigurumis/entregado/tv/MarioBowser2.jpg",
+            "assets/images/amigurumis/entregado/tv/MarioBowser.jpg",
             "assets/images/amigurumis/entregado/tv/MarioBros.jpg",
             "assets/images/amigurumis/entregado/tv/Bowser1.jpg",
             "assets/images/amigurumis/entregado/tv/Bowser2.jpg",

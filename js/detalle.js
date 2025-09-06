@@ -232,35 +232,48 @@ function renderDetail(p, all, fx) {
                     ? `detalle.html?src=${encodeURIComponent(srcForLink)}&id=${encodeURIComponent(r.id)}`
                     : `detalle.html?src=${encodeURIComponent(srcForLink)}&idx=${all.indexOf(r)}`;
 
-                let priceChunk = '';
+                // precios a la derecha (según dataset)
+                let rightPrices = '';
                 if (isFinishedRel) {
+                    // Productos terminados: solo S/.
                     const penR = firstNumber(r.price_pen ?? r.pen ?? r.price_soles ?? r.price);
                     if (penR != null && penR > 0) {
-                        priceChunk = `<span class="ms-2 small">S/${penR.toFixed(2)}</span>`;
+                        rightPrices = `<span class="rel-price-pen">S/${penR.toFixed(2)}</span>`;
                     }
                 } else {
+                    // Patrones pago/gratis: USD principal + S/ si existe
                     const usdR = firstNumber(r.price_usd ?? r.usd ?? r.price);
+                    const penR = firstNumber(r.price_pen ?? r.pen);
                     if (usdR === 0) {
-                        priceChunk = `<span class="ms-2 small">Gratis</span>`;
+                        rightPrices = `<span class="rel-price-free">Gratis</span>`;
                     } else if (usdR != null) {
-                        priceChunk = `<span class="ms-2 small">$${usdR.toFixed(2)}</span>`;
+                        rightPrices = `
+                            <span class="rel-price-usd">$${usdR.toFixed(2)}</span>
+                            ${penR != null
+                            ? `<span class="rel-price-sep">·</span><span class="rel-price-pen">S/${penR.toFixed(2)}</span>`
+                            : ``}
+                        `;
                     }
                 }
 
                 return `
-                <div class="col-6 col-md-4 col-lg-3">
-                  <a class="text-decoration-none" href="${link}">
-                    <div class="card card-related">
-                      <img src="${cover}" alt="${r.name || ''}" loading="lazy" decoding="async">
-                      <div class="p-2">
-                        <div class="small text-muted">${r.category || ''}</div>
-                        <div class="title">${r.name || ''}</div>
-                        <div class="mt-2"><button class="btn-more">Ver más</button> ${priceChunk}</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>`;
+                    <div class="col-6 col-md-4 col-lg-3">
+                    <a class="text-decoration-none" href="${link}">
+                        <div class="card card-related">
+                        <img src="${cover}" alt="${r.name || ''}" loading="lazy" decoding="async">
+                        <div class="cr-body">
+                            <div class="small text-muted">${r.category || ''}</div>
+                            <div class="title">${r.name || ''}</div>
+                            <div class="cr-footer">
+                            <button class="btn-more" type="button">Ver más</button>
+                            <div class="price-line">${rightPrices}</div>
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    </div>`;
             }).join('');
+
         }
     }
 

@@ -31,12 +31,14 @@
     border-color: #a64ad7;
 }
 
+.detail-main { --bs-aspect-ratio: 130%; }   /* ajusta 130% a tu gusto */
+
 #mainImg {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    object-fit: cover;
-    cursor: zoom-in;
+  width: 100%;
+  height: 100%;          /* <- antes tenías auto */
+  border-radius: 14px;
+  object-fit: cover;
+  cursor: zoom-in;
 }
 
 /* Modal zoom */
@@ -83,15 +85,34 @@
 }
 
 /* CTA WhatsApp */
-.detail-actions { margin-top: 1rem; }
-.wa-cta{
-  display:inline-flex; align-items:center; gap:.5rem;
-  background:#25D366; color:#fff; font-weight:700;
-  border:0; border-radius:12px; padding:.6rem 1rem;
-  text-decoration:none; box-shadow:0 3px 6px rgba(0,0,0,.12);
+.detail-actions {
+    margin-top: 1rem;
 }
-.wa-cta:hover{ color:#fff; filter:brightness(.95); text-decoration:none; }
-.wa-cta .bi{ font-size:1.2rem; line-height:1; }
+
+.wa-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-radius: 12px;
+    padding: .6rem 1rem;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+}
+
+.wa-cta:hover {
+    color: #fff;
+    filter: brightness(.95);
+    text-decoration: none;
+}
+
+.wa-cta .bi {
+    font-size: 1.2rem;
+    line-height: 1;
+}
 
 
 /* Lista de corazón */
@@ -260,6 +281,8 @@
     border-radius: 50px;
 }
 
+
+/* --- Relacionados --- */
 .rel-panel {
     background: #f7efff;
     border: 1px solid #ead6ff;
@@ -273,16 +296,36 @@
     background: #fff;
 }
 
+/* Imagen un poco más alta */
 .card-related img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
+}
+
+/* Cuerpo */
+.card-related .cr-body {
+    padding: .75rem 1rem 1rem;
+}
+
+.card-related .small {
+    margin-bottom: .15rem;
 }
 
 .card-related .title {
     color: var(--morado);
     font-weight: 700;
     font-size: .95rem;
+    margin-top: .15rem;
+}
+
+/* Footer: botón + precios alineados */
+.card-related .cr-footer {
+    margin-top: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
 }
 
 .card-related .btn-more {
@@ -298,9 +341,45 @@
     background: #5b28c6;
 }
 
+/* --- Nueva jerarquía de precios --- */
+.card-related .price-line {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+}
+
+.card-related .rel-price-usd {
+    color: #7b41e6;
+    /* morado */
+    font-weight: 800;
+    /* bold */
+}
+
+.card-related .rel-price-sep {
+    color: #c9c9c9;
+    /* separador gris */
+    font-weight: 600;
+}
+
+.card-related .rel-price-pen {
+    color: #6b7280;
+    /* gris */
+    font-weight: 600;
+    font-size: .95rem;
+    /* un poco más pequeño */
+}
+
+.card-related .rel-price-free {
+    background: #e9d6ff;
+    color: #4b007d;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: .15rem .45rem;
+}
+
 /* Responsive */
 @media (max-width:575.98px) {
     .card-related img {
-        height: 140px;
+        height: 180px;
     }
 }
