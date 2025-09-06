@@ -218,6 +218,24 @@ body {
     transform: scale(1.04);
 }
 
+/* ---- Collage: en móvil la última foto ocupa las 2 columnas ---- */
+@media (max-width: 575.98px) {
+
+    /* Fuerza 2 columnas en móvil para que la última pueda abarcar ambas */
+    .cc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* La novena (última) imagen se estira a dos columnas */
+    .cc-grid .cc-item:last-child {
+        grid-column: 1 / -1;
+        /* de la primera a la última columna */
+        aspect-ratio: 2 / 2.5;
+        /* más ancha que alta */
+    }
+}
+
+
 @media (min-width:992px) {
     .cc-grid {
         grid-template-columns: repeat(3, 1fr);

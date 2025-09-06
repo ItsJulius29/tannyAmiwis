@@ -179,8 +179,27 @@ function renderFilteredProducts() {
     const href = product.id != null
       ? `detalle.html?src=${encodeURIComponent(currentSource)}&id=${encodeURIComponent(product.id)}`
       : `detalle.html?src=${encodeURIComponent(currentSource)}&idx=${allProducts.indexOf(product)}`;
-    const usd = firstNumber(product.price ?? product.price_usd ?? product.usd);
-    const priceHtml = (usd != null && usd > 0) ? `$${usd.toFixed(2)}` : "Gratis";
+
+    // ===== Precio por fuente =====
+    let priceHtml = "";
+    if (currentSource === "products.json") {
+      // Productos terminados → SOLO soles
+      const pen = firstNumber(product.price_pen ?? product.pen ?? product.price_soles ?? product.price);
+      priceHtml = (pen != null && pen > 0) ? `S/${pen.toFixed(2)}` : "Consultar";
+    } else if (currentSource === "pay.json") {
+      // Patrones de pago → USD principal + (opcional) S/ pequeño, SIN conversión
+      const usd = firstNumber(product.price_usd ?? product.usd ?? product.price);
+      const pen = firstNumber(product.price_pen ?? product.pen ?? product.price_soles);
+      if (usd != null && usd > 0) {
+        priceHtml = `$${usd.toFixed(2)}` + (pen != null ? ` <span class="text-muted small">· S/${pen.toFixed(2)}</span>` : "");
+      } else {
+        priceHtml = (pen != null && pen > 0) ? `S/${pen.toFixed(2)}` : "Consultar";
+      }
+    } else if (currentSource === "free.json") {
+      // Patrones gratuitos
+      priceHtml = "Gratis";
+    }
+
     const priority = (currentPage === 1 && i < 3) ? "high" : "low";
 
     return `
@@ -208,6 +227,7 @@ function renderFilteredProducts() {
   // si venimos con #products-top, baja a la lista tras el primer render
   maybeAutoScroll();
 }
+
 
 function renderPagination(totalPages) {
   if (!paginationUl) return;

@@ -4,7 +4,8 @@
         "type": "pago",
         "name": "Coneja Girasol",
         "category": "Animales",
-        "price": 9.5,
+        "price_usd": 9.5,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/animales/ConejaGirasol1.jpg",
@@ -24,7 +25,8 @@
         "type": "pago",
         "name": "Coneja Lyla",
         "category": "Animales",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 200,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/animales/ConejaLyla.jpg",
@@ -46,7 +48,8 @@
         "type": "pago",
         "name": "Familia de Gatitos",
         "category": "Animales",
-        "price": 9.5,
+        "price_usd": 9.5,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/animales/FamGatos1.jpg",
@@ -67,7 +70,8 @@
         "type": "pago",
         "name": "Hipo Violet",
         "category": "Animales",
-        "price": 9.5,
+        "price_usd": 9.5,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/animales/Hipo1.jpg",
@@ -87,7 +91,8 @@
         "type": "pago",
         "name": "Vaquita",
         "category": "Animales",
-        "price": 9.5,
+        "price_usd": 9.5,
+        "price_pen": 50,
         "difficulty": 3,
         "image": "assets/images/amigurumis/pago/animales/Vaquita.jpg",
         "description": [
@@ -103,7 +108,8 @@
         "type": "pago",
         "name": "Karol G Fornite",
         "category": "Artistas",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/artistas/KarolgFornite1.jpg",
@@ -126,7 +132,8 @@
         "type": "pago",
         "name": "Karol G Mañana sera mas bonito",
         "category": "Artistas",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "image": "assets/images/amigurumis/pago/artistas/KarolgMSB.jpg",
         "description": [
@@ -142,7 +149,8 @@
         "type": "pago",
         "name": "Rosario Tijeras",
         "category": "Artistas",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/artistas/RosarioTijeras1.jpg",
@@ -163,7 +171,8 @@
         "type": "pago",
         "name": "Selena",
         "category": "Artistas",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/artistas/Selena.jpg",
@@ -183,7 +192,8 @@
         "type": "pago",
         "name": "Shakira",
         "category": "Artistas",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/artistas/Shakira.jpg",
@@ -205,7 +215,8 @@
         "type": "pago",
         "name": "Arbol Navideño",
         "category": "Navidad",
-        "price": 6.5,
+        "price_usd": 6.5,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/navidad/Arbol1.jpg",
@@ -225,7 +236,8 @@
         "type": "pago",
         "name": "Duende",
         "category": "Navidad",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/navidad/Duende1.jpg",
@@ -247,7 +259,8 @@
         "type": "pago",
         "name": "Mini Nacimiento",
         "category": "Navidad",
-        "price": 9,
+        "price_usd": 9,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/navidad/Naci1.jpg",
@@ -269,7 +282,8 @@
         "type": "pago",
         "name": "Esferas Navideñas",
         "category": "Navidad",
-        "price": 15,
+        "price_usd": 15,
+        "price_pen": 50,
         "images": [
             "assets/images/amigurumis/entregado/navidad/Todos.png",
             "assets/images/amigurumis/entregado/navidad/Bambi.png",
@@ -295,7 +309,8 @@
         "type": "pago",
         "name": "Psicologia",
         "category": "Profesiones",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/profesiones/Psicologa1.jpg",
@@ -317,7 +332,8 @@
         "type": "pago",
         "name": "Blanca nieves",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Bnieves1.jpg",
@@ -338,7 +354,8 @@
         "type": "pago",
         "name": "Mafalda",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Mafalda1.jpg",
@@ -359,7 +376,8 @@
         "type": "pago",
         "name": "Rosa de guadalupe",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "image": "assets/images/amigurumis/pago/rosasrev/guadalupe.jpg",
         "description": [
@@ -375,7 +393,8 @@
         "type": "pago",
         "name": "Santa Rosa",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/SantaRosa1.jpg",
@@ -397,7 +416,8 @@
         "type": "pago",
         "name": "Stich",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Stich.jpg",
@@ -417,7 +437,8 @@
         "type": "pago",
         "name": "Tinkerbell",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Tinkerbell1.jpg",
@@ -437,7 +458,8 @@
         "type": "pago",
         "name": "Virgen Maria",
         "category": "Reversibles",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 1,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/VirgenMaria1.jpg",
@@ -457,7 +479,8 @@
         "type": "pago",
         "name": "Cupido",
         "category": "Tv",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/Cupido1.jpg",
@@ -479,7 +502,8 @@
         "type": "pago",
         "name": "Garfiled Bebé",
         "category": "Tv",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/GarfieldBby1.jpg",
@@ -498,7 +522,8 @@
         "type": "pago",
         "name": "Gato con Botas",
         "category": "Tv",
-        "price": 22,
+        "price_usd": 22,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/GatoBotas1.jpg",
@@ -517,7 +542,8 @@
         "type": "pago",
         "name": "Harry Potter Version 1",
         "category": "Tv",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/Harry1.jpg",
@@ -539,7 +565,8 @@
         "type": "pago",
         "name": "Harry Potter Version 2",
         "category": "Tv",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/HarryP1.jpg",
@@ -562,7 +589,8 @@
         "type": "pago",
         "name": "Vicky pequeña",
         "category": "Tv",
-        "price": 12,
+        "price_usd": 12,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/tv/Vicky1.jpg",
@@ -581,7 +609,8 @@
         "type": "pago",
         "name": "Virgen de guadalupe Versión 1",
         "category": "Virgenes",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/virgenes/guada1.jpg",
@@ -602,7 +631,8 @@
         "type": "pago",
         "name": "Virgen de guadalupe Versión 2",
         "category": "Virgenes",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "images": [
             "assets/images/amigurumis/pago/virgenes/lupe1.jpg",
@@ -622,7 +652,8 @@
         "type": "pago",
         "name": "Virgen del Carmen",
         "category": "Virgenes",
-        "price": 13,
+        "price_usd": 13,
+        "price_pen": 50,
         "difficulty": 2,
         "image": "assets/images/amigurumis/pago/virgenes/carmen1.jpg",
         "description": [

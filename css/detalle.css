@@ -82,6 +82,18 @@
     line-height: 1.2;
 }
 
+/* CTA WhatsApp */
+.detail-actions { margin-top: 1rem; }
+.wa-cta{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#25D366; color:#fff; font-weight:700;
+  border:0; border-radius:12px; padding:.6rem 1rem;
+  text-decoration:none; box-shadow:0 3px 6px rgba(0,0,0,.12);
+}
+.wa-cta:hover{ color:#fff; filter:brightness(.95); text-decoration:none; }
+.wa-cta .bi{ font-size:1.2rem; line-height:1; }
+
+
 /* Lista de corazón */
 .heart-list {
     list-style: none;

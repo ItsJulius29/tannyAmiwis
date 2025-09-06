@@ -65,23 +65,22 @@ async function getUsdPenRate() {
         const data = await res.json();
 
         let prod = null;
-        if (idParam != null) {
-            prod = data.find(p => String(p.id) === String(idParam));
-        } else if (idxParam != null) {
-            const i = Number(idxParam);
-            if (!Number.isNaN(i) && i >= 0 && i < data.length) prod = data[i];
-        } else if (slugParam) {
-            prod = data.find(p => slugify(p.name) === slugParam);
-        }
+        if (idParam != null) prod = data.find(p => String(p.id) === String(idParam));
+        else if (idxParam != null) { const i = Number(idxParam); if (!Number.isNaN(i) && i >= 0 && i < data.length) prod = data[i]; }
+        else if (slugParam) prod = data.find(p => slugify(p.name) === slugParam);
+
         if (!prod) return showStatus('No se encontró el producto.');
 
-        const fx = await getUsdPenRate();
-        renderDetail(prod, data, fx);
+        const isFinished = /(^|\/)products\.json$/i.test(srcParam);   // <-- NUEVO
+        const fx = isFinished ? null : await getUsdPenRate();         // <-- NUEVO
+
+        renderDetail(prod, data, fx, isFinished);                     // <-- pasa flag
     } catch (e) {
         console.error(e);
         showStatus('Error cargando datos.');
     }
 })();
+
 
 // -------- UI --------
 function showStatus(msg) {
@@ -95,18 +94,33 @@ function renderDetail(p, all, fx) {
     const title = $('#title');
     if (title) title.textContent = p.name || '';
 
-    // precios (price en USD)
-    let usd = firstNumber(p.price ?? p.price_usd ?? p.usd);
-    let pen = (usd != null) ? +(usd * fx).toFixed(2) : null;
+    // ¿viene del dataset de productos terminados?
+    const isFinished = /(^|\/)products\.json$/i.test(srcParam);
 
+    // ===== PRECIOS =====
     const priceBox = $('#price');
     if (priceBox) {
         priceBox.innerHTML = '';
-        if (usd == null || usd === 0) {
-            priceBox.innerHTML = `<span class="price-free">Gratis</span>`;
+
+        if (isFinished) {
+            // SOLO SOLES para productos terminados
+            const pen = firstNumber(p.price_pen ?? p.pen ?? p.price_soles ?? p.price);
+            if (pen != null && pen > 0) {
+                priceBox.innerHTML =
+                    `<div class="price-row"><span class="price-flag">🇵🇪</span><span>S/${pen.toFixed(2)}</span></div>`;
+            } else {
+                priceBox.innerHTML = `<span class="price-free">Consultar</span>`;
+            }
         } else {
-            priceBox.appendChild(priceRow('🇺🇸', `$${usd.toFixed(2)}`));
-            if (pen != null) priceBox.appendChild(priceRow('🇵🇪', `S/${pen.toFixed(2)}`));
+            // Pago / Gratuitos: USD como principal + PEN si hay
+            const usd = firstNumber(p.price_usd ?? p.usd ?? p.price);
+            const pen = firstNumber(p.price_pen ?? p.pen);
+            if (usd == null || usd === 0) {
+                priceBox.innerHTML = `<span class="price-free">Gratis</span>`;
+            } else {
+                priceBox.appendChild(priceRow('🇺🇸', `$${usd.toFixed(2)}`));
+                if (pen != null) priceBox.appendChild(priceRow('🇵🇪', `S/${pen.toFixed(2)}`));
+            }
         }
     }
 
@@ -177,37 +191,74 @@ function renderDetail(p, all, fx) {
         }
     }
 
-    // relacionados
+    // --- CTA WhatsApp SOLO para productos terminados ---
+    if (isFinished) {
+        const WA_PHONE = '51999245585'; // tu número
+        // Mensaje SIN link:
+        const msg = encodeURIComponent(
+            `Hola, quisiera cotizar "${p.name || 'Producto'}". ¿Me indicas precio y tiempo de entrega?`
+        );
+        const waHref = `https://wa.me/${WA_PHONE}?text=${msg}`;
+
+        document.querySelector('.detail-actions')?.remove();
+        const actions = document.createElement('div');
+        actions.className = 'detail-actions';
+        actions.innerHTML = `
+            <a class="wa-cta" href="${waHref}" target="_blank" rel="noopener noreferrer">
+            <img src="assets/logos/Wsspblanco.svg" alt="WhatsApp" height=30> Cotizar por WhatsApp
+            </a>`;
+        (backBtn || wrap)?.insertAdjacentElement('beforebegin', actions);
+    }
+
+
+    // --- Relacionados ---
     const related = all
         .filter(x => x !== p && x.type === p.type && x.category === p.category)
         .slice(0, 4);
+
     const relBox = $('#related');
     if (relBox) {
         if (!related.length) {
             relBox.innerHTML = '<p class="text-muted mb-0">No hay relacionados.</p>';
         } else {
+            const srcForLink = (typeof rawSrc === 'string' && rawSrc) ? rawSrc : 'products.json';
+            const isFinishedRel =
+                /(^|\/)products\.json$/i.test(srcForLink) || /(^|\/)products\.json$/i.test(srcParam || '');
+
             relBox.innerHTML = related.map(r => {
                 const cover = (Array.isArray(r.images) && r.images[0]) || r.image || '';
-                const link = r.id != null
-                    ? `detalle.html?src=${encodeURIComponent(rawSrc)}&id=${encodeURIComponent(r.id)}`
-                    : `detalle.html?src=${encodeURIComponent(rawSrc)}&idx=${all.indexOf(r)}`;
-                const usdR = firstNumber(r.price ?? r.price_usd ?? r.usd);
-                const penR = (usdR != null && usdR > 0) ? +(usdR * fx).toFixed(2) : null;
+                const link = (r.id != null)
+                    ? `detalle.html?src=${encodeURIComponent(srcForLink)}&id=${encodeURIComponent(r.id)}`
+                    : `detalle.html?src=${encodeURIComponent(srcForLink)}&idx=${all.indexOf(r)}`;
+
+                let priceChunk = '';
+                if (isFinishedRel) {
+                    const penR = firstNumber(r.price_pen ?? r.pen ?? r.price_soles ?? r.price);
+                    if (penR != null && penR > 0) {
+                        priceChunk = `<span class="ms-2 small">S/${penR.toFixed(2)}</span>`;
+                    }
+                } else {
+                    const usdR = firstNumber(r.price_usd ?? r.usd ?? r.price);
+                    if (usdR === 0) {
+                        priceChunk = `<span class="ms-2 small">Gratis</span>`;
+                    } else if (usdR != null) {
+                        priceChunk = `<span class="ms-2 small">$${usdR.toFixed(2)}</span>`;
+                    }
+                }
+
                 return `
-          <div class="col-6 col-md-4 col-lg-3">
-            <a class="text-decoration-none" href="${link}">
-              <div class="card card-related">
-                <img src="${cover}" alt="${r.name || ''}" loading="lazy" decoding="async">
-                <div class="p-2">
-                  <div class="small text-muted">${r.category || ''}</div>
-                  <div class="title">${r.name || ''}</div>
-                  ${penR != null
-                        ? `<div class="mt-2"><button class="btn-more">Ver más</button> <span class="ms-2 small">S/${penR.toFixed(2)}</span></div>`
-                        : `<div class="mt-2"><button class="btn-more">Ver más</button></div>`}
-                </div>
-              </div>
-            </a>
-          </div>`;
+                <div class="col-6 col-md-4 col-lg-3">
+                  <a class="text-decoration-none" href="${link}">
+                    <div class="card card-related">
+                      <img src="${cover}" alt="${r.name || ''}" loading="lazy" decoding="async">
+                      <div class="p-2">
+                        <div class="small text-muted">${r.category || ''}</div>
+                        <div class="title">${r.name || ''}</div>
+                        <div class="mt-2"><button class="btn-more">Ver más</button> ${priceChunk}</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>`;
             }).join('');
         }
     }
