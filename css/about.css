@@ -32,8 +32,16 @@ body {
 }
 
 .about-text p {
-    font-size: clamp(14px, 2.2vw, 16px);
-    line-height: 1.8;
+    text-align: justify;
+    /* alinea ambos bordes */
+    text-align-last: left;
+    /* la última línea no se estira */
+    text-justify: inter-word;
+    /* reparte espacios entre palabras */
+    hyphens: auto;
+    /* guionado automático para es-PE */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .obillo {
@@ -133,9 +141,16 @@ body {
 }
 
 .anecdote-text {
-    font-size: clamp(14px, 2.2vw, 17px);
-    line-height: 1.8;
-    word-break: break-word;
+    text-align: justify;
+    /* alinea ambos bordes */
+    text-align-last: left;
+    /* la última línea no se estira */
+    text-justify: inter-word;
+    /* reparte espacios entre palabras */
+    hyphens: auto;
+    /* guionado automático para es-PE */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .anecdote-butterfly {
@@ -206,6 +221,10 @@ body {
 @media (min-width:992px) {
     .cc-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-text {
+        max-width: 70ch;
     }
 }
 

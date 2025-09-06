@@ -30,9 +30,9 @@ const getPageSize = () => (mm.matches ? 8 : 9);
 const firstNumber = v => { const n = Number(v); return Number.isFinite(n) ? n : null; };
 
 const BANNERS = {
-  amigurumis: "assets/images/pruebabanner.jpg",
-  pago: "assets/images/pruebabanner.jpg",
-  free: "assets/images/pruebabanner.jpg"
+  amigurumis: "assets/images/banner/1.png",
+  pago: "assets/images/banner/2.png",
+  free: "assets/images/banner/3.png"
 };
 
 // Dimensiones para reservar espacio

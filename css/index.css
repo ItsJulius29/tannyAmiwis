@@ -34,6 +34,41 @@ body {
 }
 
 /* ===== HERO ===== */
+
+.hero-title {
+  font-family: 'Croissant One', cursive;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 10px;
+  padding: 28px 16px 34px;
+  color: transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #ffeaff 55%, #ffd6ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .12)) drop-shadow(0 8px 20px rgba(79, 0, 125, .18));
+  letter-spacing: .4px;
+  line-height: 1.1;
+  font-size: clamp(1.6rem, 4.5vw, 3.2rem);
+  /* base móvil/tablet */
+  position: relative;
+}
+
+.hero-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: min(560px, 82%);
+  height: 12px;
+  border-radius: 999px;
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, .95) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(90deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .65));
+  box-shadow: 0 10px 28px rgba(107, 33, 168, .30);
+  pointer-events: none;
+}
+
+
 .hero-section {
   background: #caa0f5;
   position: relative;
@@ -84,12 +119,13 @@ body {
 
 /* Indicadores */
 .hero-section .carousel-indicators button {
-  height:6px;
-  width:clamp(70px,24vw,460px); /* se adapta a teléfono, tablet y desktop */
-  max-width:460px;
-  border-radius:999px;
-  background:#fff;
-  opacity:1;
+  height: 6px;
+  width: clamp(70px, 24vw, 460px);
+  /* se adapta a teléfono, tablet y desktop */
+  max-width: 460px;
+  border-radius: 999px;
+  background: #fff;
+  opacity: 1;
 }
 
 .hero-section .carousel-indicators .active {
@@ -145,9 +181,11 @@ body {
   border-radius: 16px;
 
   /* altura automática con proporción estable */
-  height: auto;
-  min-height: 0;
   aspect-ratio: 16 / 9;
+
+  height:auto;
+  min-height: clamp(420px, 46vh, 600px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
 }
 
 .carousel-item.active {
@@ -155,6 +193,11 @@ body {
 }
 
 @media (max-width:991.98px) {
+
+  /* móvil: un poco menos de espacio */
+  .hero-title {
+    margin: 6px 0 10px;
+  }
 
   /* Oculta cualquier texto/botón del slide */
   .hero-section .hero-content {
@@ -541,8 +584,8 @@ footer a:hover {
 }
 
 /* Ajustes finos en pantallas muy anchas (evita que todo se “estire” demasiado) */
-@media (min-width:1400px){
-  .hero-section .carousel-inner{
-    padding:clamp(12px,1vw,24px) clamp(24px,2vw,48px) clamp(48px,3.5vw,88px);
+@media (min-width:1400px) {
+  .hero-section .carousel-inner {
+    padding: clamp(12px, 1vw, 24px) clamp(24px, 2vw, 48px) clamp(48px, 3.5vw, 88px);
   }
 }
