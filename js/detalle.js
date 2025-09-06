@@ -204,6 +204,7 @@ function renderDetail(p, all, fx) {
         const actions = document.createElement('div');
         actions.className = 'detail-actions';
         actions.innerHTML = `
+            <p>Puedes cotizar tu personalizado a tu elección.</p>
             <a class="wa-cta" href="${waHref}" target="_blank" rel="noopener noreferrer">
             <img src="assets/logos/Wsspblanco.svg" alt="WhatsApp" height=30> Cotizar por WhatsApp
             </a>`;

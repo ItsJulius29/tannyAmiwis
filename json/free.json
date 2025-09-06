@@ -2,7 +2,7 @@
     {
         "id": 1,
         "type": "gratuitos",
-        "name": "Angelito colgante",
+        "name": "Angelito Colgante",
         "category": "Fantasía",
         "price": 0,
         "difficulty": 2,
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "type": "gratuitos",
-        "name": "Gatito risueño",
+        "name": "Gatito Risueño",
         "category": "Animales",
         "price": 0,
         "difficulty": 3,
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "type": "gratuitos",
-        "name": "Gato dormilon",
+        "name": "Gato Dormilón",
         "category": "Animales",
         "price": 0,
         "difficulty": 3,
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "type": "gratuitos",
-        "name": "Llamitas ",
+        "name": "Llamitas",
         "category": "Animales",
         "price": 0,
         "difficulty": 2,
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "type": "gratuitos",
-        "name": "Maceta mini lirio",
+        "name": "Maceta Mini Lirio",
         "category": "Animados",
         "price": 0,
         "difficulty": 3,

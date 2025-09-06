@@ -2,9 +2,9 @@
     {
         "id": 1,
         "type": "amigurumis",
-        "name": "Bambi Navidedña",
+        "name": "Bambi Navideña",
         "category": "Animales",
-        "price_pen": 150,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/animales/Bambi1.jpg",
             "assets/images/amigurumis/entregado/animales/Bambi2.jpg",
@@ -12,27 +12,25 @@
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
-            "Tejida en hilo acrílico antialérgica",
-            "Ojitos de seguridad ",
-            " Costo: S/. 180 "
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad."
         ]
     },
     {
         "id": 2,
         "type": "amigurumis",
-        "name": "Burro",
+        "name": "Burrito Personalizado",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 150,
         "image": [
             "assets/images/amigurumis/entregado/animales/Burro.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 18cm ",
+            "Queda de una medida aproximada de 18cm.",
             "Tejida en hilo acrílico antialérgico.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            " Costo: S/. 150 "
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -40,7 +38,7 @@
         "type": "amigurumis",
         "name": "Coneja Madre e Hija",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/animales/ConAlar1.jpg",
             "assets/images/amigurumis/entregado/animales/ConAlar2.jpg"
@@ -48,10 +46,9 @@
         "description": [
             "Queda de una medida aproximada de 18cm coneja mamá y de 12cm conejita hija.",
             "Tejida en hilo de 100% algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 180 "
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -59,18 +56,26 @@
         "type": "amigurumis",
         "name": "Coneja Blue",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/animales/ConejaBlue.jpg"
         ],
-        "description": []
+        "description": [
+            "Queda de una medida aproximada de 20 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida.",
+            "Incluye: Vestido.",
+            "No incluye maceta de tulipanes."
+        ]
     },
     {
         "id": 5,
         "type": "amigurumis",
         "name": "Coneja Girasol",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/animales/ConejaGirasol1.jpg",
             "assets/images/amigurumis/entregado/animales/ConejaGirasol2.jpg",
@@ -79,11 +84,10 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo acrílico antialérgica.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Vestido, diadema y girasol.",
-            " Costo: S/. 180"
+            "Incluye: Vestido, diadema y girasol."
         ]
     },
     {
@@ -91,7 +95,7 @@
         "type": "amigurumis",
         "name": "Coneja Lyla",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/animales/ConejaLyla1.jpg",
             "assets/images/amigurumis/entregado/animales/ConejaLyla2.jpg",
@@ -99,11 +103,10 @@
         ],
         "description": [
             "Queda de una medida aproximada de 20cm de altura.",
-            "Tejida en hilo acrílico antialérgica. ",
+            "Tejida en hilo acrílico antialérgica.",
             "Ojitos de seguridad escarchados.",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/.180  "
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -111,18 +114,17 @@
         "type": "amigurumis",
         "name": "Conejos Bebé",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 250,
         "image": [
             "assets/images/amigurumis/entregado/animales/Conejosbb.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 16 cm. ",
-            "Tejida en hilo acrílico antialérgica,",
-            "Relleno hipoalergénico ",
-            "Ojitos de seguridad ",
+            "Queda de una medida aproximada de 16 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Relleno hipoalergénico.",
+            "Ojitos de seguridad.",
             "Toda la pieza es cosida.",
-            "Incluye: OVEROL",
-            "Costo: S/. 250 "
+            "Incluye: OVEROL."
         ]
     },
     {
@@ -130,7 +132,7 @@
         "type": "amigurumis",
         "name": "Dumbo",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/animales/Dumbo.jpg"
         ],
@@ -138,18 +140,17 @@
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo acrílico antialérgica.",
             "Ojitos bordados.",
-            "Relleno hipoalergénico ",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Chalina y gorrito",
-            "Costo: S/. 180 "
+            "Incluye: Chalina y gorrito."
         ]
     },
     {
         "id": 9,
         "type": "amigurumis",
-        "name": "Familia de gatitos",
+        "name": "Familia de Gatitos",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/animales/FamiliaGatos1.jpg",
             "assets/images/amigurumis/entregado/animales/FamiliaGatos2.jpg",
@@ -157,19 +158,19 @@
         ],
         "description": [
             "Queda de una medida aproximada de 13cm de altura.",
-            "Tejida en hilo acrílico antialérgica. ",
+            "Tejida en hilo acrílico antialérgica.",
             "Ojitos de seguridad escarchados.",
-            "Relleno hipoalergénico ",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Costo : S/.190  por la familia de 3 gatitos"
+            "El costo es por la familia de 3 gatitos."
         ]
     },
     {
         "id": 10,
         "type": "amigurumis",
-        "name": "Gato bicolor",
+        "name": "Gato Bicolor",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 95,
         "images": [
             "assets/images/amigurumis/entregado/animales/Gato1.jpg",
             "assets/images/amigurumis/entregado/animales/Gato2.jpg",
@@ -178,47 +179,44 @@
         "description": [
             "Queda de una medida aproximada de 15 cm.",
             "Tejida en hilo acrílico antialérgica.",
-            "Ojitos de seguridad escarchados",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 95 "
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 11,
         "type": "amigurumis",
-        "name": "Gato dormilon",
+        "name": "Gato Dormilón",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 150,
         "image": [
             "assets/images/amigurumis/entregado/animales/GatoDormilon.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 20cm ",
+            "Queda de una medida aproximada de 20cm.",
             "Tejida en hilo ACRÍLICO CHENILLE.",
-            "Ojitos bordados. ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 150 "
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 12,
         "type": "amigurumis",
-        "name": "Gato risueño patas alargadas",
+        "name": "Gato Risueño Patas Alargadas",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 95,
         "images": [
             "assets/images/amigurumis/entregado/animales/GatoRis1.jpg",
             "assets/images/amigurumis/entregado/animales/GatoRis2.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 15cm ",
+            "Queda de una medida aproximada de 15cm.",
             "Tejida en hilo acrílico.",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            " Costo: S/. 95 "
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -226,19 +224,18 @@
         "type": "amigurumis",
         "name": "Hippo Violet",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/animales/Hippo1.jpg",
             "assets/images/amigurumis/entregado/animales/Hippo2.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 24cm sentada y 14 cm de altura.",
-            "Tejida en hilo de100%  algodón mercerizado. ",
-            "Ojitos de seguridad ",
-            "Incluye: Vestido y Diadema",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 180 "
+            "Tejida en hilo de100%  algodón mercerizado.",
+            "Ojitos de seguridad.",
+            "Incluye: Vestido y Diadema.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -246,17 +243,16 @@
         "type": "amigurumis",
         "name": "Jirafa Bebé",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/animales/Jirafabb.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 23cm ",
-            "Tejida en hilo de100% algodón mercerizado. ",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120 "
+            "Queda de una medida aproximada de 23cm.",
+            "Tejida en hilo de100% algodón mercerizado.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -264,7 +260,7 @@
         "type": "amigurumis",
         "name": "Llamitas Personalizadas",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 170,
         "images": [
             "assets/images/amigurumis/entregado/animales/Llamita1.jpg",
             "assets/images/amigurumis/entregado/animales/Llamita2.jpg",
@@ -275,11 +271,10 @@
             "assets/images/amigurumis/entregado/animales/Llamita7.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de 23cm parada en 4 patas ",
-            "Tejida en hilo acrílico antialérgico. ",
-            "Ojitos bordados ",
-            "Incluye: Hasta 3 accesorios",
-            " Costo: S/. 170 "
+            "Queda de una medida aproximada de 23cm parada en 4 patas.",
+            "Tejida en hilo acrílico antialérgico.",
+            "Ojitos bordados.",
+            "Incluye: Hasta 3 accesorios."
         ]
     },
     {
@@ -287,7 +282,7 @@
         "type": "amigurumis",
         "name": "Mini Llamitas ",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/entregado/animales/Llamitas1.jpg",
             "assets/images/amigurumis/entregado/animales/Llamitas2.jpg"
@@ -296,10 +291,10 @@
             "Queda de una medida aproximada de 15 cm paradas en 4 patas.",
             "Tejida en hilo acrílico antialérgica.",
             "Ojitos bordados.",
-            "Relleno hipoalergénico ",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Accesorios ",
-            " Costo: S/. 120 cada una."
+            "Incluye: Accesorios.",
+            "Costo: S/. 120 es por cada una."
         ]
     },
     {
@@ -307,18 +302,17 @@
         "type": "amigurumis",
         "name": "Osita Rosita",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 140,
         "image": [
             "assets/images/amigurumis/entregado/animales/Osa.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 18 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: vestido y rosita",
-            "Costo: S/. 140"
+            "Incluye: vestido y rosita."
         ]
     },
     {
@@ -326,17 +320,16 @@
         "type": "amigurumis",
         "name": "Osito Teddy",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/animales/Oso.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 18 cm.",
             "Tejida en hilo acrílico antialérgica.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -344,18 +337,17 @@
         "type": "amigurumis",
         "name": "Pack Osito Bebé",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 280,
         "image": [
             "assets/images/amigurumis/entregado/animales/Osos.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 25 cm el oso.",
-            "Tejida en hilo acrílico antialérgica",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Sonajero, y Sujetador de Chupón Personalizado con nombre. ",
-            "Costo: S/. 280"
+            "Incluye: Sonajero, y Sujetador de Chupón Personalizado con nombre."
         ]
     },
     {
@@ -363,17 +355,16 @@
         "type": "amigurumis",
         "name": "Perrito Personalizado",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 220,
         "image": [
             "assets/images/amigurumis/entregado/animales/Perro.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 35 cm parado de 4 patas.",
             "Tejida en hilo acrílico antialérgica.",
-            "Ojitos de seguridad escarchados",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 220 "
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -381,7 +372,7 @@
         "type": "amigurumis",
         "name": "Parejita Mini Pinguinos",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 80,
         "images": [
             "assets/images/amigurumis/entregado/animales/Pinguinos1.jpg",
             "assets/images/amigurumis/entregado/animales/Pinguinos2.jpg"
@@ -389,11 +380,10 @@
         "description": [
             "Queda de una medida aproximada de 8 cm.",
             "Tejida en hilo 100% algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye cúpula de acrílico.",
-            "Costo: S/. 80"
+            "Incluye cúpula de acrílico."
         ]
     },
     {
@@ -401,17 +391,16 @@
         "type": "amigurumis",
         "name": "Vaquita",
         "category": "Animales",
-        "price_pen": 15,
+        "price_pen": 85,
         "image": [
             "assets/images/amigurumis/entregado/animales/Vaquita.jpg"
         ],
         "description": [
-            "Queda de una medida aproximada de     14 cm.",
-            "Tejida en hilo acrílico antialérgica",
-            "Ojitos de seguridad kawai",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 85 "
+            "Queda de una medida aproximada de 14 cm.",
+            "Tejida en hilo acrílico antialérgica.",
+            "Ojitos de seguridad kawai.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -484,28 +473,27 @@
     {
         "id": 29,
         "type": "amigurumis",
-        "name": "KarolG Mañana Será Bonito",
+        "name": "Karol G Mañana Será Bonito",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 160,
         "image": [
             "assets/images/amigurumis/pago/artistas/KarolgMSB.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: prendas de la imagen y base de soporte de maderita.",
-            "Costo: S/. 160"
+            "Incluye: prendas de la imagen y base de soporte de maderita."
         ]
     },
     {
         "id": 30,
         "type": "amigurumis",
-        "name": "KarolG Version Fornite",
+        "name": "Karol G Versión Fornite",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/pago/artistas/KarolgFornite1.jpg",
             "assets/images/amigurumis/pago/artistas/KarolgFornite2.jpg",
@@ -515,11 +503,10 @@
         "description": [
             "Queda de una medida aproximada de 16 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: prendas de la imagen y base de soporte de maderita.",
-            " Costo: S/. 15"
+            "Incluye: prendas de la imagen y base de soporte de maderita."
         ]
     },
     {
@@ -527,7 +514,7 @@
         "type": "amigurumis",
         "name": "Rosario Tijeras",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/pago/artistas/RosarioTijeras1.jpg",
             "assets/images/amigurumis/pago/artistas/RosarioTijeras2.jpg",
@@ -537,11 +524,10 @@
         "description": [
             "Queda de una medida aproximada de 16 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Denario y base de soporte de maderita.",
-            " Costo: S/. 150"
+            "Incluye: Denario y base de soporte de maderita."
         ]
     },
     {
@@ -549,7 +535,7 @@
         "type": "amigurumis",
         "name": "Selena Quintanilla",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/pago/artistas/Selena.jpg",
             "assets/images/amigurumis/pago/artistas/Selena2.jpg",
@@ -558,11 +544,10 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de soporte de maderita.",
-            " Costo: S/. 180"
+            "Incluye: base de soporte de maderita."
         ]
     },
     {
@@ -570,7 +555,7 @@
         "type": "amigurumis",
         "name": "Shakira",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 170,
         "images": [
             "assets/images/amigurumis/pago/artistas/Shakira.jpg",
             "assets/images/amigurumis/pago/artistas/Shakira2.jpg",
@@ -580,11 +565,10 @@
         "description": [
             "Queda de una medida aproximada de 16 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: microfono, lobita y base de soporte de maderita.",
-            "Costo: S/. 170"
+            "Incluye: microfono, lobita y base de soporte de maderita."
         ]
     },
     {
@@ -592,7 +576,7 @@
         "type": "amigurumis",
         "name": "Shahrukh Khan ",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/artistas/Khan.jpg",
             "assets/images/amigurumis/entregado/artistas/Khan2.jpg",
@@ -600,20 +584,19 @@
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
-            "Tejida en hilo acrílico y hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo acrílico y hilo de 100% algodón.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: lentes y base de soporte de madera.",
-            "Costo: S/. 180"
+            "Incluye: lentes y base de soporte de madera."
         ]
     },
     {
         "id": 35,
         "type": "amigurumis",
-        "name": "Laura Paussini",
+        "name": "Laura Pausini",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 200,
         "images": [
             "assets/images/amigurumis/entregado/artistas/LauraPau1.jpg",
             "assets/images/amigurumis/entregado/artistas/LauraPau2.jpg",
@@ -622,11 +605,10 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo acrílico y hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: BANDERA Peruana y  soporte de maderita.",
-            "Costo: S/. 200"
+            "Incluye: BANDERA Peruana y  soporte de maderita."
         ]
     },
     {
@@ -634,24 +616,23 @@
         "type": "amigurumis",
         "name": "Young Miko",
         "category": "Artistas",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/artistas/YoungMiko.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 16 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad y pestañas",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad y pestañas.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: prendas y gorrito, microfono y base de soporte de maderita.",
-            "Costo: S/. 180"
+            "Incluye: prendas y gorrito, microfono y base de soporte de maderita."
         ]
     },
     {
         "id": 37,
         "type": "amigurumis",
-        "name": "Atrapasueños arcoirirs",
+        "name": "Atrapasueños Arcoiris",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -662,7 +643,7 @@
     {
         "id": 38,
         "type": "amigurumis",
-        "name": "Cortinero Rosa Blanca",
+        "name": " Par De Cortineros Rosa Blanca",
         "category": "Decoracion",
         "price_pen": 15,
         "images": [
@@ -686,7 +667,7 @@
     {
         "id": 40,
         "type": "amigurumis",
-        "name": "Mandala",
+        "name": "Cojín De Mándala",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -709,7 +690,7 @@
     {
         "id": 42,
         "type": "amigurumis",
-        "name": "Osito Lila",
+        "name": "Cojín De Osita Lila",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -720,7 +701,7 @@
     {
         "id": 43,
         "type": "amigurumis",
-        "name": "Personalizado",
+        "name": "Atrapasueños Personalizado",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -731,7 +712,7 @@
     {
         "id": 44,
         "type": "amigurumis",
-        "name": "Posa vaso Navidad",
+        "name": "Posa Vaso Navideños",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -742,7 +723,7 @@
     {
         "id": 45,
         "type": "amigurumis",
-        "name": "Tapete Azul",
+        "name": "Tapete Individual",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -776,7 +757,7 @@
     {
         "id": 48,
         "type": "amigurumis",
-        "name": "Tulipanes",
+        "name": "Tapetes De Tulipanes",
         "category": "Decoracion",
         "price_pen": 15,
         "image": [
@@ -787,7 +768,7 @@
     {
         "id": 49,
         "type": "amigurumis",
-        "name": "Ramo de Angela",
+        "name": "Ramo De Angela",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -798,7 +779,7 @@
     {
         "id": 50,
         "type": "amigurumis",
-        "name": "Bouquet de Novia",
+        "name": "Bouquet De Novia",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -820,7 +801,7 @@
     {
         "id": 52,
         "type": "amigurumis",
-        "name": "Ramo de Rosa Lila",
+        "name": "Ramo De Rosa Lila",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -831,7 +812,7 @@
     {
         "id": 53,
         "type": "amigurumis",
-        "name": "Ramo de Lirio Rojo",
+        "name": "Ramo De Lirio Rojo",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -842,7 +823,7 @@
     {
         "id": 54,
         "type": "amigurumis",
-        "name": "Ramo de Lirios",
+        "name": "Ramo De Lirios",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -853,7 +834,7 @@
     {
         "id": 55,
         "type": "amigurumis",
-        "name": "Ramo de Tulipanes",
+        "name": "Ramo De Tulipanes",
         "category": "Flores",
         "price_pen": 15,
         "images": [
@@ -993,7 +974,7 @@
     {
         "id": 67,
         "type": "amigurumis",
-        "name": "Ramo Spider gwen",
+        "name": "Ramo Spider Gwen",
         "category": "Flores",
         "price_pen": 15,
         "images": [
@@ -1005,7 +986,7 @@
     {
         "id": 68,
         "type": "amigurumis",
-        "name": "Ramo Stich",
+        "name": "Ramo Stitch",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -1027,7 +1008,7 @@
     {
         "id": 70,
         "type": "amigurumis",
-        "name": "Ramo Reversible girasol",
+        "name": "Ramo Reversible Girasol",
         "category": "Flores",
         "price_pen": 15,
         "image": [
@@ -1104,8 +1085,8 @@
     {
         "id": 77,
         "type": "amigurumis",
-        "name": "Hincha de Universitario",
-        "category": "Flores",
+        "name": "Rosa Hincha de Universitario",
+        "category": "Reversibles",
         "price_pen": 15,
         "image": [
             "assets/images/amigurumis/entregado/flores/Universitario.jpg"
@@ -1115,43 +1096,13 @@
     {
         "id": 78,
         "type": "amigurumis",
-        "name": "Maceta Blanca",
+        "name": "Maceta Mini Orquideas",
         "category": "Macetas",
         "price_pen": 15,
-        "image": [
-            "assets/images/amigurumis/entregado/macetas/blanco.jpg"
-        ],
-        "description": []
-    },
-    {
-        "id": 79,
-        "type": "amigurumis",
-        "name": "Maceta de colores",
-        "category": "Macetas",
-        "price_pen": 15,
-        "image": [
-            "assets/images/amigurumis/entregado/macetas/colores.jpg"
-        ],
-        "description": []
-    },
-    {
-        "id": 80,
-        "type": "amigurumis",
-        "name": "Maceta Flor Amarilla",
-        "category": "Macetas",
-        "price_pen": 15,
-        "image": [
-            "assets/images/amigurumis/entregado/macetas/FlorAmarilla.jpg"
-        ],
-        "description": []
-    },
-    {
-        "id": 81,
-        "type": "amigurumis",
-        "name": "Maceta Flor blanca",
-        "category": "Macetas",
-        "price_pen": 15,
-        "image": [
+        "images": [
+            "assets/images/amigurumis/entregado/macetas/colores.jpg",
+            "assets/images/amigurumis/entregado/macetas/blanco.jpg",
+            "assets/images/amigurumis/entregado/macetas/FlorAmarilla.jpg",
             "assets/images/amigurumis/entregado/macetas/florblanca.jpg"
         ],
         "description": []
@@ -1172,7 +1123,7 @@
     {
         "id": 83,
         "type": "amigurumis",
-        "name": "Maceta Lila",
+        "name": "Maceta Tulipan de Corazón",
         "category": "Macetas",
         "price_pen": 15,
         "image": [
@@ -1183,22 +1134,12 @@
     {
         "id": 84,
         "type": "amigurumis",
-        "name": "Maceta Orquideas Lilas",
+        "name": "Maceta De Orquideas Tallo Alto",
         "category": "Macetas",
         "price_pen": 15,
         "images": [
             "assets/images/amigurumis/entregado/macetas/OrquideaLila.jpg",
-            "assets/images/amigurumis/entregado/macetas/OrquideaLila2.jpg"
-        ],
-        "description": []
-    },
-    {
-        "id": 85,
-        "type": "amigurumis",
-        "name": "Maceta Orquideas Rosa",
-        "category": "Macetas",
-        "price_pen": 15,
-        "images": [
+            "assets/images/amigurumis/entregado/macetas/OrquideaLila2.jpg",
             "assets/images/amigurumis/entregado/macetas/OrquideaRosa.jpg",
             "assets/images/amigurumis/entregado/macetas/OrquideaRosa2.jpg"
         ],
@@ -1218,7 +1159,7 @@
     {
         "id": 87,
         "type": "amigurumis",
-        "name": "Nacimiento ",
+        "name": "Nacimiento",
         "category": "Misterios",
         "price_pen": 15,
         "images": [
@@ -1231,9 +1172,9 @@
     {
         "id": 88,
         "type": "amigurumis",
-        "name": "Cupido Valentino ",
+        "name": "Cupido Valentino",
         "category": "Munecas",
-        "price_pen": 15,
+        "price_pen": 160,
         "images": [
             "assets/images/amigurumis/entregado/munecas/Cupido.jpg",
             "assets/images/amigurumis/entregado/munecas/Cupido2.jpg",
@@ -1242,17 +1183,16 @@
         "description": [
             "Queda de una medida aproximada de 15 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad escarchado",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad escarchado.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: ropa y flecha, base de madera de soporte.",
-            " Costo: S/.160"
+            "Incluye: ropa y flecha, base de madera de soporte."
         ]
     },
     {
         "id": 89,
         "type": "amigurumis",
-        "name": "Dulce Grande ",
+        "name": "Dulce Grande",
         "category": "Munecas",
         "price_pen": 15,
         "images": [
@@ -1311,7 +1251,7 @@
     {
         "id": 94,
         "type": "amigurumis",
-        "name": "Muñeca Morena",
+        "name": "Muñeca Morena Rulosa",
         "category": "Munecas",
         "price_pen": 15,
         "image": [
@@ -1322,7 +1262,7 @@
     {
         "id": 95,
         "type": "amigurumis",
-        "name": "Muñeca Morra",
+        "name": "Muñeca Morena Lacia",
         "category": "Munecas",
         "price_pen": 15,
         "images": [
@@ -1334,7 +1274,7 @@
     {
         "id": 96,
         "type": "amigurumis",
-        "name": "Muñeca Persona",
+        "name": "Muñeca Crespa",
         "category": "Munecas",
         "price_pen": 15,
         "images": [
@@ -1358,7 +1298,7 @@
     {
         "id": 98,
         "type": "amigurumis",
-        "name": "Muñeca Señorita",
+        "name": "Muñeca Estudiante",
         "category": "Munecas",
         "price_pen": 15,
         "image": [
@@ -1371,7 +1311,7 @@
         "type": "amigurumis",
         "name": "Arbol Navideño",
         "category": "Navidad",
-        "price_pen": 15,
+        "price_pen": 90,
         "images": [
             "assets/images/amigurumis/entregado/navidad/Arbol1.jpg",
             "assets/images/amigurumis/entregado/navidad/Arbol2.jpg",
@@ -1380,10 +1320,9 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo acrílico y hilo de 100%algodón.",
-            "Relleno hipoalergénico ",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: soporte de maderita, luces y detalles de decoración.",
-            " Costo: S/. 90"
+            "Incluye: soporte de maderita, luces y detalles de decoración."
         ]
     },
     {
@@ -1391,7 +1330,7 @@
         "type": "amigurumis",
         "name": "Esferas Navideñas",
         "category": "Navidad",
-        "price_pen": 15,
+        "price_pen": 230,
         "images": [
             "assets/images/amigurumis/entregado/navidad/Todos.png",
             "assets/images/amigurumis/entregado/navidad/Bambi.png",
@@ -1403,19 +1342,18 @@
             "assets/images/amigurumis/entregado/navidad/Rodolfo.png"
         ],
         "description": [
-            "Queda de una medida aproximada de 6cm de diámetro",
+            "Queda de una medida aproximada de 6cm de diámetro.",
             "Tejida en hilo 100 %algodón.",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            " Costo: S/. 230"
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 101,
         "type": "amigurumis",
-        "name": "Duende Nicolas",
+        "name": "Duende Nícolas",
         "category": "Navidad",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/navidad/Duende1.jpg",
             "assets/images/amigurumis/entregado/navidad/Duende2.jpg",
@@ -1426,10 +1364,9 @@
             "Queda de una medida aproximada de 18 cm.",
             "Tejida en hilo acrílico y hilo de 100%algodón.",
             "Ojitos de seguridad escarchados.",
-            "Relleno hipoalergénico ",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye gorrito, lamparita ,bolsita de regalo y  soporte de maderita.",
-            " Costo: S/. 190"
+            "Incluye gorrito, lamparita ,bolsita de regalo y  soporte de maderita."
         ]
     },
     {
@@ -1437,7 +1374,7 @@
         "type": "amigurumis",
         "name": "Nacimiento",
         "category": "Navidad",
-        "price_pen": 15,
+        "price_pen": 90,
         "images": [
             "assets/images/amigurumis/entregado/navidad/Naci1.jpg",
             "assets/images/amigurumis/entregado/navidad/Naci2.jpg",
@@ -1447,11 +1384,10 @@
         ],
         "description": [
             "Queda de una medida aproximada de 10cm.",
-            "Tejida en hilo 100 %algodón.",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo 100% algodón.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: soporte de maderita o esfera acrílica a elección.",
-            " Costo: S/. 90"
+            "Incluye: soporte de maderita o esfera acrílica a elección."
         ]
     },
     {
@@ -1459,19 +1395,18 @@
         "type": "amigurumis",
         "name": "Luffy",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 160,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/Luffy.jpg",
             "assets/images/amigurumis/entregado/personalizados/Luffy2.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 16 cm.",
-            "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo de 100% algodón.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: ropita y base de madera de soporte.",
-            "Costo: S/. 160"
+            "Incluye: ropita y base de madera de soporte."
         ]
     },
     {
@@ -1479,7 +1414,7 @@
         "type": "amigurumis",
         "name": "Marinera",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/Marinera1.jpg",
             "assets/images/amigurumis/entregado/personalizados/Marinero.jpg",
@@ -1488,11 +1423,10 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de soporte de maderita.",
-            "Costo: S/. 180"
+            "Incluye: base de soporte de maderita."
         ]
     },
     {
@@ -1500,7 +1434,7 @@
         "type": "amigurumis",
         "name": "Messi",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 160,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/Messi1.jpg",
             "assets/images/amigurumis/entregado/personalizados/Messi2.jpg"
@@ -1508,11 +1442,10 @@
         "description": [
             "Queda de una medida aproximada de 15 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: madera de soporte.",
-            "Costo: S/. 160"
+            "Incluye: madera de soporte."
         ]
     },
     {
@@ -1520,7 +1453,7 @@
         "type": "amigurumis",
         "name": "Pareja de Marinera",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 350,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/ParejaMarinera1.jpg",
             "assets/images/amigurumis/entregado/personalizados/ParejaMarinera2.jpg"
@@ -1528,11 +1461,10 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100% algodón mercerizado.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Prendas y base de madera",
-            "Costo: S/.350"
+            "Incluye: Prendas y base de madera."
         ]
     },
     {
@@ -1540,19 +1472,18 @@
         "type": "amigurumis",
         "name": "Funko Personalizado",
         "category": "Personalizados",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/personalizados/Personalizada1.jpg",
             "assets/images/amigurumis/entregado/personalizados/Personalizada2.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 15cm.",
-            "Tejida en hilo 100& algodón",
-            "Ojitos de seguridad",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo 100& algodón.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Gorrita,mandil,saco,mantelito y base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: Gorrita,mandil,saco,mantelito y base de madera de soporte."
         ]
     },
     {
@@ -1573,7 +1504,7 @@
         "type": "amigurumis",
         "name": "Administrador",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/profesiones/Administrador1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Administrador2.jpg",
@@ -1581,12 +1512,11 @@
         ],
         "description": [
             "Queda de una medida aproximada de 20cm.",
-            "Tejida en hilo ACRÍLICO ANTIALERGICO",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO ANTIALERGICO.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de madera de soporte.",
-            "Costo: S/. 180"
+            "Incluye: base de madera de soporte."
         ]
     },
     {
@@ -1594,18 +1524,17 @@
         "type": "amigurumis",
         "name": "Arquitecto",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 150,
         "image": [
             "assets/images/amigurumis/entregado/profesiones/Arquitecto1.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 15cm.",
             "Tejida en hilo 100% ALGODÓN.",
-            "Ojito de seguridad, ",
-            "Relleno hipoalergénico ",
+            "Ojito de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: base de madera de soporte."
         ]
     },
     {
@@ -1613,18 +1542,17 @@
         "type": "amigurumis",
         "name": "Chef",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 150,
         "image": [
             "assets/images/amigurumis/entregado/profesiones/Chef.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 15cm.",
-            "Tejida en hilo 100& algodón",
-            "Ojitos de seguridad",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo 100& algodón.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Gorrita,mandil,saco,mantelito y base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: Gorrita,mandil,saco,mantelito y base de madera de soporte."
         ]
     },
     {
@@ -1632,19 +1560,18 @@
         "type": "amigurumis",
         "name": "Corredor de autos Formula 1 Fernando Alonso",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/profesiones/FernandoAlonso.jpg",
             "assets/images/amigurumis/entregado/profesiones/FernandoAlonso2.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20cm.",
-            "Tejida en hilo ACRÍLICO ANTIALERGICO",
-            "Ojitos de seguridad. ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO ANTIALERGICO.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: gorrito y casco en acrílico y base de madera de soporte.",
-            "Costo: S/. 190"
+            "Incluye: gorrito y casco en acrílico y base de madera de soporte."
         ]
     },
     {
@@ -1652,7 +1579,7 @@
         "type": "amigurumis",
         "name": "Ingeniero",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/profesiones/Ingeniero1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Ingeniero2.jpg",
@@ -1661,12 +1588,11 @@
         ],
         "description": [
             "Queda de una medida aproximada de 15cm.",
-            "Tejida en hilo 100& algodón",
-            "Ojitos de seguridad",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo 100& algodón.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: chaleco,casco y base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: chaleco,casco y base de madera de soporte."
         ]
     },
     {
@@ -1674,7 +1600,7 @@
         "type": "amigurumis",
         "name": "Maestra",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/profesiones/Maestra1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Maestra2.jpg",
@@ -1683,11 +1609,10 @@
         "description": [
             "Queda de una medida aproximada de 15cm.",
             "Tejida en hilo 100% ALGODÓN.",
-            "Ojito de seguridad, ",
-            "Relleno hipoalergénico ",
+            "Ojito de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: base de madera de soporte."
         ]
     },
     {
@@ -1695,26 +1620,25 @@
         "type": "amigurumis",
         "name": "Maestra Personalizada",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 180,
         "image": [
             "assets/images/amigurumis/entregado/profesiones/MaestraGrande.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20cm.",
-            "Tejida en hilo ACRÍLICO ANTIALERGICO",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO ANTIALERGICO.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: Mandil removible y prenda a elección y soporte.",
-            "Costo: S/. 180"
+            "Incluye: Mandil removible y prenda a elección y soporte."
         ]
     },
     {
         "id": 116,
         "type": "amigurumis",
-        "name": "Psicologia",
+        "name": "Psicologa",
         "category": "Profesiones",
-        "price_pen": 15,
+        "price_pen": 150,
         "images": [
             "assets/images/amigurumis/entregado/profesiones/Psicologa1.jpg",
             "assets/images/amigurumis/entregado/profesiones/Psicologa2.jpg",
@@ -1722,20 +1646,19 @@
         ],
         "description": [
             "Queda de una medida aproximada de 18 cm.",
-            "Tejida en hilo ACRÍLICO antialegico",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida. ",
-            "Incluye: mascarilla, guardapolvo y base de madera de soporte.",
-            "Costo: S/. 150"
+            "Tejida en hilo ACRÍLICO antialegico.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida.",
+            "Incluye: mascarilla, guardapolvo y base de madera de soporte."
         ]
     },
     {
         "id": 117,
         "type": "amigurumis",
-        "name": "Blancanieves",
+        "name": "Blanca Nieves",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Bnieves1.jpg",
             "assets/images/amigurumis/pago/rosasrev/Bnieves2.jpg",
@@ -1744,11 +1667,10 @@
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -1756,17 +1678,16 @@
         "type": "amigurumis",
         "name": "Guadalupe",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/pago/rosasrev/guadalupe.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -1774,7 +1695,7 @@
         "type": "amigurumis",
         "name": "Mafalda",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Mafalda1.jpg",
             "assets/images/amigurumis/pago/rosasrev/Mafalda2.jpg",
@@ -1782,11 +1703,10 @@
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -1794,7 +1714,7 @@
         "type": "amigurumis",
         "name": "Santa Rosa",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/SantaRosa1.jpg",
             "assets/images/amigurumis/pago/rosasrev/SantaRosa2.jpg",
@@ -1804,47 +1724,44 @@
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 121,
         "type": "amigurumis",
-        "name": "Stich",
+        "name": "Stitch",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/pago/rosasrev/Stich.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 122,
         "type": "amigurumis",
-        "name": "Stich y Angela",
+        "name": "Stitch y Angela",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 200,
         "image": [
             "assets/images/amigurumis/pago/rosasrev/StichAngela.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -1852,7 +1769,7 @@
         "type": "amigurumis",
         "name": "Tinkerbell",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/Tinkerbell1.jpg",
             "assets/images/amigurumis/pago/rosasrev/Tinkerbell2.jpg",
@@ -1860,11 +1777,10 @@
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
@@ -1872,7 +1788,7 @@
         "type": "amigurumis",
         "name": "Virgen Maria",
         "category": "Reversibles",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/pago/rosasrev/VirgenMaria1.jpg",
             "assets/images/amigurumis/pago/rosasrev/VirgenMaria2.jpg",
@@ -1880,19 +1796,18 @@
         ],
         "description": [
             "Queda de una medida aproximada de 35cm.",
-            "Tejida en hilo acrílico e hilo 100% algodón",
-            "Ojitos bordados ",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 120"
+            "Tejida en hilo acrílico e hilo 100% algodón.",
+            "Ojitos bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 125,
         "type": "amigurumis",
-        "name": "Mario Bros y Bowser ",
+        "name": "Mario Bros y Bowser",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 350,
         "images": [
             "assets/images/amigurumis/entregado/tv/MarioBowser.jpg",
             "assets/images/amigurumis/entregado/tv/MarioBowser2.jpg",
@@ -1904,21 +1819,20 @@
         ],
         "description": [
             "Queda de una medida aproximada de 23cm MARIO Y 18cm BOWSER.",
-            "Tejida en hilo ACRÍLICO antialérgico",
-            "Ojitos de seguridad y bordados,",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO antialérgico.",
+            "Ojitos de seguridad y bordados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
             "Incluye: base de soporte de madera.",
-            " También se pueden pedir las piezas individualmente. ",
-            "Costo: S/. 350"
+            " También se pueden pedir las piezas individualmente."
         ]
     },
     {
         "id": 126,
         "type": "amigurumis",
-        "name": "Mario Bros , Hongo y Donkey ",
+        "name": "Mario Bros ,Hongo y Donkey ",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 390,
         "images": [
             "assets/images/amigurumis/entregado/tv/MarioHongoDonkey.jpg",
             "assets/images/amigurumis/entregado/tv/MarioBros.jpg",
@@ -1928,40 +1842,38 @@
         ],
         "description": [
             "Queda de una medida aproximada de 23cm MARIO Y 20cm donkey y 13 cm hongo.",
-            "Tejida en hilo ACRÍLICO antialérgico",
-            "Ojitos de seguridad y bordados,",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO antialérgico.",
+            "Ojitos de seguridad y bordados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
             "Incluye: base de soporte de madera.",
-            "También se pueden pedir las piezas individualmente. ",
-            "Costo: S/. 390"
+            "También se pueden pedir las piezas individualmente."
         ]
     },
     {
         "id": 127,
         "type": "amigurumis",
-        "name": "Flash ",
+        "name": "Flash",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 150,
         "image": [
             "assets/images/amigurumis/entregado/tv/Flash.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 15cm.",
             "Tejida en hilo 100% ALGODÓN.",
-            "Ojito de seguridad, ",
-            "Relleno hipoalergénico ",
+            "Ojito de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de madera de soporte.",
-            "Costo: S/. 150"
+            "Incluye: base de madera de soporte."
         ]
     },
     {
         "id": 128,
         "type": "amigurumis",
-        "name": "Garfield Bebé ",
+        "name": "Garfield Bebé",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 120,
         "images": [
             "assets/images/amigurumis/entregado/tv/Garfiel1.jpg",
             "assets/images/amigurumis/entregado/tv/Garfiel2.jpg"
@@ -1969,11 +1881,10 @@
         "description": [
             "Queda de una medida aproximada de 15 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de madera de soporte.",
-            "Costo: S/. 120"
+            "Incluye: base de madera de soporte."
         ]
     },
     {
@@ -1981,21 +1892,21 @@
         "type": "amigurumis",
         "name": "Gato con Botas y Kitty patitas suaves ",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 260,
         "images": [
+            "assets/images/amigurumis/entregado/tv/GatoBotasKitty.jpg",
             "assets/images/amigurumis/entregado/tv/GatoBotas.jpg",
-            "assets/images/amigurumis/entregado/tv/Kitty.jpg",
-            "assets/images/amigurumis/entregado/tv/GatoBotasKitty.jpg"
+            "assets/images/amigurumis/entregado/tv/Kitty.jpg"
+            
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad escarchados",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
             "Incluye: accesorios y base de madera de soporte.",
-            "También se pueden pedir las piezas individualmente. ",
-            "Costo: S/. 260"
+            "También se pueden pedir las piezas individualmente."
         ]
     },
     {
@@ -2003,7 +1914,7 @@
         "type": "amigurumis",
         "name": "Harry Potter",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 180,
         "images": [
             "assets/images/amigurumis/entregado/tv/Harry1.jpg",
             "assets/images/amigurumis/entregado/tv/Harry2.png",
@@ -2017,31 +1928,29 @@
         "description": [
             "Queda de una medida aproximada de 16 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad escarchados",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad escarchados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: ropa, lentes, gorro, escobita, Golden y base de soporte de madera.",
-            "Costo: S/. 180"
+            "Incluye: ropa, lentes, gorro, escobita, Golden y base de soporte de madera."
         ]
     },
     {
         "id": 131,
         "type": "amigurumis",
-        "name": "Lilo y Stich",
+        "name": "Lilo y Stitch",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 300,
         "images": [
             "assets/images/amigurumis/entregado/tv/LiloStich1.png",
             "assets/images/amigurumis/entregado/tv/LiloStich2.jpg"
         ],
         "description": [
-            "Tejida en hilo 100% ALGODÓN ",
-            "Ojitos de seguridad y bordados,",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo 100% ALGODÓN.",
+            "Ojitos de seguridad y bordados.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
             "Incluye: base de soporte de madera.",
-            "También se pueden pedir las piezas individualmente. ",
-            "Costo: S/. 300"
+            "También se pueden pedir las piezas individualmente."
         ]
     },
     {
@@ -2049,7 +1958,7 @@
         "type": "amigurumis",
         "name": "Mafalda",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/tv/Mafalda1.jpg",
             "assets/images/amigurumis/entregado/tv/Mafalda2.jpg",
@@ -2059,30 +1968,28 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de soporte de madera.",
-            "Costo: S/. 190"
+            "Incluye: base de soporte de madera."
         ]
     },
     {
         "id": 133,
         "type": "amigurumis",
-        "name": "Mr Peadbody",
+        "name": "Mr. Peabody",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 120,
         "image": [
             "assets/images/amigurumis/entregado/tv/Peabody.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 18 cm.",
-            "Tejida en hilo ACRÍLICO antialegico",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Tejida en hilo ACRÍLICO antialegico.",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: lentes y base de madera de soporte.",
-            "Costo: S/. 120"
+            "Incluye: lentes y base de madera de soporte."
         ]
     },
     {
@@ -2090,7 +1997,7 @@
         "type": "amigurumis",
         "name": "Simba",
         "category": "Tv",
-        "price_pen": 15,
+        "price_pen": 190,
         "images": [
             "assets/images/amigurumis/entregado/tv/Simba1.jpg",
             "assets/images/amigurumis/entregado/tv/Simba2.jpg"
@@ -2098,18 +2005,17 @@
         "description": [
             "Queda de una medida aproximada de 18cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad y bordados",
-            "Relleno hipoalergénico ",
-            "Toda la pieza es cosida.",
-            "Costo: S/. 190"
+            "Ojitos de seguridad y bordados.",
+            "Relleno hipoalergénico.",
+            "Toda la pieza es cosida."
         ]
     },
     {
         "id": 135,
         "type": "amigurumis",
-        "name": "Virgen de Guadalupe",
+        "name": "Virgen De Guadalupe",
         "category": "Virgenes",
-        "price_pen": 15,
+        "price_pen": 250,
         "images": [
             "assets/images/amigurumis/entregado/virgenes/guada1.jpg",
             "assets/images/amigurumis/entregado/virgenes/guada2.jpg",
@@ -2122,30 +2028,28 @@
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de soporte de madera.",
-            "Costo: S/. 250"
+            "Incluye: base de soporte de madera."
         ]
     },
     {
         "id": 136,
         "type": "amigurumis",
-        "name": "Virgen del Carmen",
+        "name": "Virgen Del Carmen",
         "category": "Virgenes",
-        "price_pen": 15,
+        "price_pen": 250,
         "image": [
             "assets/images/amigurumis/entregado/virgenes/carmen1.jpg"
         ],
         "description": [
             "Queda de una medida aproximada de 20 cm.",
             "Tejida en hilo de 100%algodón.",
-            "Ojitos de seguridad ",
-            "Relleno hipoalergénico ",
+            "Ojitos de seguridad.",
+            "Relleno hipoalergénico.",
             "Toda la pieza es cosida.",
-            "Incluye: base de soporte de madera.",
-            "Costo: S/. 250"
+            "Incluye: base de soporte de madera."
         ]
     }
 ]
